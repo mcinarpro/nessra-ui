@@ -3,7 +3,7 @@ title: Card
 description: Displays a card with header, content, and footer.
 ---
 
-<ComponentPreview name="card-demo" className="mb-4" />
+<ComponentPreview name="card-demo" />
 
 ## Installation
 
@@ -70,30 +70,7 @@ import {
 
 ### Simple Card
 
-<ComponentPreview name="card-simple" className="mb-4" />
-
-```tsx
-<Card className="w-[350px]">
-  <CardHeader>
-    <CardTitle>Create project</CardTitle>
-    <CardDescription>Deploy your new project in one-click.</CardDescription>
-  </CardHeader>
-  <CardContent>
-    <form>
-      <div className="grid w-full items-center gap-4">
-        <div className="flex flex-col space-y-1.5">
-          <Label htmlFor="name">Name</Label>
-          <Input id="name" placeholder="Name of your project" />
-        </div>
-      </div>
-    </form>
-  </CardContent>
-  <CardFooter className="flex justify-between">
-    <Button variant="outline">Cancel</Button>
-    <Button>Deploy</Button>
-  </CardFooter>
-</Card>
-```
+<ComponentPreview name="card-simple" />
 
 ## API Reference
 

@@ -7,7 +7,7 @@ links:
   api: https://www.radix-ui.com/primitives/docs/components/avatar#api-reference
 ---
 
-<ComponentPreview name="avatar-demo" className="mb-4" />
+<ComponentPreview name="avatar-demo" />
 
 ## Installation
 
@@ -65,35 +65,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 ### With Fallback
 
-<ComponentPreview name="avatar-fallback" className="mb-4" />
-
-```tsx
-<Avatar>
-  <AvatarImage src="/broken-image.jpg" alt="User" />
-  <AvatarFallback>JD</AvatarFallback>
-</Avatar>
-```
+<ComponentPreview name="avatar-fallback" />
 
 ### Different Sizes
 
-<ComponentPreview name="avatar-sizes" className="mb-4" />
-
-```tsx
-<div className="flex items-center gap-4">
-  <Avatar className="h-8 w-8">
-    <AvatarImage src="https://github.com/shadcn.png" />
-    <AvatarFallback>SM</AvatarFallback>
-  </Avatar>
-  <Avatar>
-    <AvatarImage src="https://github.com/shadcn.png" />
-    <AvatarFallback>MD</AvatarFallback>
-  </Avatar>
-  <Avatar className="h-14 w-14">
-    <AvatarImage src="https://github.com/shadcn.png" />
-    <AvatarFallback>LG</AvatarFallback>
-  </Avatar>
-</div>
-```
+<ComponentPreview name="avatar-sizes" />
 
 ## API Reference
 

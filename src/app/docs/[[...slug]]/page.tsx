@@ -46,6 +46,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
       toc={page.data.toc}
       full={page.data.full}
       breadcrumb={{ enabled: false }}
+      footer={{ enabled: false }}
     >
       <div className="flex items-center justify-between">
         <DocsTitle>{page.data.title}</DocsTitle>
@@ -114,7 +115,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
       </DocsBody>
 
       {/* Bottom navigation */}
-      <div className="flex items-center gap-2 border-t pt-6">
+      <div className="flex items-center gap-2 pt-6">
         {neighbours.previous && (
           <Button variant="secondary" size="sm" asChild>
             <Link href={neighbours.previous.url}>

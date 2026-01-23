@@ -7,7 +7,7 @@ links:
   api: https://www.radix-ui.com/primitives/docs/components/dropdown-menu#api-reference
 ---
 
-<ComponentPreview name="dropdown-menu-demo" className="mb-4" />
+<ComponentPreview name="dropdown-menu-demo" />
 
 ## Installation
 
@@ -78,59 +78,15 @@ import {
 
 ### With Icons
 
-<ComponentPreview name="dropdown-menu-with-icons" className="mb-4" />
-
-```tsx
-import { CreditCard, LogOut, Settings, User } from "lucide-react"
-
-;<DropdownMenu>
-  <DropdownMenuTrigger asChild>
-    <Button variant="outline">Open Menu</Button>
-  </DropdownMenuTrigger>
-  <DropdownMenuContent className="w-56">
-    <DropdownMenuLabel>My Account</DropdownMenuLabel>
-    <DropdownMenuSeparator />
-    <DropdownMenuItem>
-      <User className="mr-2 h-4 w-4" />
-      Profile
-    </DropdownMenuItem>
-    <DropdownMenuItem>
-      <CreditCard className="mr-2 h-4 w-4" />
-      Billing
-    </DropdownMenuItem>
-    <DropdownMenuItem>
-      <Settings className="mr-2 h-4 w-4" />
-      Settings
-    </DropdownMenuItem>
-    <DropdownMenuSeparator />
-    <DropdownMenuItem>
-      <LogOut className="mr-2 h-4 w-4" />
-      Log out
-    </DropdownMenuItem>
-  </DropdownMenuContent>
-</DropdownMenu>
-```
+<ComponentPreview name="dropdown-menu-with-icons" />
 
 ### With Checkboxes
 
-<ComponentPreview name="dropdown-menu-checkboxes" className="mb-4" />
-
-```tsx
-<DropdownMenuCheckboxItem checked={showStatus}>
-  Status Bar
-</DropdownMenuCheckboxItem>
-```
+<ComponentPreview name="dropdown-menu-checkboxes" />
 
 ### With Radio Group
 
-<ComponentPreview name="dropdown-menu-radio" className="mb-4" />
-
-```tsx
-<DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-  <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>
-  <DropdownMenuRadioItem value="bottom">Bottom</DropdownMenuRadioItem>
-</DropdownMenuRadioGroup>
-```
+<ComponentPreview name="dropdown-menu-radio" />
 
 ## API Reference
 
