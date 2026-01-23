@@ -1,7 +1,9 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { notFound } from "next/navigation"
 import { getMDXComponents } from "@/mdx-components"
 import fm from "front-matter"
+import { findNeighbour } from "fumadocs-core/page-tree"
 import { createRelativeLink } from "fumadocs-ui/mdx"
 import {
   DocsBody,
@@ -9,7 +11,7 @@ import {
   DocsPage,
   DocsTitle,
 } from "fumadocs-ui/page"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react"
 import * as z from "zod"
 
 import { getPageImage, source } from "@/lib/source"
@@ -23,6 +25,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   if (!page) notFound()
 
   const MDX = page.data.body
+  const neighbours = findNeighbour(source.pageTree, page.url)
 
   const raw = await page.data.getText("raw")
   const { attributes } = fm(raw)
@@ -46,7 +49,29 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
     >
       <div className="flex items-center justify-between">
         <DocsTitle>{page.data.title}</DocsTitle>
-        <DocsCopyPage page={raw} url={absoluteUrl(page.url)} />
+        <div className="flex items-center gap-2">
+          <DocsCopyPage page={raw} url={absoluteUrl(page.url)} />
+          <div className="flex gap-1">
+            {neighbours.previous && (
+              <Button variant="secondary" size="icon-sm" asChild>
+                <Link href={neighbours.previous.url}>
+                  <ArrowLeft className="size-4" />
+                  <span className="sr-only">
+                    Previous: {neighbours.previous.name}
+                  </span>
+                </Link>
+              </Button>
+            )}
+            {neighbours.next && (
+              <Button variant="secondary" size="icon-sm" asChild>
+                <Link href={neighbours.next.url}>
+                  <ArrowRight className="size-4" />
+                  <span className="sr-only">Next: {neighbours.next.name}</span>
+                </Link>
+              </Button>
+            )}
+          </div>
+        </div>
       </div>
 
       <DocsDescription>{page.data.description}</DocsDescription>
@@ -87,6 +112,26 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
           })}
         />
       </DocsBody>
+
+      {/* Bottom navigation */}
+      <div className="flex items-center gap-2 border-t pt-6">
+        {neighbours.previous && (
+          <Button variant="secondary" size="sm" asChild>
+            <Link href={neighbours.previous.url}>
+              <ArrowLeft className="size-4" />
+              {neighbours.previous.name}
+            </Link>
+          </Button>
+        )}
+        {neighbours.next && (
+          <Button variant="secondary" size="sm" className="ml-auto" asChild>
+            <Link href={neighbours.next.url}>
+              {neighbours.next.name}
+              <ArrowRight className="size-4" />
+            </Link>
+          </Button>
+        )}
+      </div>
     </DocsPage>
   )
 }

@@ -14,12 +14,14 @@ export async function ComponentSource({
   language,
   collapsible = true,
   className,
+  maxLines,
 }: React.ComponentProps<"div"> & {
   name?: string
   src?: string
   title?: string
   language?: string
   collapsible?: boolean
+  maxLines?: number
 }) {
   if (!name && !src) {
     return null
@@ -63,6 +65,11 @@ export async function ComponentSource({
   code = code.replaceAll(`@/registry/new-york/`, "@/components/")
   code = code.replaceAll(`@/registry/default/`, "@/components/")
   code = code.replaceAll("export default", "export")
+
+  // Truncate code if maxLines is set
+  if (maxLines) {
+    code = code.split("\n").slice(0, maxLines).join("\n")
+  }
 
   const lang = language ?? title?.split(".").pop() ?? "tsx"
   const highlightedCode = await highlightCode(code, lang)

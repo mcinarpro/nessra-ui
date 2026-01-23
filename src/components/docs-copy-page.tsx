@@ -41,7 +41,7 @@ export function DocsCopyPage({
   const menuItems = [
     {
       label: "View as Markdown",
-      href: `/docs/${slug.join("/")}.md`,
+      href: `/llms.mdx/docs/${slug.join("/")}`,
       icon: <Icons.markdown />,
     },
     {

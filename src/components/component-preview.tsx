@@ -7,12 +7,14 @@ import { Index } from "@/registry/__index__"
 export function ComponentPreview({
   name,
   className,
+  previewClassName,
   align = "center",
   hideCode = false,
   chromeLessOnMobile = false,
   ...props
 }: React.ComponentProps<"div"> & {
   name: string
+  previewClassName?: string
   align?: "center" | "start" | "end"
   hideCode?: boolean
   chromeLessOnMobile?: boolean
@@ -34,6 +36,7 @@ export function ComponentPreview({
   return (
     <ComponentPreviewTabs
       className={className}
+      previewClassName={previewClassName}
       align={align}
       hideCode={hideCode}
       component={
@@ -48,6 +51,9 @@ export function ComponentPreview({
         </React.Suspense>
       }
       source={<ComponentSource name={name} collapsible={false} />}
+      sourcePreview={
+        <ComponentSource name={name} collapsible={false} maxLines={3} />
+      }
       chromeLessOnMobile={chromeLessOnMobile}
       {...props}
     />
