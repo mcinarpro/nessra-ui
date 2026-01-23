@@ -134,14 +134,64 @@ npx shadcn@latest add http://localhost:3000/r/nom-du-composant.json
 
 ---
 
-## Commandes utiles
+## Commandes
 
-| Commande                                      | Description                  |
-| --------------------------------------------- | ---------------------------- |
-| `pnpm dev`                                    | Démarrer le serveur de dev   |
-| `pnpm build`                                  | Build complet                |
-| `npx shadcn@latest add <component>`           | Ajouter un composant shadcn  |
-| `npx shadcn@latest build --output ./public/r` | Générer les JSON du registry |
+| Commande                 | Description                             |
+| ------------------------ | --------------------------------------- |
+| `pnpm dev`               | Serveur de développement                |
+| `pnpm build`             | Build complet (auto: registry + format) |
+| `pnpm check`             | Lint + format check + types check       |
+| `pnpm prerelease`        | Validation complète avant release       |
+| `pnpm registry:generate` | Génère `registry/__index__.tsx`         |
+| `pnpm registry:build`    | Génère `public/r/*.json` (CLI)          |
+
+---
+
+## Workflow
+
+```
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│   Develop   │────▶│   Commit    │────▶│   Deploy    │────▶│   Release   │
+└─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘
+    pnpm dev         git commit          git push           pnpm prerelease
+                     (lint-staged)       (Vercel auto)      git tag vX.Y.Z
+```
+
+### 1. Développement
+
+```bash
+pnpm dev
+```
+
+### 2. Commit
+
+```bash
+git add .
+git commit -m "feat(components): add tooltip"
+# └─ Pre-commit hook: lint-staged (ESLint + Prettier)
+```
+
+### 3. Deploy (automatique)
+
+```bash
+git push
+# └─ Vercel: prebuild → registry:generate + registry:build + format
+# └─ Vercel: next build
+```
+
+### 4. Release
+
+```bash
+# Validation complète
+pnpm prerelease
+
+# Mettre à jour CHANGELOG.md
+# Puis tag et push
+git add .
+git commit -m "chore(release): v0.2.0"
+git tag v0.2.0
+git push && git push --tags
+```
 
 ---
 

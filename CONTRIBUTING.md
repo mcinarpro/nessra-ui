@@ -145,8 +145,8 @@ Update `content/docs/components/meta.json` to include your component in the `pag
 ### Step 5: Build & Test
 
 ```bash
-pnpm registry:build   # Generate registry JSON
-pnpm dev              # Test locally
+pnpm build   # Auto: registry:generate + registry:build + next build
+pnpm dev     # Test locally
 ```
 
 ## Commit Convention
@@ -253,6 +253,85 @@ export { Component, componentVariants }
 | Variant exports | camelCase + Variants | `buttonVariants`       |
 | Hooks           | camelCase + use      | `useMobile`            |
 | CSS variables   | kebab-case           | `--primary-foreground` |
+
+## Release Workflow
+
+### Versioning (SemVer)
+
+```
+MAJOR.MINOR.PATCH
+  │     │     └── Bug fixes (0.1.1)
+  │     └──────── New features (0.2.0)
+  └────────────── Breaking changes (1.0.0)
+```
+
+| Change              | Version | Example       |
+| ------------------- | ------- | ------------- |
+| Bug fix             | PATCH   | 0.1.0 → 0.1.1 |
+| New component       | MINOR   | 0.1.1 → 0.2.0 |
+| New variant         | MINOR   | 0.2.0 → 0.3.0 |
+| Breaking API change | MAJOR   | 0.9.0 → 1.0.0 |
+
+### Release Steps
+
+```bash
+# 1. Validate everything
+pnpm prerelease
+
+# 2. Update CHANGELOG.md with changes
+
+# 3. Commit and tag
+git add .
+git commit -m "chore(release): v0.2.0"
+git tag v0.2.0
+
+# 4. Push
+git push && git push --tags
+```
+
+### CHANGELOG Format
+
+```markdown
+## [0.2.0] - YYYY-MM-DD
+
+### Added
+
+- New `tooltip` component
+
+### Changed
+
+- Updated button hover styles
+
+### Fixed
+
+- Fixed checkbox alignment in dark mode
+```
+
+## Automated Workflows
+
+### Pre-commit (via Husky + lint-staged)
+
+Runs automatically on `git commit`:
+
+- ESLint fix on `.ts`, `.tsx`
+- Prettier on all staged files
+
+### Pre-build (via npm lifecycle)
+
+Runs automatically on `pnpm build`:
+
+- `registry:generate` → generates `registry/__index__.tsx`
+- `registry:build` → generates `public/r/*.json`
+- Prettier on generated files
+
+### Pre-release (manual)
+
+Run before creating a release tag:
+
+```bash
+pnpm prerelease
+# → format → check → build
+```
 
 ## Questions?
 
