@@ -1,0 +1,97 @@
+---
+title: Switch
+description: A control that allows the user to toggle between on and off.
+
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/switch
+  api: https://www.radix-ui.com/primitives/docs/components/switch#api-reference
+---
+
+<ComponentPreview name="switch-demo" className="mb-4" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/switch.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-switch
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="switch" title="components/ui/switch.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Switch } from "@/components/ui/switch"
+```
+
+```tsx
+<Switch />
+```
+
+## Examples
+
+### With Label
+
+<ComponentPreview name="switch-with-label" className="mb-4" />
+
+```tsx
+<div className="flex items-center space-x-2">
+  <Switch id="airplane-mode" />
+  <Label htmlFor="airplane-mode">Airplane Mode</Label>
+</div>
+```
+
+### Disabled
+
+<ComponentPreview name="switch-disabled" className="mb-4" />
+
+```tsx
+<div className="flex items-center space-x-2">
+  <Switch id="disabled" disabled />
+  <Label htmlFor="disabled">Disabled</Label>
+</div>
+```
+
+## API Reference
+
+### Switch
+
+| Prop              | Type                         | Default | Description                   |
+| ----------------- | ---------------------------- | ------- | ----------------------------- |
+| `checked`         | `boolean`                    | -       | The controlled checked state  |
+| `defaultChecked`  | `boolean`                    | -       | The default checked state     |
+| `onCheckedChange` | `(checked: boolean) => void` | -       | Callback when checked changes |
+| `disabled`        | `boolean`                    | `false` | Disable the switch            |
+| `required`        | `boolean`                    | `false` | Mark as required              |
+| `name`            | `string`                     | -       | The name for form submission  |
+| `value`           | `string`                     | `"on"`  | The value for form submission |

@@ -1,0 +1,113 @@
+---
+title: Checkbox
+description: A control that allows the user to toggle between checked and not checked.
+
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/checkbox
+  api: https://www.radix-ui.com/primitives/docs/components/checkbox#api-reference
+---
+
+<ComponentPreview name="checkbox-demo" className="mb-4" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/checkbox.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-checkbox
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="checkbox" title="components/ui/checkbox.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Checkbox } from "@/components/ui/checkbox"
+```
+
+```tsx
+<Checkbox />
+```
+
+## Examples
+
+### With Label
+
+<ComponentPreview name="checkbox-with-label" className="mb-4" />
+
+```tsx
+<div className="flex items-center space-x-2">
+  <Checkbox id="terms" />
+  <Label htmlFor="terms">Accept terms and conditions</Label>
+</div>
+```
+
+### Disabled
+
+<ComponentPreview name="checkbox-disabled" className="mb-4" />
+
+```tsx
+<div className="flex items-center space-x-2">
+  <Checkbox id="disabled" disabled />
+  <Label htmlFor="disabled">Disabled checkbox</Label>
+</div>
+```
+
+### With Text
+
+<ComponentPreview name="checkbox-with-text" className="mb-4" />
+
+```tsx
+<div className="items-top flex space-x-2">
+  <Checkbox id="terms1" />
+  <div className="grid gap-1.5 leading-none">
+    <Label htmlFor="terms1">Accept terms and conditions</Label>
+    <p className="text-muted-foreground text-sm">
+      You agree to our Terms of Service and Privacy Policy.
+    </p>
+  </div>
+</div>
+```
+
+## API Reference
+
+### Checkbox
+
+| Prop              | Type                                            | Default | Description                   |
+| ----------------- | ----------------------------------------------- | ------- | ----------------------------- |
+| `checked`         | `boolean \| "indeterminate"`                    | -       | The controlled checked state  |
+| `defaultChecked`  | `boolean`                                       | -       | The default checked state     |
+| `onCheckedChange` | `(checked: boolean \| "indeterminate") => void` | -       | Callback when checked changes |
+| `disabled`        | `boolean`                                       | `false` | Disable the checkbox          |
+| `required`        | `boolean`                                       | `false` | Mark as required              |
+| `name`            | `string`                                        | -       | The name for form submission  |
+| `value`           | `string`                                        | `"on"`  | The value for form submission |

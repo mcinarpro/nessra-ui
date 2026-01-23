@@ -1,0 +1,104 @@
+---
+title: Textarea
+description: Displays a form textarea.
+---
+
+<ComponentPreview name="textarea-demo" className="mb-4" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/textarea.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="textarea" title="components/ui/textarea.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Textarea } from "@/components/ui/textarea"
+```
+
+```tsx
+<Textarea placeholder="Type your message here." />
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview name="textarea-default" className="mb-4" />
+
+```tsx
+<Textarea placeholder="Type your message here." />
+```
+
+### With Label
+
+<ComponentPreview name="textarea-with-label" className="mb-4" />
+
+```tsx
+<div className="grid w-full gap-1.5">
+  <Label htmlFor="message">Your message</Label>
+  <Textarea placeholder="Type your message here." id="message" />
+</div>
+```
+
+### Disabled
+
+<ComponentPreview name="textarea-disabled" className="mb-4" />
+
+```tsx
+<Textarea placeholder="Disabled" disabled />
+```
+
+### With Text
+
+<ComponentPreview name="textarea-with-text" className="mb-4" />
+
+```tsx
+<div className="grid w-full gap-1.5">
+  <Label htmlFor="message-2">Your Message</Label>
+  <Textarea placeholder="Type your message here." id="message-2" />
+  <p className="text-muted-foreground text-sm">
+    Your message will be copied to the support team.
+  </p>
+</div>
+```
+
+## API Reference
+
+### Textarea
+
+All standard HTML textarea attributes are supported.
+
+| Prop          | Type      | Default | Description                  |
+| ------------- | --------- | ------- | ---------------------------- |
+| `placeholder` | `string`  | -       | Placeholder text             |
+| `disabled`    | `boolean` | `false` | Disable the textarea         |
+| `rows`        | `number`  | -       | Number of visible text lines |

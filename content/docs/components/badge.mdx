@@ -1,0 +1,102 @@
+---
+title: Badge
+description: Displays a badge or a component that looks like a badge.
+---
+
+<ComponentPreview name="badge-demo" className="mb-4" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/badge.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="badge" title="components/ui/badge.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Badge } from "@/components/ui/badge"
+```
+
+```tsx
+<Badge>Badge</Badge>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview name="badge-default" className="mb-4" />
+
+```tsx
+<Badge variant="default">Default</Badge>
+```
+
+### Secondary
+
+<ComponentPreview name="badge-secondary" className="mb-4" />
+
+```tsx
+<Badge variant="secondary">Secondary</Badge>
+```
+
+### Destructive
+
+<ComponentPreview name="badge-destructive" className="mb-4" />
+
+```tsx
+<Badge variant="destructive">Destructive</Badge>
+```
+
+### Outline
+
+<ComponentPreview name="badge-outline" className="mb-4" />
+
+```tsx
+<Badge variant="outline">Outline</Badge>
+```
+
+### With Icon
+
+<ComponentPreview name="badge-with-icon" className="mb-4" />
+
+```tsx
+<Badge>
+  <CheckCircle className="mr-1 h-3 w-3" />
+  Verified
+</Badge>
+```
+
+## API Reference
+
+### Badge
+
+| Prop      | Type                                                     | Default     | Description      |
+| --------- | -------------------------------------------------------- | ----------- | ---------------- |
+| `variant` | `"default" \| "secondary" \| "destructive" \| "outline"` | `"default"` | The visual style |

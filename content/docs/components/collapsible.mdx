@@ -1,0 +1,104 @@
+---
+title: Collapsible
+description: An interactive component which expands/collapses a panel.
+
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/collapsible
+  api: https://www.radix-ui.com/primitives/docs/components/collapsible#api-reference
+---
+
+<ComponentPreview name="collapsible-demo" className="mb-4" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/collapsible.json
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-collapsible
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="collapsible" title="components/ui/collapsible.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible"
+```
+
+```tsx
+<Collapsible>
+  <CollapsibleTrigger>Can I use this in my project?</CollapsibleTrigger>
+  <CollapsibleContent>
+    Yes. Free to use for personal and commercial projects. No attribution
+    required.
+  </CollapsibleContent>
+</Collapsible>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview name="collapsible-demo" className="mb-4" />
+
+## API Reference
+
+### Collapsible
+
+The root component that contains all collapsible parts.
+
+| Prop           | Type                      | Default |
+| -------------- | ------------------------- | ------- |
+| `defaultOpen`  | `boolean`                 | `false` |
+| `open`         | `boolean`                 | -       |
+| `onOpenChange` | `(open: boolean) => void` | -       |
+| `disabled`     | `boolean`                 | `false` |
+
+### CollapsibleTrigger
+
+The button that toggles the collapsible content.
+
+| Prop      | Type      | Default |
+| --------- | --------- | ------- |
+| `asChild` | `boolean` | `false` |
+
+### CollapsibleContent
+
+The component that contains the collapsible content.
+
+| Prop         | Type      | Default |
+| ------------ | --------- | ------- |
+| `forceMount` | `boolean` | -       |

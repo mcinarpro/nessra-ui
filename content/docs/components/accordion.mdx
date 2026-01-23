@@ -1,0 +1,135 @@
+---
+title: Accordion
+description: A vertically stacked set of interactive headings.
+
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/accordion
+  api: https://www.radix-ui.com/primitives/docs/components/accordion#api-reference
+---
+
+<ComponentPreview name="accordion-demo" className="mb-4" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/accordion.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-accordion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="accordion" title="components/ui/accordion.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+```
+
+```tsx
+<Accordion type="single" collapsible>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+
+## Examples
+
+### Single
+
+<ComponentPreview name="accordion-single" className="mb-4" />
+
+```tsx
+<Accordion type="single" collapsible className="w-full">
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-2">
+    <AccordionTrigger>Is it styled?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It comes with default styles that match your theme.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-3">
+    <AccordionTrigger>Is it animated?</AccordionTrigger>
+    <AccordionContent>Yes. It's animated by default.</AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+
+### Multiple
+
+<ComponentPreview name="accordion-multiple" className="mb-4" />
+
+```tsx
+<Accordion type="multiple" className="w-full">
+  <AccordionItem value="item-1">
+    <AccordionTrigger>First item</AccordionTrigger>
+    <AccordionContent>Content for first item.</AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-2">
+    <AccordionTrigger>Second item</AccordionTrigger>
+    <AccordionContent>Content for second item.</AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+
+## API Reference
+
+### Accordion
+
+| Prop            | Type                                  | Default | Description                                    |
+| --------------- | ------------------------------------- | ------- | ---------------------------------------------- |
+| `type`          | `"single" \| "multiple"`              | -       | Allow single or multiple items open (required) |
+| `value`         | `string \| string[]`                  | -       | The controlled open item(s)                    |
+| `defaultValue`  | `string \| string[]`                  | -       | Default open item(s)                           |
+| `onValueChange` | `(value: string \| string[]) => void` | -       | Callback when value changes                    |
+| `collapsible`   | `boolean`                             | `false` | Allow all items to be closed (single mode)     |
+| `disabled`      | `boolean`                             | `false` | Disable the accordion                          |
+
+### AccordionItem Props
+
+| Prop       | Type      | Default | Description                             |
+| ---------- | --------- | ------- | --------------------------------------- |
+| `value`    | `string`  | -       | The unique value of the item (required) |
+| `disabled` | `boolean` | `false` | Disable the item                        |

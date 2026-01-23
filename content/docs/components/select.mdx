@@ -1,0 +1,132 @@
+---
+title: Select
+description: Displays a list of options for the user to pick from.
+
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/select
+  api: https://www.radix-ui.com/primitives/docs/components/select#api-reference
+---
+
+<ComponentPreview name="select-demo" className="mb-4" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/select.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-select
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="select" title="components/ui/select.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+```
+
+```tsx
+<Select>
+  <SelectTrigger className="w-[180px]">
+    <SelectValue placeholder="Select a fruit" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="apple">Apple</SelectItem>
+    <SelectItem value="banana">Banana</SelectItem>
+    <SelectItem value="orange">Orange</SelectItem>
+  </SelectContent>
+</Select>
+```
+
+## Examples
+
+### With Groups
+
+<ComponentPreview name="select-with-groups" className="mb-4" />
+
+```tsx
+<Select>
+  <SelectTrigger className="w-[280px]">
+    <SelectValue placeholder="Select a timezone" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectGroup>
+      <SelectLabel>North America</SelectLabel>
+      <SelectItem value="est">Eastern Standard Time (EST)</SelectItem>
+      <SelectItem value="cst">Central Standard Time (CST)</SelectItem>
+      <SelectItem value="pst">Pacific Standard Time (PST)</SelectItem>
+    </SelectGroup>
+    <SelectGroup>
+      <SelectLabel>Europe</SelectLabel>
+      <SelectItem value="gmt">Greenwich Mean Time (GMT)</SelectItem>
+      <SelectItem value="cet">Central European Time (CET)</SelectItem>
+    </SelectGroup>
+  </SelectContent>
+</Select>
+```
+
+## API Reference
+
+### Select
+
+| Component         | Description                |
+| ----------------- | -------------------------- |
+| `Select`          | The root component         |
+| `SelectTrigger`   | The trigger button         |
+| `SelectValue`     | The selected value display |
+| `SelectContent`   | The dropdown content       |
+| `SelectItem`      | Individual select option   |
+| `SelectGroup`     | Group of items             |
+| `SelectLabel`     | Label for a group          |
+| `SelectSeparator` | Visual separator           |
+
+### Select Props
+
+| Prop            | Type                      | Default | Description                 |
+| --------------- | ------------------------- | ------- | --------------------------- |
+| `value`         | `string`                  | -       | The controlled value        |
+| `defaultValue`  | `string`                  | -       | The default value           |
+| `onValueChange` | `(value: string) => void` | -       | Callback when value changes |
+| `disabled`      | `boolean`                 | `false` | Disable the select          |
+
+### SelectItem Props
+
+| Prop       | Type      | Default | Description                      |
+| ---------- | --------- | ------- | -------------------------------- |
+| `value`    | `string`  | -       | The value of the item (required) |
+| `disabled` | `boolean` | `false` | Disable the item                 |

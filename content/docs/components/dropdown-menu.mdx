@@ -1,0 +1,173 @@
+---
+title: Dropdown Menu
+description: Displays a menu to the user with a list of actions or options.
+
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/dropdown-menu
+  api: https://www.radix-ui.com/primitives/docs/components/dropdown-menu#api-reference
+---
+
+<ComponentPreview name="dropdown-menu-demo" className="mb-4" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/dropdown-menu.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-dropdown-menu
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="dropdown-menu" title="components/ui/dropdown-menu.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+```
+
+```tsx
+<DropdownMenu>
+  <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem>Profile</DropdownMenuItem>
+    <DropdownMenuItem>Billing</DropdownMenuItem>
+    <DropdownMenuItem>Settings</DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+```
+
+## Examples
+
+### With Icons
+
+<ComponentPreview name="dropdown-menu-with-icons" className="mb-4" />
+
+```tsx
+import { CreditCard, LogOut, Settings, User } from "lucide-react"
+
+;<DropdownMenu>
+  <DropdownMenuTrigger asChild>
+    <Button variant="outline">Open Menu</Button>
+  </DropdownMenuTrigger>
+  <DropdownMenuContent className="w-56">
+    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem>
+      <User className="mr-2 h-4 w-4" />
+      Profile
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+      <CreditCard className="mr-2 h-4 w-4" />
+      Billing
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+      <Settings className="mr-2 h-4 w-4" />
+      Settings
+    </DropdownMenuItem>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem>
+      <LogOut className="mr-2 h-4 w-4" />
+      Log out
+    </DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+```
+
+### With Checkboxes
+
+<ComponentPreview name="dropdown-menu-checkboxes" className="mb-4" />
+
+```tsx
+<DropdownMenuCheckboxItem checked={showStatus}>
+  Status Bar
+</DropdownMenuCheckboxItem>
+```
+
+### With Radio Group
+
+<ComponentPreview name="dropdown-menu-radio" className="mb-4" />
+
+```tsx
+<DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
+  <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>
+  <DropdownMenuRadioItem value="bottom">Bottom</DropdownMenuRadioItem>
+</DropdownMenuRadioGroup>
+```
+
+## API Reference
+
+### Dropdown Menu
+
+| Component                  | Description           |
+| -------------------------- | --------------------- |
+| `DropdownMenu`             | The root component    |
+| `DropdownMenuTrigger`      | The trigger element   |
+| `DropdownMenuContent`      | The menu content      |
+| `DropdownMenuItem`         | A menu item           |
+| `DropdownMenuLabel`        | A label for items     |
+| `DropdownMenuSeparator`    | A visual separator    |
+| `DropdownMenuCheckboxItem` | Checkbox menu item    |
+| `DropdownMenuRadioGroup`   | Radio group container |
+| `DropdownMenuRadioItem`    | Radio menu item       |
+| `DropdownMenuSub`          | Submenu container     |
+| `DropdownMenuSubTrigger`   | Submenu trigger       |
+| `DropdownMenuSubContent`   | Submenu content       |
+
+### DropdownMenuItem Props
+
+| Prop       | Type                     | Default | Description                    |
+| ---------- | ------------------------ | ------- | ------------------------------ |
+| `disabled` | `boolean`                | `false` | Disable the item               |
+| `onSelect` | `(event: Event) => void` | -       | Callback when item is selected |
+
+### DropdownMenuCheckboxItem Props
+
+| Prop              | Type                         | Default | Description                   |
+| ----------------- | ---------------------------- | ------- | ----------------------------- |
+| `checked`         | `boolean`                    | -       | The controlled checked state  |
+| `onCheckedChange` | `(checked: boolean) => void` | -       | Callback when checked changes |
+
+### DropdownMenuRadioGroup Props
+
+| Prop            | Type                      | Default | Description                 |
+| --------------- | ------------------------- | ------- | --------------------------- |
+| `value`         | `string`                  | -       | The controlled value        |
+| `onValueChange` | `(value: string) => void` | -       | Callback when value changes |

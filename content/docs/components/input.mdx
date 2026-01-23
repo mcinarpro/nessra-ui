@@ -1,0 +1,112 @@
+---
+title: Input
+description: Displays a form input field.
+---
+
+<ComponentPreview name="input-demo" className="mb-4" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/input.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="input" title="components/ui/input.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Input } from "@/components/ui/input"
+```
+
+```tsx
+<Input type="text" placeholder="Enter your name" />
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview name="input-default" className="mb-4" />
+
+```tsx
+<Input placeholder="Email" />
+```
+
+### With Label
+
+<ComponentPreview name="input-with-label" className="mb-4" />
+
+```tsx
+<div className="grid w-full max-w-sm items-center gap-1.5">
+  <Label htmlFor="email">Email</Label>
+  <Input type="email" id="email" placeholder="Email" />
+</div>
+```
+
+### Disabled
+
+<ComponentPreview name="input-disabled" className="mb-4" />
+
+```tsx
+<Input disabled placeholder="Disabled" />
+```
+
+### With Button
+
+<ComponentPreview name="input-with-button" className="mb-4" />
+
+```tsx
+<div className="flex w-full max-w-sm items-center space-x-2">
+  <Input type="email" placeholder="Email" />
+  <Button type="submit">Subscribe</Button>
+</div>
+```
+
+### File Input
+
+<ComponentPreview name="input-file" className="mb-4" />
+
+```tsx
+<div className="grid w-full max-w-sm items-center gap-1.5">
+  <Label htmlFor="picture">Picture</Label>
+  <Input id="picture" type="file" />
+</div>
+```
+
+## API Reference
+
+### Input
+
+All standard HTML input attributes are supported.
+
+| Prop          | Type      | Default  | Description       |
+| ------------- | --------- | -------- | ----------------- |
+| `type`        | `string`  | `"text"` | The input type    |
+| `placeholder` | `string`  | -        | Placeholder text  |
+| `disabled`    | `boolean` | `false`  | Disable the input |
