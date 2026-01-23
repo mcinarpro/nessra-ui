@@ -8,6 +8,7 @@ import { CodeBlockCommand } from "@/components/code-block-command"
 import { CodeTabs } from "@/components/code-tabs"
 import { ComponentPreview } from "@/components/component-preview"
 import { ComponentSource } from "@/components/component-source"
+import { ComponentsGrid } from "@/components/components-grid"
 import { CopyButton } from "@/components/copy-button"
 import {
   Tabs,
@@ -285,6 +286,7 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     ),
     ComponentPreview,
     ComponentSource,
+    ComponentsGrid,
     CodeTabs,
     Link: ({ className, ...props }: React.ComponentProps<typeof Link>) => (
       <Link
