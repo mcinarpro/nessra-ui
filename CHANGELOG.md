@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `.env.example` for environment variables documentation
 - `.prettierignore` to skip generated files
 - Registry validation in `check` script
+- Commitlint for conventional commit message validation
+- Dependabot for automated dependency updates
 
 ### Changed
 
