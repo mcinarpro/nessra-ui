@@ -1,0 +1,86 @@
+---
+title: Table
+description: A responsive table component for displaying data.
+---
+
+<ComponentPreview name="table-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/table.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="table" title="components/ui/table.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+```
+
+```tsx
+<Table>
+  <TableCaption>A list of items.</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Name</TableHead>
+      <TableHead>Status</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>Item 1</TableCell>
+      <TableCell>Active</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+```
+
+## API Reference
+
+### Table
+
+| Component      | Description              |
+| -------------- | ------------------------ |
+| `Table`        | The root table element   |
+| `TableHeader`  | The table header section |
+| `TableBody`    | The table body section   |
+| `TableFooter`  | The table footer section |
+| `TableRow`     | A table row              |
+| `TableHead`    | A header cell            |
+| `TableCell`    | A body cell              |
+| `TableCaption` | A caption for the table  |

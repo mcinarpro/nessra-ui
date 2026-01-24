@@ -1,0 +1,91 @@
+---
+title: Hover Card
+description: For sighted users to preview content available behind a link.
+
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/hover-card
+  api: https://www.radix-ui.com/primitives/docs/components/hover-card#api-reference
+---
+
+<ComponentPreview name="hover-card-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/hover-card.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-hover-card
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="hover-card" title="components/ui/hover-card.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card"
+```
+
+```tsx
+<HoverCard>
+  <HoverCardTrigger>Hover</HoverCardTrigger>
+  <HoverCardContent>Content shown on hover</HoverCardContent>
+</HoverCard>
+```
+
+## API Reference
+
+### HoverCard
+
+| Component          | Description            |
+| ------------------ | ---------------------- |
+| `HoverCard`        | The root component     |
+| `HoverCardTrigger` | The trigger element    |
+| `HoverCardContent` | The hover card content |
+
+### HoverCard Props
+
+| Prop         | Type     | Default | Description                |
+| ------------ | -------- | ------- | -------------------------- |
+| `openDelay`  | `number` | `700`   | Delay in ms before opening |
+| `closeDelay` | `number` | `300`   | Delay in ms before closing |
+
+### HoverCardContent Props
+
+| Prop         | Type                                     | Default    | Description               |
+| ------------ | ---------------------------------------- | ---------- | ------------------------- |
+| `side`       | `"top" \| "right" \| "bottom" \| "left"` | `"bottom"` | Preferred side            |
+| `sideOffset` | `number`                                 | `0`        | Distance from trigger     |
+| `align`      | `"start" \| "center" \| "end"`           | `"center"` | Alignment against trigger |

@@ -1,0 +1,107 @@
+---
+title: Command
+description: A command menu with search and keyboard navigation.
+---
+
+<ComponentPreview name="command-demo" previewClassName="h-[400px]" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/command.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install cmdk
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="command" title="components/ui/command.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command"
+```
+
+```tsx
+<Command>
+  <CommandInput placeholder="Type a command or search..." />
+  <CommandList>
+    <CommandEmpty>No results found.</CommandEmpty>
+    <CommandGroup heading="Suggestions">
+      <CommandItem>Calendar</CommandItem>
+      <CommandItem>Search</CommandItem>
+    </CommandGroup>
+  </CommandList>
+</Command>
+```
+
+## Examples
+
+### Dialog
+
+Use `CommandDialog` to show the command menu in a dialog (⌘K style).
+
+<ComponentPreview name="command-dialog" />
+
+## API Reference
+
+### Command
+
+| Component          | Description                   |
+| ------------------ | ----------------------------- |
+| `Command`          | The root component            |
+| `CommandInput`     | The search input              |
+| `CommandList`      | Container for command items   |
+| `CommandEmpty`     | Shown when no results         |
+| `CommandGroup`     | A group of items with heading |
+| `CommandItem`      | A selectable item             |
+| `CommandSeparator` | Separator between groups      |
+| `CommandShortcut`  | Keyboard shortcut display     |
+
+### CommandInput Props
+
+| Prop          | Type     | Default | Description      |
+| ------------- | -------- | ------- | ---------------- |
+| `placeholder` | `string` | -       | Placeholder text |
+
+### CommandItem Props
+
+| Prop       | Type         | Default | Description                 |
+| ---------- | ------------ | ------- | --------------------------- |
+| `onSelect` | `() => void` | -       | Callback when item selected |
+| `disabled` | `boolean`    | `false` | Disable the item            |

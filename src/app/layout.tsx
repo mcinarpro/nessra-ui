@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { RootProvider } from "fumadocs-ui/provider/next"
 
+import { Toaster } from "@/registry/new-york/ui/sonner"
+
 import "./global.css"
 
 import { Geist, Geist_Mono } from "next/font/google"
@@ -36,6 +38,7 @@ export default function Layout({ children }: LayoutProps<"/">) {
         <div className="root flex min-h-screen flex-col">
           <RootProvider theme={{ defaultTheme: "dark" }}>
             {children}
+            <Toaster />
           </RootProvider>
         </div>
       </body>

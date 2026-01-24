@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-picker",
+  "title": "Date Picker",
+  "description": "A date picker component with range and presets.",
+  "dependencies": [
+    "react-day-picker",
+    "date-fns"
+  ],
+  "registryDependencies": [
+    "utils",
+    "button",
+    "calendar",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/date-picker.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { format } from \"date-fns\"\nimport { CalendarIcon } from \"lucide-react\"\nimport type { DateRange } from \"react-day-picker\"\nimport { cn } from \"registry/new-york/lib/utils\"\nimport { Button } from \"registry/new-york/ui/button\"\nimport { Calendar } from \"registry/new-york/ui/calendar\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"registry/new-york/ui/popover\"\n\nfunction DatePicker({\n  date,\n  onDateChange,\n  placeholder = \"Pick a date\",\n  className,\n  ...props\n}: {\n  date?: Date\n  onDateChange?: (date: Date | undefined) => void\n  placeholder?: string\n  className?: string\n} & Omit<\n  React.ComponentProps<typeof Calendar>,\n  \"mode\" | \"selected\" | \"onSelect\"\n>) {\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button\n          variant=\"outline\"\n          data-slot=\"date-picker-trigger\"\n          data-empty={!date}\n          className={cn(\n            \"data-[empty=true]:text-muted-foreground w-[280px] justify-start text-left font-normal\",\n            className\n          )}\n        >\n          <CalendarIcon className=\"size-4\" />\n          {date ? format(date, \"PPP\") : <span>{placeholder}</span>}\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent className=\"w-auto p-0\" align=\"start\">\n        <Calendar\n          mode=\"single\"\n          selected={date}\n          onSelect={onDateChange}\n          {...props}\n        />\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nfunction DateRangePicker({\n  dateRange,\n  onDateRangeChange,\n  placeholder = \"Pick a date range\",\n  className,\n  numberOfMonths = 2,\n  ...props\n}: {\n  dateRange?: DateRange\n  onDateRangeChange?: (dateRange: DateRange | undefined) => void\n  placeholder?: string\n  className?: string\n  numberOfMonths?: number\n} & Omit<\n  React.ComponentProps<typeof Calendar>,\n  \"mode\" | \"selected\" | \"onSelect\"\n>) {\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button\n          variant=\"outline\"\n          data-slot=\"date-range-picker-trigger\"\n          data-empty={!dateRange?.from}\n          className={cn(\n            \"data-[empty=true]:text-muted-foreground w-[300px] justify-start text-left font-normal\",\n            className\n          )}\n        >\n          <CalendarIcon className=\"size-4\" />\n          {dateRange?.from ? (\n            dateRange.to ? (\n              <>\n                {format(dateRange.from, \"LLL dd, y\")} -{\" \"}\n                {format(dateRange.to, \"LLL dd, y\")}\n              </>\n            ) : (\n              format(dateRange.from, \"LLL dd, y\")\n            )\n          ) : (\n            <span>{placeholder}</span>\n          )}\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent className=\"w-auto p-0\" align=\"start\">\n        <Calendar\n          mode=\"range\"\n          defaultMonth={dateRange?.from}\n          selected={dateRange}\n          onSelect={onDateRangeChange}\n          numberOfMonths={numberOfMonths}\n          {...props}\n        />\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport { DatePicker, DateRangePicker }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,74 @@
+---
+title: Slider
+description: An input where the user selects a value from within a given range.
+
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/slider
+  api: https://www.radix-ui.com/primitives/docs/components/slider#api-reference
+---
+
+<ComponentPreview name="slider-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/slider.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-slider
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="slider" title="components/ui/slider.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Slider } from "@/components/ui/slider"
+```
+
+```tsx
+<Slider defaultValue={[50]} max={100} step={1} />
+```
+
+## API Reference
+
+### Slider Props
+
+| Prop            | Type                         | Default        | Description                 |
+| --------------- | ---------------------------- | -------------- | --------------------------- |
+| `value`         | `number[]`                   | -              | Controlled value            |
+| `defaultValue`  | `number[]`                   | `[0]`          | Default value               |
+| `onValueChange` | `(value: number[]) => void`  | -              | Callback when value changes |
+| `min`           | `number`                     | `0`            | Minimum value               |
+| `max`           | `number`                     | `100`          | Maximum value               |
+| `step`          | `number`                     | `1`            | Step increment              |
+| `disabled`      | `boolean`                    | `false`        | Disable the slider          |
+| `orientation`   | `"horizontal" \| "vertical"` | `"horizontal"` | Slider orientation          |

@@ -7,6 +7,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2025-01-24
+
+### Added
+
+- 21 new UI components:
+  - Alert
+  - Aspect Ratio
+  - Breadcrumb
+  - Calendar (with react-day-picker)
+  - Command (with cmdk)
+  - Date Picker (DatePicker + DateRangePicker)
+  - Drawer (with vaul)
+  - Hover Card
+  - Pagination
+  - Popover
+  - Progress
+  - Radio Group
+  - Scroll Area
+  - Sheet
+  - Skeleton
+  - Slider
+  - Sonner (toast notifications)
+  - Table
+  - Toggle
+- Date Picker examples: basic, range, presets, date of birth
+- Calendar examples: basic, range, multiple months, dropdown navigation
+- Documentation for all new components
+
 ## [0.1.2] - 2025-01-24
 
 ### Added

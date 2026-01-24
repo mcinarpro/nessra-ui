@@ -1,0 +1,77 @@
+---
+title: Alert
+description: Displays a callout for user attention.
+---
+
+<ComponentPreview name="alert-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/alert.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="alert" title="components/ui/alert.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+```
+
+```tsx
+<Alert>
+  <Terminal className="size-4" />
+  <AlertTitle>Heads up!</AlertTitle>
+  <AlertDescription>
+    You can add components to your app using the CLI.
+  </AlertDescription>
+</Alert>
+```
+
+## Examples
+
+### Destructive
+
+<ComponentPreview name="alert-destructive" />
+
+## API Reference
+
+### Alert
+
+| Component          | Description           |
+| ------------------ | --------------------- |
+| `Alert`            | The root component    |
+| `AlertTitle`       | The alert title       |
+| `AlertDescription` | The alert description |
+
+### Alert Props
+
+| Prop      | Type                         | Default     | Description             |
+| --------- | ---------------------------- | ----------- | ----------------------- |
+| `variant` | `"default" \| "destructive"` | `"default"` | The alert style variant |

@@ -1,0 +1,82 @@
+---
+title: Scroll Area
+description: Augments native scroll functionality for custom, cross-browser styling.
+
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/scroll-area
+  api: https://www.radix-ui.com/primitives/docs/components/scroll-area#api-reference
+---
+
+<ComponentPreview name="scroll-area-demo" previewClassName="h-[350px]" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/scroll-area.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-scroll-area
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="scroll-area" title="components/ui/scroll-area.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { ScrollArea } from "@/components/ui/scroll-area"
+```
+
+```tsx
+<ScrollArea className="h-[200px] w-[350px] rounded-md border p-4">
+  Content goes here...
+</ScrollArea>
+```
+
+## API Reference
+
+### ScrollArea
+
+| Component    | Description                   |
+| ------------ | ----------------------------- |
+| `ScrollArea` | The main scrollable container |
+| `ScrollBar`  | The scrollbar component       |
+
+### ScrollArea Props
+
+| Prop   | Type                                        | Default   | Description          |
+| ------ | ------------------------------------------- | --------- | -------------------- |
+| `type` | `"auto" \| "always" \| "scroll" \| "hover"` | `"hover"` | Scrollbar visibility |
+
+### ScrollBar Props
+
+| Prop          | Type                         | Default      | Description           |
+| ------------- | ---------------------------- | ------------ | --------------------- |
+| `orientation` | `"horizontal" \| "vertical"` | `"vertical"` | Scrollbar orientation |

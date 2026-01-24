@@ -272,6 +272,266 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "Displays a callout for user attention.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/alert.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Progress",
+      "description": "Displays an indicator showing the completion progress of a task.",
+      "dependencies": ["@radix-ui/react-progress"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/progress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Sheet",
+      "description": "Extends the Dialog component to display content that complements the main content of the screen.",
+      "dependencies": ["@radix-ui/react-dialog"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sonner",
+      "type": "registry:ui",
+      "title": "Sonner",
+      "description": "An opinionated toast component for React.",
+      "dependencies": ["sonner", "next-themes"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/sonner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "Displays rich content in a portal, triggered by a button.",
+      "dependencies": ["@radix-ui/react-popover"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "Use to show a placeholder while content is loading.",
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "An input where the user selects a value from within a given range.",
+      "dependencies": ["@radix-ui/react-slider"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/slider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "title": "Scroll Area",
+      "description": "Augments native scroll functionality for custom, cross-browser styling.",
+      "dependencies": ["@radix-ui/react-scroll-area"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/scroll-area.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Radio Group",
+      "description": "A set of checkable buttons where only one can be checked at a time.",
+      "dependencies": ["@radix-ui/react-radio-group"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/radio-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "Toggle",
+      "description": "A two-state button that can be either on or off.",
+      "dependencies": ["@radix-ui/react-toggle", "class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/toggle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "aspect-ratio",
+      "type": "registry:ui",
+      "title": "Aspect Ratio",
+      "description": "Displays content within a desired ratio.",
+      "dependencies": ["@radix-ui/react-aspect-ratio"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/aspect-ratio.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hover-card",
+      "type": "registry:ui",
+      "title": "Hover Card",
+      "description": "For sighted users to preview content available behind a link.",
+      "dependencies": ["@radix-ui/react-hover-card"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/hover-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "Breadcrumb",
+      "description": "Displays the path to the current resource using a hierarchy of links.",
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/breadcrumb.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "description": "Pagination with page navigation, next and previous links.",
+      "registryDependencies": ["utils", "button"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/pagination.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "description": "A responsive table component for displaying data.",
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "Command",
+      "description": "A command menu with search and keyboard navigation.",
+      "dependencies": ["cmdk"],
+      "registryDependencies": ["utils", "dialog"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/command.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "title": "Drawer",
+      "description": "A drawer component for mobile-friendly navigation and content.",
+      "dependencies": ["vaul"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/drawer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "A date field component that allows users to enter and edit date.",
+      "dependencies": ["react-day-picker", "date-fns"],
+      "registryDependencies": ["utils", "button"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/calendar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "Date Picker",
+      "description": "A date picker component with range and presets.",
+      "dependencies": ["react-day-picker", "date-fns"],
+      "registryDependencies": ["utils", "button", "calendar", "popover"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/date-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

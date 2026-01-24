@@ -1,0 +1,99 @@
+---
+title: Drawer
+description: A drawer component for mobile-friendly navigation and content.
+---
+
+<ComponentPreview name="drawer-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/drawer.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install vaul
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="drawer" title="components/ui/drawer.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer"
+```
+
+```tsx
+<Drawer>
+  <DrawerTrigger>Open</DrawerTrigger>
+  <DrawerContent>
+    <DrawerHeader>
+      <DrawerTitle>Title</DrawerTitle>
+      <DrawerDescription>Description</DrawerDescription>
+    </DrawerHeader>
+    <DrawerFooter>
+      <Button>Submit</Button>
+      <DrawerClose>Cancel</DrawerClose>
+    </DrawerFooter>
+  </DrawerContent>
+</Drawer>
+```
+
+## API Reference
+
+### Drawer
+
+| Component           | Description                  |
+| ------------------- | ---------------------------- |
+| `Drawer`            | The root component           |
+| `DrawerTrigger`     | The button that opens it     |
+| `DrawerContent`     | The drawer content container |
+| `DrawerHeader`      | Header section               |
+| `DrawerTitle`       | The drawer title             |
+| `DrawerDescription` | Description text             |
+| `DrawerFooter`      | Footer section for actions   |
+| `DrawerClose`       | Close button component       |
+
+### Drawer Props
+
+| Prop                    | Type                      | Default | Description                  |
+| ----------------------- | ------------------------- | ------- | ---------------------------- |
+| `open`                  | `boolean`                 | -       | Controlled open state        |
+| `onOpenChange`          | `(open: boolean) => void` | -       | Callback when open changes   |
+| `shouldScaleBackground` | `boolean`                 | `true`  | Scale the background on open |

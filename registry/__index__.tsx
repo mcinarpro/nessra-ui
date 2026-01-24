@@ -20,10 +20,19 @@ export const Index: Record<string, RegistryEntry> = {
     ),
     files: ["registry/new-york/examples/accordion-multiple.tsx"],
   },
-  "accordion-single": {
-    name: "accordion-single",
-    component: React.lazy(() => import("./new-york/examples/accordion-single")),
-    files: ["registry/new-york/examples/accordion-single.tsx"],
+
+  // Alert examples
+  "alert-demo": {
+    name: "alert-demo",
+    component: React.lazy(() => import("./new-york/examples/alert-demo")),
+    files: ["registry/new-york/examples/alert-demo.tsx"],
+  },
+  "alert-destructive": {
+    name: "alert-destructive",
+    component: React.lazy(
+      () => import("./new-york/examples/alert-destructive")
+    ),
+    files: ["registry/new-york/examples/alert-destructive.tsx"],
   },
 
   // Alert Dialog examples
@@ -40,6 +49,15 @@ export const Index: Record<string, RegistryEntry> = {
       () => import("./new-york/examples/alert-dialog-demo")
     ),
     files: ["registry/new-york/examples/alert-dialog-demo.tsx"],
+  },
+
+  // Aspect Ratio examples
+  "aspect-ratio-demo": {
+    name: "aspect-ratio-demo",
+    component: React.lazy(
+      () => import("./new-york/examples/aspect-ratio-demo")
+    ),
+    files: ["registry/new-york/examples/aspect-ratio-demo.tsx"],
   },
 
   // Avatar examples
@@ -93,6 +111,13 @@ export const Index: Record<string, RegistryEntry> = {
     files: ["registry/new-york/examples/badge-with-icon.tsx"],
   },
 
+  // Breadcrumb examples
+  "breadcrumb-demo": {
+    name: "breadcrumb-demo",
+    component: React.lazy(() => import("./new-york/examples/breadcrumb-demo")),
+    files: ["registry/new-york/examples/breadcrumb-demo.tsx"],
+  },
+
   // Button examples
   "button-demo": {
     name: "button-demo",
@@ -142,6 +167,34 @@ export const Index: Record<string, RegistryEntry> = {
     files: ["registry/new-york/examples/button-with-icon.tsx"],
   },
 
+  // Calendar examples
+  "calendar-demo": {
+    name: "calendar-demo",
+    component: React.lazy(() => import("./new-york/examples/calendar-demo")),
+    files: ["registry/new-york/examples/calendar-demo.tsx"],
+  },
+  "calendar-with-range": {
+    name: "calendar-with-range",
+    component: React.lazy(
+      () => import("./new-york/examples/calendar-with-range")
+    ),
+    files: ["registry/new-york/examples/calendar-with-range.tsx"],
+  },
+  "calendar-multiple-months": {
+    name: "calendar-multiple-months",
+    component: React.lazy(
+      () => import("./new-york/examples/calendar-multiple-months")
+    ),
+    files: ["registry/new-york/examples/calendar-multiple-months.tsx"],
+  },
+  "calendar-with-dropdown": {
+    name: "calendar-with-dropdown",
+    component: React.lazy(
+      () => import("./new-york/examples/calendar-with-dropdown")
+    ),
+    files: ["registry/new-york/examples/calendar-with-dropdown.tsx"],
+  },
+
   // Card examples
   "card-demo": {
     name: "card-demo",
@@ -189,6 +242,44 @@ export const Index: Record<string, RegistryEntry> = {
     files: ["registry/new-york/examples/collapsible-demo.tsx"],
   },
 
+  // Command examples
+  "command-demo": {
+    name: "command-demo",
+    component: React.lazy(() => import("./new-york/examples/command-demo")),
+    files: ["registry/new-york/examples/command-demo.tsx"],
+  },
+  "command-dialog": {
+    name: "command-dialog",
+    component: React.lazy(() => import("./new-york/examples/command-dialog")),
+    files: ["registry/new-york/examples/command-dialog.tsx"],
+  },
+
+  // Date Picker examples
+  "date-picker-demo": {
+    name: "date-picker-demo",
+    component: React.lazy(() => import("./new-york/examples/date-picker-demo")),
+    files: ["registry/new-york/examples/date-picker-demo.tsx"],
+  },
+  "date-picker-dob": {
+    name: "date-picker-dob",
+    component: React.lazy(() => import("./new-york/examples/date-picker-dob")),
+    files: ["registry/new-york/examples/date-picker-dob.tsx"],
+  },
+  "date-picker-with-range": {
+    name: "date-picker-with-range",
+    component: React.lazy(
+      () => import("./new-york/examples/date-picker-with-range")
+    ),
+    files: ["registry/new-york/examples/date-picker-with-range.tsx"],
+  },
+  "date-picker-with-presets": {
+    name: "date-picker-with-presets",
+    component: React.lazy(
+      () => import("./new-york/examples/date-picker-with-presets")
+    ),
+    files: ["registry/new-york/examples/date-picker-with-presets.tsx"],
+  },
+
   // Dialog examples
   "dialog-basic": {
     name: "dialog-basic",
@@ -199,6 +290,13 @@ export const Index: Record<string, RegistryEntry> = {
     name: "dialog-demo",
     component: React.lazy(() => import("./new-york/examples/dialog-demo")),
     files: ["registry/new-york/examples/dialog-demo.tsx"],
+  },
+
+  // Drawer examples
+  "drawer-demo": {
+    name: "drawer-demo",
+    component: React.lazy(() => import("./new-york/examples/drawer-demo")),
+    files: ["registry/new-york/examples/drawer-demo.tsx"],
   },
 
   // Dropdown Menu examples
@@ -229,6 +327,13 @@ export const Index: Record<string, RegistryEntry> = {
       () => import("./new-york/examples/dropdown-menu-with-icons")
     ),
     files: ["registry/new-york/examples/dropdown-menu-with-icons.tsx"],
+  },
+
+  // Hover Card examples
+  "hover-card-demo": {
+    name: "hover-card-demo",
+    component: React.lazy(() => import("./new-york/examples/hover-card-demo")),
+    files: ["registry/new-york/examples/hover-card-demo.tsx"],
   },
 
   // Input examples
@@ -284,6 +389,41 @@ export const Index: Record<string, RegistryEntry> = {
     files: ["registry/new-york/examples/label-with-input.tsx"],
   },
 
+  // Pagination examples
+  "pagination-demo": {
+    name: "pagination-demo",
+    component: React.lazy(() => import("./new-york/examples/pagination-demo")),
+    files: ["registry/new-york/examples/pagination-demo.tsx"],
+  },
+
+  // Popover examples
+  "popover-demo": {
+    name: "popover-demo",
+    component: React.lazy(() => import("./new-york/examples/popover-demo")),
+    files: ["registry/new-york/examples/popover-demo.tsx"],
+  },
+
+  // Progress examples
+  "progress-demo": {
+    name: "progress-demo",
+    component: React.lazy(() => import("./new-york/examples/progress-demo")),
+    files: ["registry/new-york/examples/progress-demo.tsx"],
+  },
+
+  // Radio Group examples
+  "radio-group-demo": {
+    name: "radio-group-demo",
+    component: React.lazy(() => import("./new-york/examples/radio-group-demo")),
+    files: ["registry/new-york/examples/radio-group-demo.tsx"],
+  },
+
+  // Scroll Area examples
+  "scroll-area-demo": {
+    name: "scroll-area-demo",
+    component: React.lazy(() => import("./new-york/examples/scroll-area-demo")),
+    files: ["registry/new-york/examples/scroll-area-demo.tsx"],
+  },
+
   // Select examples
   "select-demo": {
     name: "select-demo",
@@ -319,6 +459,49 @@ export const Index: Record<string, RegistryEntry> = {
     files: ["registry/new-york/examples/separator-vertical.tsx"],
   },
 
+  // Sheet examples
+  "sheet-demo": {
+    name: "sheet-demo",
+    component: React.lazy(() => import("./new-york/examples/sheet-demo")),
+    files: ["registry/new-york/examples/sheet-demo.tsx"],
+  },
+  "sheet-side": {
+    name: "sheet-side",
+    component: React.lazy(() => import("./new-york/examples/sheet-side")),
+    files: ["registry/new-york/examples/sheet-side.tsx"],
+  },
+
+  // Skeleton examples
+  "skeleton-card": {
+    name: "skeleton-card",
+    component: React.lazy(() => import("./new-york/examples/skeleton-card")),
+    files: ["registry/new-york/examples/skeleton-card.tsx"],
+  },
+  "skeleton-demo": {
+    name: "skeleton-demo",
+    component: React.lazy(() => import("./new-york/examples/skeleton-demo")),
+    files: ["registry/new-york/examples/skeleton-demo.tsx"],
+  },
+
+  // Slider examples
+  "slider-demo": {
+    name: "slider-demo",
+    component: React.lazy(() => import("./new-york/examples/slider-demo")),
+    files: ["registry/new-york/examples/slider-demo.tsx"],
+  },
+
+  // Sonner examples
+  "sonner-demo": {
+    name: "sonner-demo",
+    component: React.lazy(() => import("./new-york/examples/sonner-demo")),
+    files: ["registry/new-york/examples/sonner-demo.tsx"],
+  },
+  "sonner-types": {
+    name: "sonner-types",
+    component: React.lazy(() => import("./new-york/examples/sonner-types")),
+    files: ["registry/new-york/examples/sonner-types.tsx"],
+  },
+
   // Switch examples
   "switch-demo": {
     name: "switch-demo",
@@ -336,6 +519,13 @@ export const Index: Record<string, RegistryEntry> = {
       () => import("./new-york/examples/switch-with-label")
     ),
     files: ["registry/new-york/examples/switch-with-label.tsx"],
+  },
+
+  // Table examples
+  "table-demo": {
+    name: "table-demo",
+    component: React.lazy(() => import("./new-york/examples/table-demo")),
+    files: ["registry/new-york/examples/table-demo.tsx"],
   },
 
   // Tabs examples
@@ -386,6 +576,28 @@ export const Index: Record<string, RegistryEntry> = {
       () => import("./new-york/examples/textarea-with-text")
     ),
     files: ["registry/new-york/examples/textarea-with-text.tsx"],
+  },
+
+  // Toggle examples
+  "toggle-demo": {
+    name: "toggle-demo",
+    component: React.lazy(() => import("./new-york/examples/toggle-demo")),
+    files: ["registry/new-york/examples/toggle-demo.tsx"],
+  },
+  "toggle-disabled": {
+    name: "toggle-disabled",
+    component: React.lazy(() => import("./new-york/examples/toggle-disabled")),
+    files: ["registry/new-york/examples/toggle-disabled.tsx"],
+  },
+  "toggle-outline": {
+    name: "toggle-outline",
+    component: React.lazy(() => import("./new-york/examples/toggle-outline")),
+    files: ["registry/new-york/examples/toggle-outline.tsx"],
+  },
+  "toggle-with-text": {
+    name: "toggle-with-text",
+    component: React.lazy(() => import("./new-york/examples/toggle-with-text")),
+    files: ["registry/new-york/examples/toggle-with-text.tsx"],
   },
 
   // Tooltip examples

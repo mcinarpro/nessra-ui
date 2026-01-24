@@ -1,0 +1,95 @@
+---
+title: Radio Group
+description: A set of checkable buttons where only one can be checked at a time.
+
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/radio-group
+  api: https://www.radix-ui.com/primitives/docs/components/radio-group#api-reference
+---
+
+<ComponentPreview name="radio-group-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/radio-group.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-radio-group
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="radio-group" title="components/ui/radio-group.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Label } from "@/components/ui/label"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+```
+
+```tsx
+<RadioGroup defaultValue="option-one">
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-one" id="option-one" />
+    <Label htmlFor="option-one">Option One</Label>
+  </div>
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-two" id="option-two" />
+    <Label htmlFor="option-two">Option Two</Label>
+  </div>
+</RadioGroup>
+```
+
+## API Reference
+
+### RadioGroup
+
+| Component        | Description         |
+| ---------------- | ------------------- |
+| `RadioGroup`     | The root component  |
+| `RadioGroupItem` | A radio button item |
+
+### RadioGroup Props
+
+| Prop            | Type                      | Default | Description                 |
+| --------------- | ------------------------- | ------- | --------------------------- |
+| `value`         | `string`                  | -       | Controlled value            |
+| `defaultValue`  | `string`                  | -       | Default value               |
+| `onValueChange` | `(value: string) => void` | -       | Callback when value changes |
+| `disabled`      | `boolean`                 | `false` | Disable the group           |
+| `required`      | `boolean`                 | `false` | Mark as required            |
+
+### RadioGroupItem Props
+
+| Prop       | Type      | Default | Description                      |
+| ---------- | --------- | ------- | -------------------------------- |
+| `value`    | `string`  | -       | The value of the item (required) |
+| `disabled` | `boolean` | `false` | Disable the item                 |

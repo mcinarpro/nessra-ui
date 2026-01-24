@@ -1,0 +1,86 @@
+---
+title: Toggle
+description: A two-state button that can be either on or off.
+
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/toggle
+  api: https://www.radix-ui.com/primitives/docs/components/toggle#api-reference
+---
+
+<ComponentPreview name="toggle-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/toggle.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-toggle
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="toggle" title="components/ui/toggle.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Toggle } from "@/components/ui/toggle"
+```
+
+```tsx
+<Toggle>Toggle</Toggle>
+```
+
+## Examples
+
+### Outline
+
+<ComponentPreview name="toggle-outline" />
+
+### With Text
+
+<ComponentPreview name="toggle-with-text" />
+
+### Disabled
+
+<ComponentPreview name="toggle-disabled" />
+
+## API Reference
+
+### Toggle Props
+
+| Prop              | Type                         | Default     | Description                   |
+| ----------------- | ---------------------------- | ----------- | ----------------------------- |
+| `variant`         | `"default" \| "outline"`     | `"default"` | The toggle variant            |
+| `size`            | `"default" \| "sm" \| "lg"`  | `"default"` | The toggle size               |
+| `pressed`         | `boolean`                    | -           | Controlled pressed state      |
+| `defaultPressed`  | `boolean`                    | `false`     | Default pressed state         |
+| `onPressedChange` | `(pressed: boolean) => void` | -           | Callback when pressed changes |
+| `disabled`        | `boolean`                    | `false`     | Disable the toggle            |

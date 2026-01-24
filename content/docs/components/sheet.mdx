@@ -1,0 +1,104 @@
+---
+title: Sheet
+description: Extends the Dialog component to display content that complements the main content of the screen.
+
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/dialog
+  api: https://www.radix-ui.com/primitives/docs/components/dialog#api-reference
+---
+
+<ComponentPreview name="sheet-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/sheet.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-dialog
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="sheet" title="components/ui/sheet.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+```
+
+```tsx
+<Sheet>
+  <SheetTrigger>Open</SheetTrigger>
+  <SheetContent>
+    <SheetHeader>
+      <SheetTitle>Are you sure?</SheetTitle>
+      <SheetDescription>This action cannot be undone.</SheetDescription>
+    </SheetHeader>
+  </SheetContent>
+</Sheet>
+```
+
+## Examples
+
+### Side
+
+Use the `side` prop to control which side the sheet opens from.
+
+<ComponentPreview name="sheet-side" />
+
+## API Reference
+
+### Sheet
+
+| Component          | Description                     |
+| ------------------ | ------------------------------- |
+| `Sheet`            | The root component              |
+| `SheetTrigger`     | The button that opens the sheet |
+| `SheetContent`     | The sheet content container     |
+| `SheetHeader`      | Header section                  |
+| `SheetTitle`       | The sheet title                 |
+| `SheetDescription` | Description text                |
+| `SheetFooter`      | Footer section for actions      |
+| `SheetClose`       | Close button component          |
+
+### SheetContent Props
+
+| Prop              | Type                                     | Default   | Description                   |
+| ----------------- | ---------------------------------------- | --------- | ----------------------------- |
+| `side`            | `"top" \| "right" \| "bottom" \| "left"` | `"right"` | The side the sheet opens from |
+| `showCloseButton` | `boolean`                                | `true`    | Show the close button         |

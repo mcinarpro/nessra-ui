@@ -1,0 +1,89 @@
+---
+title: Pagination
+description: Pagination with page navigation, next and previous links.
+---
+
+<ComponentPreview name="pagination-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/pagination.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="pagination" title="components/ui/pagination.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination"
+```
+
+```tsx
+<Pagination>
+  <PaginationContent>
+    <PaginationItem>
+      <PaginationPrevious href="#" />
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationLink href="#">1</PaginationLink>
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationNext href="#" />
+    </PaginationItem>
+  </PaginationContent>
+</Pagination>
+```
+
+## API Reference
+
+### Pagination
+
+| Component            | Description                    |
+| -------------------- | ------------------------------ |
+| `Pagination`         | The root component             |
+| `PaginationContent`  | Container for pagination items |
+| `PaginationItem`     | A single pagination item       |
+| `PaginationLink`     | A page number link             |
+| `PaginationPrevious` | Previous page link             |
+| `PaginationNext`     | Next page link                 |
+| `PaginationEllipsis` | Ellipsis for skipped pages     |
+
+### PaginationLink Props
+
+| Prop       | Type      | Default | Description                |
+| ---------- | --------- | ------- | -------------------------- |
+| `href`     | `string`  | -       | The URL the link points to |
+| `isActive` | `boolean` | `false` | Mark as current page       |
