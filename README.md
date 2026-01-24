@@ -1,149 +1,184 @@
 # nessra ui
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6)](https://www.typescriptlang.org/)
+
 A beautiful component library built with Radix UI and Tailwind CSS. Install components directly into your project.
+
+**[Documentation](https://nessra-ui.vercel.app)** | **[Components](https://nessra-ui.vercel.app/docs/components)**
+
+---
+
+## Quick Start
+
+### Install a component
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/button.json
+```
+
+### With registry namespace (recommended)
+
+Add to your `components.json`:
+
+```json
+{
+  "registries": {
+    "@nessra-ui": "https://nessra-ui.vercel.app/r/{name}.json"
+  }
+}
+```
+
+Then install components:
+
+```bash
+npx shadcn@latest add @nessra-ui/button
+npx shadcn@latest add @nessra-ui/card
+```
+
+---
 
 ## Development
 
 ```bash
+# Install dependencies
+pnpm install
+
 # Start dev server
 pnpm dev
 
 # Build
 pnpm build
+
+# Run all checks
+pnpm check
 ```
 
 ## Project Structure
 
 ```
 nessra-ui/
-├── registry/new-york/       # Source des composants (single source of truth)
-│   ├── ui/                  # Composants UI
-│   ├── hooks/               # Hooks
-│   └── lib/                 # Utilitaires (utils.ts)
-├── public/r/                # JSON générés par shadcn build
-├── content/docs/            # Documentation MDX
-│   ├── components/          # Doc par composant
-│   └── ...
-├── registry.json            # Manifest du registry
-└── components.json          # Config shadcn
+├── registry/new-york/       # Component source (single source of truth)
+│   ├── ui/                  # UI components
+│   ├── hooks/               # Custom hooks
+│   └── lib/                 # Utilities (utils.ts)
+├── public/r/                # Generated JSON files (shadcn build)
+├── content/docs/            # MDX documentation
+│   └── components/          # Per-component docs
+├── registry.json            # Registry manifest
+└── components.json          # shadcn config
 ```
 
 ---
 
-## Ajouter un nouveau composant
+## Adding a New Component
 
-### Étape 1 : Installer le composant
+### Step 1: Install the component
 
 ```bash
-npx shadcn@latest add <nom-du-composant>
+npx shadcn@latest add <component-name>
 ```
 
-Le composant sera installé dans `registry/new-york/ui/`.
+The component will be installed in `registry/new-york/ui/`.
 
-### Étape 2 : Ajouter au registry.json
+### Step 2: Add to registry.json
 
-Ouvrir `registry.json` et ajouter une entrée dans le tableau `items` :
+Open `registry.json` and add an entry to the `items` array:
 
 ```json
 {
-  "name": "nom-du-composant",
+  "name": "component-name",
   "type": "registry:ui",
-  "title": "Nom Du Composant",
-  "description": "Description courte du composant.",
+  "title": "Component Name",
+  "description": "Short description of the component.",
   "dependencies": ["@radix-ui/react-xxx"],
   "registryDependencies": ["utils"],
   "files": [
     {
-      "path": "registry/new-york/ui/nom-du-composant.tsx",
+      "path": "registry/new-york/ui/component-name.tsx",
       "type": "registry:ui"
     }
   ]
 }
 ```
 
-**Notes :**
+**Notes:**
 
-- `dependencies` : packages npm requis (regarder les imports du composant)
-- `registryDependencies` : autres composants du registry requis (ex: `["utils", "button"]`)
+- `dependencies`: npm packages required (check component imports)
+- `registryDependencies`: other registry components required (e.g., `["utils", "button"]`)
 
-### Étape 3 : Rebuild le registry
+### Step 3: Rebuild the registry
 
 ```bash
-npx shadcn@latest build --output ./public/r
+pnpm registry:build
 ```
 
-Cela génère `public/r/nom-du-composant.json`.
+This generates `public/r/component-name.json`.
 
-### Étape 4 : Créer la documentation MDX
+### Step 4: Create MDX documentation
 
-Créer `content/docs/components/nom-du-composant.mdx` :
+Create `content/docs/components/component-name.mdx`:
 
 ```mdx
 ---
-title: Nom Du Composant
-description: Description courte du composant.
+title: Component Name
+description: Short description of the component.
 ---
 
 ## Installation
 
 \`\`\`bash
-npx shadcn@latest add https://nessra-ui.vercel.app/r/nom-du-composant.json
+npx shadcn@latest add https://nessra-ui.vercel.app/r/component-name.json
 \`\`\`
 
 ## Usage
 
 \`\`\`tsx
-import { NomDuComposant } from "@/components/ui/nom-du-composant"
+import { ComponentName } from "@/components/ui/component-name"
 \`\`\`
 
 \`\`\`tsx
 
-<NomDuComposant>Example</NomDuComposant>
-\`\`\`
-
-## Examples
-
-### Basic
-
-\`\`\`tsx
-
-<NomDuComposant>Basic example</NomDuComposant>
+<ComponentName>Example</ComponentName>
 \`\`\`
 ```
 
-### Étape 5 : Ajouter au menu de navigation
+### Step 5: Add to navigation
 
-Ouvrir `content/docs/components/meta.json` et ajouter le nom du composant :
+Open `content/docs/components/meta.json` and add the component name:
 
 ```json
 {
   "title": "Components",
-  "pages": ["button", "card", "nom-du-composant"]
+  "pages": ["button", "card", "component-name"]
 }
 ```
 
-### Étape 6 : Tester
+### Step 6: Test
 
 ```bash
-# Rebuild et vérifier
+# Rebuild and verify
 pnpm build
 
-# Tester l'installation depuis un autre projet
-npx shadcn@latest add http://localhost:3000/r/nom-du-composant.json
+# Test installation from another project
+npx shadcn@latest add http://localhost:3000/r/component-name.json
 ```
 
 ---
 
-## Commandes
+## Commands
 
-| Commande                 | Description                             |
-| ------------------------ | --------------------------------------- |
-| `pnpm dev`               | Serveur de développement                |
-| `pnpm build`             | Build complet (auto: registry + format) |
-| `pnpm check`             | Lint + format check + types check       |
-| `pnpm prerelease`        | Validation complète avant release       |
-| `pnpm registry:generate` | Génère `registry/__index__.tsx`         |
-| `pnpm registry:build`    | Génère `public/r/*.json` (CLI)          |
+| Command                  | Description                              |
+| ------------------------ | ---------------------------------------- |
+| `pnpm dev`               | Start development server                 |
+| `pnpm build`             | Full build (auto: registry + next build) |
+| `pnpm check`             | Lint + format check + types + registry   |
+| `pnpm prerelease`        | Full validation before release           |
+| `pnpm registry:generate` | Generate `registry/__index__.tsx`        |
+| `pnpm registry:build`    | Generate `public/r/*.json` files         |
+| `pnpm registry:validate` | Type-check registry components           |
 
 ---
 
@@ -157,7 +192,7 @@ npx shadcn@latest add http://localhost:3000/r/nom-du-composant.json
                      (lint-staged)       (Vercel auto)      git tag vX.Y.Z
 ```
 
-### 1. Développement
+### 1. Development
 
 ```bash
 pnpm dev
@@ -171,55 +206,26 @@ git commit -m "feat(components): add tooltip"
 # └─ Pre-commit hook: lint-staged (ESLint + Prettier)
 ```
 
-### 3. Deploy (automatique)
+### 3. Deploy (automatic)
 
 ```bash
 git push
-# └─ Vercel: prebuild → registry:generate + registry:build + format
+# └─ Vercel: prebuild → registry:generate + registry:build
 # └─ Vercel: next build
 ```
 
 ### 4. Release
 
 ```bash
-# Validation complète
+# Full validation
 pnpm prerelease
 
-# Mettre à jour CHANGELOG.md
-# Puis tag et push
+# Update CHANGELOG.md
+# Then tag and push
 git add .
 git commit -m "chore(release): v0.2.0"
 git tag v0.2.0
 git push && git push --tags
-```
-
----
-
-## Utilisation (pour les autres projets)
-
-### Installation directe
-
-```bash
-npx shadcn@latest add https://nessra-ui.vercel.app/r/button.json
-```
-
-### Avec namespace (recommandé)
-
-Ajouter dans `components.json` du projet cible :
-
-```json
-{
-  "registries": {
-    "@nessra-ui": "https://nessra-ui.vercel.app/r/{name}.json"
-  }
-}
-```
-
-Puis utiliser :
-
-```bash
-npx shadcn@latest add @nessra-ui/button
-npx shadcn@latest add @nessra-ui/card
 ```
 
 ---
@@ -231,3 +237,9 @@ npx shadcn@latest add @nessra-ui/card
 - [shadcn/ui](https://ui.shadcn.com/) - Components
 - [Radix UI](https://www.radix-ui.com/) - Primitives
 - [Tailwind CSS v4](https://tailwindcss.com/)
+
+---
+
+## License
+
+[MIT](LICENSE)

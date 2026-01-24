@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- MIT License file
+- `.env.example` for environment variables documentation
+- `.prettierignore` to skip generated files
+- Registry validation in `check` script
+
+### Changed
+
+- README translated to English with badges
+- Build scripts optimized (Prettier formatting moved into generators)
+
 ## [0.1.0] - 2025-01-23
 
 ### Added

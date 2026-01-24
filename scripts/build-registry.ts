@@ -1,5 +1,6 @@
 import * as fs from "node:fs"
 import * as path from "node:path"
+import * as prettier from "prettier"
 
 const EXAMPLES_DIR = "registry/new-york/examples"
 const OUTPUT_FILE = "registry/__index__.tsx"
@@ -49,7 +50,7 @@ function capitalizeGroup(group: string): string {
     .join(" ")
 }
 
-function main() {
+async function main() {
   // Scan examples directory
   const examplesPath = path.resolve(EXAMPLES_DIR)
 
@@ -119,8 +120,13 @@ export const Index: Record<string, RegistryEntry> = {
 
   output += `\n}\n`
 
-  // Write output
-  fs.writeFileSync(OUTPUT_FILE, output)
+  // Format and write output
+  const prettierConfig = await prettier.resolveConfig(OUTPUT_FILE)
+  const formatted = await prettier.format(output, {
+    ...prettierConfig,
+    filepath: OUTPUT_FILE,
+  })
+  fs.writeFileSync(OUTPUT_FILE, formatted)
   console.log(`✅ Generated ${OUTPUT_FILE}`)
   console.log(`   ${files.length} examples in ${groups.length} groups`)
   groups.forEach((group) => {
