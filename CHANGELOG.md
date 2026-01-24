@@ -11,6 +11,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - `CLAUDE.md` with project instructions for Claude Code
 - Version badge on homepage linking to GitHub releases
+- `tabs-underline` example to showcase underline variant
+
+### Fixed
+
+- Component preview now uses `not-prose` to prevent prose styles bleeding into demos
+- `alert-dialog` import path for `buttonVariants`
+- `alert-dialog-delete` example now uses destructive variant for action button
+- Removed duplicated code blocks in docs (label, separator, switch, tabs, textarea)
+- `tabs-with-cards` preview height increased to show full content
+
+### Changed
+
+- `absoluteUrl` removed from registry utils (users only get `cn`)
 
 ## [0.1.1] - 2025-01-24
 

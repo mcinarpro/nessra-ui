@@ -344,6 +344,11 @@ export const Index: Record<string, RegistryEntry> = {
     component: React.lazy(() => import("./new-york/examples/tabs-demo")),
     files: ["registry/new-york/examples/tabs-demo.tsx"],
   },
+  "tabs-underline": {
+    name: "tabs-underline",
+    component: React.lazy(() => import("./new-york/examples/tabs-underline")),
+    files: ["registry/new-york/examples/tabs-underline.tsx"],
+  },
   "tabs-with-cards": {
     name: "tabs-with-cards",
     component: React.lazy(() => import("./new-york/examples/tabs-with-cards")),

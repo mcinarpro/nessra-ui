@@ -67,46 +67,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 ## Examples
 
+### Underline
+
+<ComponentPreview name="tabs-underline" />
+
 ### With Cards
 
-<ComponentPreview name="tabs-with-cards" />
-
-```tsx
-<Tabs defaultValue="account" className="w-[400px]">
-  <TabsList className="grid w-full grid-cols-2">
-    <TabsTrigger value="account">Account</TabsTrigger>
-    <TabsTrigger value="password">Password</TabsTrigger>
-  </TabsList>
-  <TabsContent value="account">
-    <Card>
-      <CardHeader>
-        <CardTitle>Account</CardTitle>
-        <CardDescription>Make changes to your account here.</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Input placeholder="Name" />
-      </CardContent>
-      <CardFooter>
-        <Button>Save changes</Button>
-      </CardFooter>
-    </Card>
-  </TabsContent>
-  <TabsContent value="password">
-    <Card>
-      <CardHeader>
-        <CardTitle>Password</CardTitle>
-        <CardDescription>Change your password here.</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Input type="password" placeholder="New password" />
-      </CardContent>
-      <CardFooter>
-        <Button>Save password</Button>
-      </CardFooter>
-    </Card>
-  </TabsContent>
-</Tabs>
-```
+<ComponentPreview name="tabs-with-cards" previewClassName="h-[450px]" />
 
 ## API Reference
 
