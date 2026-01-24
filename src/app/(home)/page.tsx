@@ -1,6 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { version } from "../../../package.json"
+
 export default function HomePage() {
   return (
     <div className="mx-auto flex w-full max-w-(--fd-layout-width) flex-1 flex-col items-center justify-center border-x px-4 text-center">
@@ -16,6 +18,12 @@ export default function HomePage() {
       <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
         nessra ui
       </h1>
+      <Link
+        href="https://github.com/codewithmehmet/nessra-ui/releases"
+        className="bg-muted hover:bg-muted/80 mt-2 rounded-full px-2.5 py-0.5 font-mono text-xs transition-colors"
+      >
+        v{version}
+      </Link>
       <p className="text-muted-foreground max-w-xxl mt-4 text-lg text-balance">
         Beautiful, accessible React components built on Radix UI. Copy, paste,
         and customize.
