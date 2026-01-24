@@ -3,8 +3,12 @@
   "name": "collapsible",
   "title": "Collapsible",
   "description": "An interactive component which expands/collapses a panel.",
-  "dependencies": ["@radix-ui/react-collapsible"],
-  "registryDependencies": ["utils"],
+  "dependencies": [
+    "@radix-ui/react-collapsible"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/collapsible.tsx",

@@ -3,8 +3,12 @@
   "name": "badge",
   "title": "Badge",
   "description": "Displays a badge or a component that looks like a badge.",
-  "dependencies": ["class-variance-authority"],
-  "registryDependencies": ["utils"],
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/badge.tsx",

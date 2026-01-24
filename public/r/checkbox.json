@@ -3,8 +3,12 @@
   "name": "checkbox",
   "title": "Checkbox",
   "description": "A control that allows the user to toggle between checked and not checked.",
-  "dependencies": ["@radix-ui/react-checkbox"],
-  "registryDependencies": ["utils"],
+  "dependencies": [
+    "@radix-ui/react-checkbox"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/checkbox.tsx",

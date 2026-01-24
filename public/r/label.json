@@ -3,8 +3,12 @@
   "name": "label",
   "title": "Label",
   "description": "Renders an accessible label associated with controls.",
-  "dependencies": ["@radix-ui/react-label"],
-  "registryDependencies": ["utils"],
+  "dependencies": [
+    "@radix-ui/react-label"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/label.tsx",

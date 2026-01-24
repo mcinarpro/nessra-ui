@@ -3,8 +3,12 @@
   "name": "dropdown-menu",
   "title": "Dropdown Menu",
   "description": "Displays a menu to the user with a list of actions or options.",
-  "dependencies": ["@radix-ui/react-dropdown-menu"],
-  "registryDependencies": ["utils"],
+  "dependencies": [
+    "@radix-ui/react-dropdown-menu"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/dropdown-menu.tsx",

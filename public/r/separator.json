@@ -3,8 +3,12 @@
   "name": "separator",
   "title": "Separator",
   "description": "Visually separates content.",
-  "dependencies": ["@radix-ui/react-separator"],
-  "registryDependencies": ["utils"],
+  "dependencies": [
+    "@radix-ui/react-separator"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/separator.tsx",

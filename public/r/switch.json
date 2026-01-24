@@ -3,8 +3,12 @@
   "name": "switch",
   "title": "Switch",
   "description": "A control that allows the user to toggle between on and off.",
-  "dependencies": ["@radix-ui/react-switch"],
-  "registryDependencies": ["utils"],
+  "dependencies": [
+    "@radix-ui/react-switch"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/switch.tsx",

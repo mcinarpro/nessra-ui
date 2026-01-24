@@ -3,8 +3,12 @@
   "name": "tooltip",
   "title": "Tooltip",
   "description": "A popup that displays information related to an element.",
-  "dependencies": ["@radix-ui/react-tooltip"],
-  "registryDependencies": ["utils"],
+  "dependencies": [
+    "@radix-ui/react-tooltip"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/tooltip.tsx",

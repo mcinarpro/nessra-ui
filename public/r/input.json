@@ -3,7 +3,9 @@
   "name": "input",
   "title": "Input",
   "description": "Displays a form input field.",
-  "registryDependencies": ["utils"],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/input.tsx",

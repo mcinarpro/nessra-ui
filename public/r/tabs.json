@@ -3,8 +3,12 @@
   "name": "tabs",
   "title": "Tabs",
   "description": "A set of layered sections of content, known as tab panels.",
-  "dependencies": ["@radix-ui/react-tabs"],
-  "registryDependencies": ["utils"],
+  "dependencies": [
+    "@radix-ui/react-tabs"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/tabs.tsx",

@@ -15,9 +15,10 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react"
 import * as z from "zod"
 
 import { getPageImage, source } from "@/lib/source"
-import { absoluteUrl } from "@/lib/utils"
 import { DocsCopyPage } from "@/components/docs-copy-page"
 import { Button } from "@/registry/new-york/ui/button"
+
+import { absoluteUrl } from "../../../lib/utils"
 
 export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   const params = await props.params

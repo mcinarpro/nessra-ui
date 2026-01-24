@@ -3,8 +3,12 @@
   "name": "dialog",
   "title": "Dialog",
   "description": "A window overlaid on the primary window.",
-  "dependencies": ["@radix-ui/react-dialog"],
-  "registryDependencies": ["utils"],
+  "dependencies": [
+    "@radix-ui/react-dialog"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/dialog.tsx",

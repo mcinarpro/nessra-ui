@@ -3,8 +3,12 @@
   "name": "select",
   "title": "Select",
   "description": "Displays a list of options for the user to pick from.",
-  "dependencies": ["@radix-ui/react-select"],
-  "registryDependencies": ["utils"],
+  "dependencies": [
+    "@radix-ui/react-select"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/select.tsx",

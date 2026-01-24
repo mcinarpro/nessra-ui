@@ -3,8 +3,12 @@
   "name": "accordion",
   "title": "Accordion",
   "description": "A vertically stacked set of interactive headings.",
-  "dependencies": ["@radix-ui/react-accordion"],
-  "registryDependencies": ["utils"],
+  "dependencies": [
+    "@radix-ui/react-accordion"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/accordion.tsx",
