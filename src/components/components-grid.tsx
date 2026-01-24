@@ -14,6 +14,7 @@ const components = [
   { name: "Checkbox", href: "/docs/components/checkbox" },
   { name: "Collapsible", href: "/docs/components/collapsible" },
   { name: "Command", href: "/docs/components/command" },
+  { name: "Data Table", href: "/docs/components/data-table" },
   { name: "Date Picker", href: "/docs/components/date-picker" },
   { name: "Dialog", href: "/docs/components/dialog" },
   { name: "Drawer", href: "/docs/components/drawer" },

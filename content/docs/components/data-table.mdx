@@ -1,0 +1,336 @@
+---
+title: Data Table
+description: A powerful data table component with sorting, filtering, pagination, row selection and faceted filters.
+
+links:
+  doc: https://tanstack.com/table/latest
+  api: https://tanstack.com/table/latest/docs/api/core/table
+---
+
+<ComponentPreview name="data-table-demo" previewClassName="h-[600px]" />
+
+## About
+
+The `DataTable` component is built on top of [TanStack Table](https://tanstack.com/table) and provides a powerful, flexible data table with:
+
+- Column sorting with dropdown (Asc/Desc/Hide)
+- Text filtering and faceted filters
+- Pagination with page numbers or simple navigation
+- Row selection with callbacks
+- Column visibility toggle
+- Loading skeleton state
+- Custom empty state
+- Row click handler
+- Controlled state for URL sync
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/data-table.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @tanstack/react-table lucide-react
+```
+
+<Step>Install the required components:</Step>
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/table.json
+npx shadcn@latest add https://nessra-ui.vercel.app/r/button.json
+npx shadcn@latest add https://nessra-ui.vercel.app/r/input.json
+npx shadcn@latest add https://nessra-ui.vercel.app/r/dropdown-menu.json
+npx shadcn@latest add https://nessra-ui.vercel.app/r/select.json
+npx shadcn@latest add https://nessra-ui.vercel.app/r/skeleton.json
+npx shadcn@latest add https://nessra-ui.vercel.app/r/badge.json
+npx shadcn@latest add https://nessra-ui.vercel.app/r/popover.json
+npx shadcn@latest add https://nessra-ui.vercel.app/r/command.json
+npx shadcn@latest add https://nessra-ui.vercel.app/r/separator.json
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="data-table" title="components/ui/data-table.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { ColumnDef } from "@tanstack/react-table"
+
+import { DataTable } from "@/components/ui/data-table"
+```
+
+```tsx
+type User = {
+  id: string
+  name: string
+  email: string
+}
+
+const columns: ColumnDef<User>[] = [
+  { accessorKey: "name", header: "Name" },
+  { accessorKey: "email", header: "Email" },
+]
+
+const data: User[] = [
+  { id: "1", name: "John", email: "john@example.com" },
+  { id: "2", name: "Jane", email: "jane@example.com" },
+]
+
+return <DataTable columns={columns} data={data} />
+```
+
+## Examples
+
+### Basic Table
+
+<ComponentPreview name="data-table-demo" previewClassName="h-[600px]" />
+
+### Advanced with Faceted Filters
+
+This example shows faceted filters, row selection, page numbers, and sortable column headers.
+
+<ComponentPreview name="data-table-advanced" previewClassName="h-[700px]" />
+
+### Loading State
+
+Use `isLoading` to show a skeleton while data is loading.
+
+<ComponentPreview name="data-table-loading" previewClassName="h-[350px]" />
+
+## Exported Components
+
+The data-table exports multiple components you can use:
+
+| Component                | Description                               |
+| ------------------------ | ----------------------------------------- |
+| `DataTable`              | Main table component                      |
+| `DataTableColumnHeader`  | Sortable column header with dropdown      |
+| `DataTablePagination`    | Pagination with page numbers              |
+| `DataTableToolbar`       | Toolbar with filter, facets, view options |
+| `DataTableFacetedFilter` | Multi-select filter with counts           |
+| `DataTableViewOptions`   | Column visibility toggle                  |
+
+### Using DataTableColumnHeader
+
+```tsx
+import { DataTableColumnHeader } from "@/components/ui/data-table"
+
+const columns: ColumnDef<Task>[] = [
+  {
+    accessorKey: "title",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Title" />
+    ),
+  },
+]
+```
+
+### Faceted Filters
+
+```tsx
+import { DataTable, FacetedFilterConfig } from "@/components/ui/data-table"
+
+const facetedFilters: FacetedFilterConfig[] = [
+  {
+    column: "status",
+    title: "Status",
+    options: [
+      { label: "Todo", value: "todo" },
+      { label: "Done", value: "done" },
+    ],
+  },
+]
+
+return (
+  <DataTable columns={columns} data={data} facetedFilters={facetedFilters} />
+)
+```
+
+## Column Definitions
+
+Columns are defined using TanStack Table's `ColumnDef` type:
+
+```tsx
+const columns: ColumnDef<Payment>[] = [
+  {
+    accessorKey: "email",
+    header: "Email",
+  },
+  {
+    accessorKey: "amount",
+    header: () => <div className="text-right">Amount</div>,
+    cell: ({ row }) => {
+      const amount = parseFloat(row.getValue("amount"))
+      const formatted = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+      }).format(amount)
+      return <div className="text-right font-medium">{formatted}</div>
+    },
+  },
+]
+```
+
+### Row Selection Column
+
+Add a selection column using the `Checkbox` component:
+
+```tsx
+import { Checkbox } from "@/components/ui/checkbox"
+
+// In your columns array:
+{
+  id: "select",
+  header: ({ table }) => (
+    <Checkbox
+      checked={table.getIsAllPageRowsSelected()}
+      onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+    />
+  ),
+  cell: ({ row }) => (
+    <Checkbox
+      checked={row.getIsSelected()}
+      onCheckedChange={(value) => row.toggleSelected(!!value)}
+    />
+  ),
+  enableSorting: false,
+  enableHiding: false,
+}
+```
+
+## Controlled State
+
+For URL sync or external state management, you can control the table state from outside the component.
+
+### Basic Example
+
+```tsx
+const [sorting, setSorting] = useState<SortingState>([])
+const [pagination, setPagination] = useState({ pageIndex: 0, pageSize: 10 })
+
+return (
+  <DataTable
+    columns={columns}
+    data={data}
+    sorting={sorting}
+    onSortingChange={setSorting}
+    pagination={pagination}
+    onPaginationChange={setPagination}
+  />
+)
+```
+
+### With nuqs (URL State)
+
+Use [nuqs](https://nuqs.dev/) to sync table state with URL query parameters:
+
+```tsx
+import { SortingState } from "@tanstack/react-table"
+import { parseAsInteger, parseAsJson, useQueryState } from "nuqs"
+
+export function UsersTable({ data, columns }) {
+  const [page, setPage] = useQueryState("page", parseAsInteger.withDefault(0))
+  const [pageSize, setPageSize] = useQueryState(
+    "size",
+    parseAsInteger.withDefault(10)
+  )
+  const [sorting, setSorting] = useQueryState<SortingState>(
+    "sort",
+    parseAsJson<SortingState>().withDefault([])
+  )
+
+  return (
+    <DataTable
+      columns={columns}
+      data={data}
+      pagination={{ pageIndex: page, pageSize }}
+      onPaginationChange={(state) => {
+        setPage(state.pageIndex)
+        setPageSize(state.pageSize)
+      }}
+      sorting={sorting}
+      onSortingChange={setSorting}
+    />
+  )
+}
+```
+
+This enables:
+
+- **Shareable URLs**: `/users?page=2&size=20&sort=[{"id":"name","desc":false}]`
+- **Browser history**: Back/forward navigation works with table state
+- **Bookmarks**: Users can save filtered/sorted views
+
+## API Reference
+
+### DataTable
+
+| Prop                    | Type                                     | Default                | Description                     |
+| ----------------------- | ---------------------------------------- | ---------------------- | ------------------------------- |
+| `columns`               | `ColumnDef<TData>[]`                     | -                      | Column definitions              |
+| `data`                  | `TData[]`                                | -                      | Table data                      |
+| `isLoading`             | `boolean`                                | `false`                | Show loading skeleton           |
+| `emptyState`            | `ReactNode`                              | `"No results."`        | Custom empty state              |
+| `filterColumn`          | `string`                                 | -                      | Column key to filter on         |
+| `filterPlaceholder`     | `string`                                 | `"Filter..."`          | Placeholder for filter input    |
+| `facetedFilters`        | `FacetedFilterConfig[]`                  | `[]`                   | Faceted filter configs          |
+| `showPagination`        | `boolean`                                | `true`                 | Show pagination controls        |
+| `showPageSizeSelector`  | `boolean`                                | `true`                 | Show rows per page selector     |
+| `showPageNumbers`       | `boolean`                                | `false`                | Show clickable page numbers     |
+| `pageSizeOptions`       | `number[]`                               | `[10, 20, 30, 40, 50]` | Available page size options     |
+| `defaultPageSize`       | `number`                                 | `10`                   | Initial page size               |
+| `defaultSorting`        | `SortingState`                           | `[]`                   | Initial sorting state           |
+| `showColumnToggle`      | `boolean`                                | `false`                | Show column visibility dropdown |
+| `enableRowSelection`    | `boolean`                                | `false`                | Enable row selection            |
+| `getRowId`              | `(row: TData) => string`                 | -                      | Custom row ID function          |
+| `onRowSelectionChange`  | `(selection: RowSelectionState) => void` | -                      | Row selection callback          |
+| `onRowClick`            | `(row: TData) => void`                   | -                      | Row click callback              |
+| `pagination`            | `PaginationState`                        | -                      | Controlled pagination state     |
+| `onPaginationChange`    | `(state: PaginationState) => void`       | -                      | Pagination change callback      |
+| `sorting`               | `SortingState`                           | -                      | Controlled sorting state        |
+| `onSortingChange`       | `(state: SortingState) => void`          | -                      | Sorting change callback         |
+| `columnFilters`         | `ColumnFiltersState`                     | -                      | Controlled filter state         |
+| `onColumnFiltersChange` | `(state: ColumnFiltersState) => void`    | -                      | Filter change callback          |
+| `toolbarChildren`       | `ReactNode`                              | -                      | Custom toolbar content          |
+
+### FacetedFilterConfig
+
+| Prop      | Type                    | Description              |
+| --------- | ----------------------- | ------------------------ |
+| `column`  | `string`                | Column ID to filter      |
+| `title`   | `string`                | Filter button label      |
+| `options` | `FacetedFilterOption[]` | Available filter options |
+
+### FacetedFilterOption
+
+| Prop    | Type                                    | Description   |
+| ------- | --------------------------------------- | ------------- |
+| `label` | `string`                                | Display label |
+| `value` | `string`                                | Filter value  |
+| `icon`  | `ComponentType<{ className?: string }>` | Optional icon |

@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **DataTable**: Complete rewrite with all shadcn features
+  - `DataTableColumnHeader` - Sortable column header with dropdown (Asc/Desc/Hide)
+  - `DataTableViewOptions` - Toggle column visibility
+  - `DataTableFacetedFilter` - Multi-select faceted filters with count
+  - `DataTableToolbar` - Toolbar with filter input, faceted filters, reset button
+  - `DataTablePagination` - Pagination with page numbers or simple navigation
+  - Loading skeleton state (`isLoading`)
+  - Custom empty state (`emptyState`)
+  - Row click callback (`onRowClick`)
+  - Controlled state for URL sync (`pagination`, `sorting`, `columnFilters` + callbacks)
+  - New props: `facetedFilters`, `showPageNumbers`, `enableRowSelection`, `getRowId`, `toolbarChildren`
+
 ## [0.2.0] - 2025-01-24
 
 ### Added

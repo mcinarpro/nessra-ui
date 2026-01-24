@@ -173,13 +173,6 @@ export const Index: Record<string, RegistryEntry> = {
     component: React.lazy(() => import("./new-york/examples/calendar-demo")),
     files: ["registry/new-york/examples/calendar-demo.tsx"],
   },
-  "calendar-with-range": {
-    name: "calendar-with-range",
-    component: React.lazy(
-      () => import("./new-york/examples/calendar-with-range")
-    ),
-    files: ["registry/new-york/examples/calendar-with-range.tsx"],
-  },
   "calendar-multiple-months": {
     name: "calendar-multiple-months",
     component: React.lazy(
@@ -193,6 +186,13 @@ export const Index: Record<string, RegistryEntry> = {
       () => import("./new-york/examples/calendar-with-dropdown")
     ),
     files: ["registry/new-york/examples/calendar-with-dropdown.tsx"],
+  },
+  "calendar-with-range": {
+    name: "calendar-with-range",
+    component: React.lazy(
+      () => import("./new-york/examples/calendar-with-range")
+    ),
+    files: ["registry/new-york/examples/calendar-with-range.tsx"],
   },
 
   // Card examples
@@ -254,7 +254,28 @@ export const Index: Record<string, RegistryEntry> = {
     files: ["registry/new-york/examples/command-dialog.tsx"],
   },
 
-  // Date Picker examples
+  // Data Table examples
+  "data-table-advanced": {
+    name: "data-table-advanced",
+    component: React.lazy(
+      () => import("./new-york/examples/data-table-advanced")
+    ),
+    files: ["registry/new-york/examples/data-table-advanced.tsx"],
+  },
+  "data-table-demo": {
+    name: "data-table-demo",
+    component: React.lazy(() => import("./new-york/examples/data-table-demo")),
+    files: ["registry/new-york/examples/data-table-demo.tsx"],
+  },
+  "data-table-loading": {
+    name: "data-table-loading",
+    component: React.lazy(
+      () => import("./new-york/examples/data-table-loading")
+    ),
+    files: ["registry/new-york/examples/data-table-loading.tsx"],
+  },
+
+  // Date examples
   "date-picker-demo": {
     name: "date-picker-demo",
     component: React.lazy(() => import("./new-york/examples/date-picker-demo")),
@@ -265,19 +286,19 @@ export const Index: Record<string, RegistryEntry> = {
     component: React.lazy(() => import("./new-york/examples/date-picker-dob")),
     files: ["registry/new-york/examples/date-picker-dob.tsx"],
   },
-  "date-picker-with-range": {
-    name: "date-picker-with-range",
-    component: React.lazy(
-      () => import("./new-york/examples/date-picker-with-range")
-    ),
-    files: ["registry/new-york/examples/date-picker-with-range.tsx"],
-  },
   "date-picker-with-presets": {
     name: "date-picker-with-presets",
     component: React.lazy(
       () => import("./new-york/examples/date-picker-with-presets")
     ),
     files: ["registry/new-york/examples/date-picker-with-presets.tsx"],
+  },
+  "date-picker-with-range": {
+    name: "date-picker-with-range",
+    component: React.lazy(
+      () => import("./new-york/examples/date-picker-with-range")
+    ),
+    files: ["registry/new-york/examples/date-picker-with-range.tsx"],
   },
 
   // Dialog examples

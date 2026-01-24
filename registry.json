@@ -532,6 +532,32 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "data-table",
+      "type": "registry:ui",
+      "title": "Data Table",
+      "description": "A powerful data table with sorting, filtering, pagination, row selection and faceted filters.",
+      "dependencies": ["@tanstack/react-table"],
+      "registryDependencies": [
+        "utils",
+        "button",
+        "input",
+        "table",
+        "dropdown-menu",
+        "select",
+        "skeleton",
+        "badge",
+        "popover",
+        "command",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/data-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
