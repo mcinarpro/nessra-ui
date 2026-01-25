@@ -1,0 +1,9 @@
+{
+  "title": "Blocks",
+  "pages": [
+    "signin-form",
+    "signup-form",
+    "forgot-password-form",
+    "reset-password-form"
+  ]
+}

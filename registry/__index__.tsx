@@ -799,4 +799,42 @@ export const Index: Record<string, RegistryEntry> = {
     component: React.lazy(() => import("./new-york/examples/typography-demo")),
     files: ["registry/new-york/examples/typography-demo.tsx"],
   },
+
+  // Blocks
+  "signin-form": {
+    name: "signin-form",
+    component: React.lazy(() =>
+      import("./new-york/blocks/signin-form").then((m) => ({
+        default: m.SigninForm,
+      }))
+    ),
+    files: ["registry/new-york/blocks/signin-form.tsx"],
+  },
+  "signup-form": {
+    name: "signup-form",
+    component: React.lazy(() =>
+      import("./new-york/blocks/signup-form").then((m) => ({
+        default: m.SignupForm,
+      }))
+    ),
+    files: ["registry/new-york/blocks/signup-form.tsx"],
+  },
+  "forgot-password-form": {
+    name: "forgot-password-form",
+    component: React.lazy(() =>
+      import("./new-york/blocks/forgot-password-form").then((m) => ({
+        default: m.ForgotPasswordForm,
+      }))
+    ),
+    files: ["registry/new-york/blocks/forgot-password-form.tsx"],
+  },
+  "reset-password-form": {
+    name: "reset-password-form",
+    component: React.lazy(() =>
+      import("./new-york/blocks/reset-password-form").then((m) => ({
+        default: m.ResetPasswordForm,
+      }))
+    ),
+    files: ["registry/new-york/blocks/reset-password-form.tsx"],
+  },
 }

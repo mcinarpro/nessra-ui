@@ -705,6 +705,84 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "signin-form",
+      "type": "registry:block",
+      "title": "Sign In Form",
+      "description": "A complete sign in page with email and password validation.",
+      "registryDependencies": [
+        "button",
+        "card",
+        "input-group",
+        "form",
+        "spinner"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/signin-form.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "signup-form",
+      "type": "registry:block",
+      "title": "Signup Form",
+      "description": "A complete signup page with name, email, password and confirmation.",
+      "registryDependencies": [
+        "button",
+        "card",
+        "input-group",
+        "form",
+        "spinner"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/signup-form.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "forgot-password-form",
+      "type": "registry:block",
+      "title": "Forgot Password Form",
+      "description": "A forgot password page with email input and success state.",
+      "registryDependencies": [
+        "button",
+        "card",
+        "input-group",
+        "form",
+        "spinner",
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/forgot-password-form.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "reset-password-form",
+      "type": "registry:block",
+      "title": "Reset Password Form",
+      "description": "A reset password page with new password and confirmation.",
+      "registryDependencies": [
+        "button",
+        "card",
+        "input-group",
+        "form",
+        "spinner",
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/reset-password-form.tsx",
+          "type": "registry:block"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,46 @@
+---
+title: Signup Form
+description: A complete signup page with name, email, password and confirmation.
+---
+
+<ComponentPreview name="signup-form" previewClassName="h-[900px] p-0!" />
+
+## Installation
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/signup-form.json
+```
+
+## Usage
+
+This block is a **complete signup page** ready to use. Just import and render:
+
+```tsx
+import { SignupForm } from "@/components/blocks/signup-form"
+
+export default function SignupPage() {
+  return <SignupForm />
+}
+```
+
+## Features
+
+- Full page layout with centered card
+- Logo with link to homepage
+- Name field with User icon
+- Email field with Mail icon
+- Password field with Lock icon and show/hide toggle
+- Confirm password field with Lock icon and show/hide toggle
+- Password match validation with Zod refine
+- TanStack Form for form state management
+- Submit button with spinner
+- Sign in link
+- Footer with copyright
+
+## Customization
+
+- Replace the logo with your own
+- Modify the validation schema in `signupSchema`
+- Add fields (like phone number, terms checkbox)
+- Integrate with your authentication provider in `onSubmit`
+- Change the links (`/`, `/sign-in`) to match your routing

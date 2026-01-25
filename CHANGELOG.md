@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Blocks**: New registry type for complete, ready-to-use compositions
+  - `signin-form`: Complete sign in page with email/password validation using TanStack Form and Zod
+  - `signup-form`: Complete sign up page with name, email, password confirmation using TanStack Form and Zod
+  - `forgot-password-form`: Forgot password page with email input and success state
+  - `reset-password-form`: Reset password page with new password, confirmation and success state
+  - Blocks page on homepage and dedicated `/docs/blocks` index page
 - **Spinner**: Loading indicator component with accessible attributes
 - **Empty**: Empty state component with media, title, description, and action slots
 - **Typography**: Styled text components (H1-H4, P, Blockquote, List, InlineCode, Lead, Large, Small, Muted)

@@ -35,7 +35,7 @@ export default function HomePage() {
         <span>·</span>
         <span>Production ready</span>
       </div>
-      <div className="mt-8 flex gap-3">
+      <div className="mt-8 flex flex-wrap justify-center gap-3">
         <Link
           href="/docs/get-started"
           className="bg-primary text-primary-foreground hover:bg-primary/80 inline-flex h-10 items-center justify-center rounded-4xl px-6 text-sm font-medium transition-colors"
@@ -47,6 +47,12 @@ export default function HomePage() {
           className="border-border bg-background text-foreground hover:bg-muted inline-flex h-10 items-center justify-center gap-2 rounded-4xl border px-6 text-sm font-medium transition-colors"
         >
           Components
+        </Link>
+        <Link
+          href="/docs/blocks"
+          className="border-border bg-background text-foreground hover:bg-muted inline-flex h-10 items-center justify-center gap-2 rounded-4xl border px-6 text-sm font-medium transition-colors"
+        >
+          Blocks
         </Link>
       </div>
     </div>
