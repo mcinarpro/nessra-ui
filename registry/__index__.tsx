@@ -350,6 +350,28 @@ export const Index: Record<string, RegistryEntry> = {
     files: ["registry/new-york/examples/dropdown-menu-with-icons.tsx"],
   },
 
+  // Form examples
+  "form-array": {
+    name: "form-array",
+    component: React.lazy(() => import("./new-york/examples/form-array")),
+    files: ["registry/new-york/examples/form-array.tsx"],
+  },
+  "form-demo": {
+    name: "form-demo",
+    component: React.lazy(() => import("./new-york/examples/form-demo")),
+    files: ["registry/new-york/examples/form-demo.tsx"],
+  },
+  "form-fields": {
+    name: "form-fields",
+    component: React.lazy(() => import("./new-york/examples/form-fields")),
+    files: ["registry/new-york/examples/form-fields.tsx"],
+  },
+  "form-validation": {
+    name: "form-validation",
+    component: React.lazy(() => import("./new-york/examples/form-validation")),
+    files: ["registry/new-york/examples/form-validation.tsx"],
+  },
+
   // Hover Card examples
   "hover-card-demo": {
     name: "hover-card-demo",

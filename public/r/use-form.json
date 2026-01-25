@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-form",
+  "title": "useForm",
+  "description": "Re-exports useForm from TanStack Form.",
+  "dependencies": [
+    "@tanstack/react-form"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/hooks/use-form.ts",
+      "content": "\"use client\"\n\nexport { useForm } from \"@tanstack/react-form\"\n",
+      "type": "registry:hook"
+    }
+  ],
+  "type": "registry:hook"
+}

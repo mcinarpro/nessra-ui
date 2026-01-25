@@ -1,0 +1,199 @@
+---
+title: Form
+description: Form field components for building accessible forms with TanStack Form.
+---
+
+<ComponentPreview name="form-demo" previewClassName="h-[280px]" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/form.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the required dependencies.</Step>
+
+```bash
+npm install @tanstack/react-form zod
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="form" title="components/ui/form.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { useForm } from "@tanstack/react-form"
+
+import { Button } from "@/components/ui/button"
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+```
+
+```tsx
+const form = useForm({
+  defaultValues: { email: "" },
+  onSubmit: async ({ value }) => {
+    console.log(value)
+  },
+})
+
+return (
+  <Form
+    onSubmit={(e) => {
+      e.preventDefault()
+      form.handleSubmit()
+    }}
+  >
+    <form.Field name="email">
+      {(field) => (
+        <FormField
+          name={field.name}
+          errors={field.state.meta.errors}
+          isTouched={field.state.meta.isTouched}
+        >
+          <FormLabel>Email</FormLabel>
+          <FormControl>
+            <Input
+              value={field.state.value}
+              onBlur={field.handleBlur}
+              onChange={(e) => field.handleChange(e.target.value)}
+            />
+          </FormControl>
+          <FormMessage />
+        </FormField>
+      )}
+    </form.Field>
+    <Button type="submit">Submit</Button>
+  </Form>
+)
+```
+
+## Examples
+
+### With Zod Validation
+
+Use Zod schemas for form-level validation.
+
+<ComponentPreview name="form-validation" previewClassName="h-[480px]" />
+
+### All Field Types
+
+Examples with Input, Textarea, Select, RadioGroup, Checkbox, and Switch.
+
+<ComponentPreview name="form-fields" previewClassName="h-[800px]" />
+
+### Dynamic Array Fields
+
+Add and remove fields dynamically with array mode.
+
+<ComponentPreview name="form-array" previewClassName="h-[550px]" />
+
+## API Reference
+
+### Form
+
+A styled `<form>` wrapper with consistent spacing.
+
+| Prop        | Type       | Default | Description             |
+| ----------- | ---------- | ------- | ----------------------- |
+| `className` | `string`   | -       | Additional CSS classes  |
+| `onSubmit`  | `function` | -       | Form submission handler |
+
+### FormField
+
+Context provider for field state. Wrap each form field with this component.
+
+| Prop           | Type                           | Default      | Description                                           |
+| -------------- | ------------------------------ | ------------ | ----------------------------------------------------- |
+| `name`         | `string`                       | -            | Field name (required)                                 |
+| `errors`       | `unknown[]`                    | `[]`         | Validation errors (auto-normalized to strings)        |
+| `isTouched`    | `boolean`                      | `false`      | Whether field has been touched                        |
+| `isValidating` | `boolean`                      | `false`      | Whether field is validating                           |
+| `orientation`  | `"vertical"` \| `"horizontal"` | `"vertical"` | Layout direction (use horizontal for checkbox/switch) |
+
+**Error Normalization:** The `errors` prop accepts any error format and automatically extracts the message. This handles Zod validation errors, string errors, and objects with a `message` property.
+
+**Horizontal Layout:** Use `orientation="horizontal"` for inline layouts like checkboxes and switches:
+
+```tsx
+<FormField orientation="horizontal" {...props}>
+  <FormControl>
+    <Checkbox checked={checked} onCheckedChange={onChange} />
+  </FormControl>
+  <div className="space-y-1 leading-none">
+    <FormLabel>Accept terms</FormLabel>
+    <FormDescription>You agree to our terms of service.</FormDescription>
+  </div>
+</FormField>
+```
+
+### FormLabel
+
+Label component with automatic error styling.
+
+| Prop        | Type     | Default | Description            |
+| ----------- | -------- | ------- | ---------------------- |
+| `className` | `string` | -       | Additional CSS classes |
+
+### FormControl
+
+Slot component that passes `id`, `aria-invalid`, and `aria-describedby` to its child.
+
+| Prop       | Type           | Default | Description                  |
+| ---------- | -------------- | ------- | ---------------------------- |
+| `children` | `ReactElement` | -       | Single child element (input) |
+
+### FormDescription
+
+Help text displayed below the input.
+
+| Prop        | Type     | Default | Description            |
+| ----------- | -------- | ------- | ---------------------- |
+| `className` | `string` | -       | Additional CSS classes |
+
+### FormMessage
+
+Displays validation error messages when field is touched.
+
+| Prop        | Type     | Default | Description            |
+| ----------- | -------- | ------- | ---------------------- |
+| `className` | `string` | -       | Additional CSS classes |
+
+## Accessibility
+
+- Labels are automatically associated with inputs via `htmlFor`/`id`
+- Error states use `aria-invalid` attribute
+- Descriptions and errors use `aria-describedby`
+- Error messages have `role="alert"` for screen reader announcements

@@ -11,9 +11,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Dependabot config optimized: monthly schedule, grouped minor/patch updates, ignore patches
 - `CLAUDE.md` changelog rule clarified: any notable change, not just user-facing
+- **Form**: `FormField` now accepts `unknown[]` for errors and normalizes them automatically (handles Zod error objects, strings, and objects with `message` property)
+- **Form**: Added `orientation` prop to `FormField` (`"vertical"` | `"horizontal"`) for inline layouts like checkbox/switch
 
 ### Added
 
+- **Form**: TanStack Form integration with Zod validation support
+  - `Form`, `FormField`, `FormLabel`, `FormControl`, `FormDescription`, `FormMessage` UI components
+  - Context-based field state management with error handling
+  - Accessible form controls with auto `aria-invalid` and `aria-describedby`
+  - Examples: basic form, Zod validation, all field types, dynamic array fields
+  - Dependencies: `@tanstack/react-form`, `zod`
 - **DataTable**: Complete rewrite with all shadcn features
   - `DataTableColumnHeader` - Sortable column header with dropdown (Asc/Desc/Hide)
   - `DataTableViewOptions` - Toggle column visibility

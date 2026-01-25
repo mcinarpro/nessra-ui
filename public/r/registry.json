@@ -79,6 +79,20 @@
       ]
     },
     {
+      "name": "form",
+      "type": "registry:ui",
+      "title": "Form",
+      "description": "Form field components for building accessible forms with TanStack Form.",
+      "dependencies": ["@radix-ui/react-slot", "@tanstack/react-form", "zod"],
+      "registryDependencies": ["utils", "label"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "textarea",
       "type": "registry:ui",
       "title": "Textarea",

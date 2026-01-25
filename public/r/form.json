@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "form",
+  "title": "Form",
+  "description": "Form field components for building accessible forms with TanStack Form.",
+  "dependencies": [
+    "@radix-ui/react-slot",
+    "@tanstack/react-form",
+    "zod"
+  ],
+  "registryDependencies": [
+    "utils",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/form.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Slot } from \"@radix-ui/react-slot\"\n\nimport { cn } from \"@/lib/utils\"\nimport { Label } from \"@/components/ui/label\"\n\n// Context for field state\ninterface FormFieldContextValue {\n  id: string\n  name: string\n  errors: string[]\n  isTouched: boolean\n  isValidating: boolean\n}\n\nconst FormFieldContext = React.createContext<FormFieldContextValue | null>(null)\n\nfunction useFormField() {\n  const ctx = React.useContext(FormFieldContext)\n  if (!ctx) throw new Error(\"useFormField must be used within FormField\")\n  return ctx\n}\n\n// Normalize errors to strings (handles Zod error objects, strings, etc.)\nfunction normalizeErrors(errors: unknown[]): string[] {\n  return errors\n    .map((e) => {\n      if (typeof e === \"string\") return e\n      if (e && typeof e === \"object\" && \"message\" in e) return String(e.message)\n      return String(e)\n    })\n    .filter(Boolean)\n}\n\n// FormField - Context provider\nfunction FormField({\n  children,\n  name,\n  errors = [],\n  isTouched = false,\n  isValidating = false,\n  orientation = \"vertical\",\n  className,\n  ...props\n}: {\n  children: React.ReactNode\n  name: string\n  errors?: unknown[]\n  isTouched?: boolean\n  isValidating?: boolean\n  orientation?: \"vertical\" | \"horizontal\"\n} & React.ComponentProps<\"div\">) {\n  const id = React.useId()\n  const normalizedErrors = normalizeErrors(errors)\n\n  return (\n    <FormFieldContext.Provider\n      value={{ id, name, errors: normalizedErrors, isTouched, isValidating }}\n    >\n      <div\n        data-slot=\"form-field\"\n        data-orientation={orientation}\n        className={cn(\n          orientation === \"vertical\" ? \"space-y-2\" : \"flex items-start gap-3\",\n          className\n        )}\n        {...props}\n      >\n        {children}\n      </div>\n    </FormFieldContext.Provider>\n  )\n}\n\n// FormLabel - Label with error state\nfunction FormLabel({\n  className,\n  ...props\n}: React.ComponentProps<typeof Label>) {\n  const { id, errors, isTouched } = useFormField()\n  const hasError = isTouched && errors.length > 0\n  return (\n    <Label\n      data-slot=\"form-label\"\n      htmlFor={id}\n      data-invalid={hasError || undefined}\n      className={cn(\"data-[invalid]:text-destructive\", className)}\n      {...props}\n    />\n  )\n}\n\n// FormControl - Slot with auto aria-invalid\nfunction FormControl({ children }: { children: React.ReactElement }) {\n  const { id, errors, isTouched } = useFormField()\n  const hasError = isTouched && errors.length > 0\n  return (\n    <Slot\n      id={id}\n      aria-invalid={hasError || undefined}\n      aria-describedby={hasError ? `${id}-message` : `${id}-description`}\n    >\n      {children}\n    </Slot>\n  )\n}\n\n// FormDescription - Help text\nfunction FormDescription({ className, ...props }: React.ComponentProps<\"p\">) {\n  const { id } = useFormField()\n  return (\n    <p\n      data-slot=\"form-description\"\n      id={`${id}-description`}\n      className={cn(\"text-muted-foreground text-sm\", className)}\n      {...props}\n    />\n  )\n}\n\n// FormMessage - Error messages\nfunction FormMessage({ className, ...props }: React.ComponentProps<\"p\">) {\n  const { id, errors, isTouched } = useFormField()\n  if (!isTouched || errors.length === 0) return null\n  return (\n    <p\n      data-slot=\"form-message\"\n      id={`${id}-message`}\n      role=\"alert\"\n      className={cn(\"text-destructive text-sm font-medium\", className)}\n      {...props}\n    >\n      {errors.join(\", \")}\n    </p>\n  )\n}\n\n// Form - Form wrapper\nfunction Form({ className, ...props }: React.ComponentProps<\"form\">) {\n  return (\n    <form data-slot=\"form\" className={cn(\"space-y-6\", className)} {...props} />\n  )\n}\n\nexport {\n  Form,\n  FormField,\n  FormLabel,\n  FormControl,\n  FormDescription,\n  FormMessage,\n  useFormField,\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
