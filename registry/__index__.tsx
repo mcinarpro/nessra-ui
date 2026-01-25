@@ -265,6 +265,30 @@ export const Index: Record<string, RegistryEntry> = {
     files: ["registry/new-york/examples/collapsible-demo.tsx"],
   },
 
+  // Combobox examples
+  "combobox-demo": {
+    name: "combobox-demo",
+    component: React.lazy(() => import("./new-york/examples/combobox-demo")),
+    files: ["registry/new-york/examples/combobox-demo.tsx"],
+  },
+  "combobox-clear": {
+    name: "combobox-clear",
+    component: React.lazy(() => import("./new-york/examples/combobox-clear")),
+    files: ["registry/new-york/examples/combobox-clear.tsx"],
+  },
+  "combobox-multiple": {
+    name: "combobox-multiple",
+    component: React.lazy(
+      () => import("./new-york/examples/combobox-multiple")
+    ),
+    files: ["registry/new-york/examples/combobox-multiple.tsx"],
+  },
+  "combobox-objects": {
+    name: "combobox-objects",
+    component: React.lazy(() => import("./new-york/examples/combobox-objects")),
+    files: ["registry/new-york/examples/combobox-objects.tsx"],
+  },
+
   // Command examples
   "command-demo": {
     name: "command-demo",

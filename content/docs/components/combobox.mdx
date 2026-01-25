@@ -1,0 +1,177 @@
+---
+title: Combobox
+description: An autocomplete input with a dropdown list of suggestions.
+
+links:
+  doc: https://base-ui.com/react/components/combobox
+  api: https://base-ui.com/react/components/combobox#api-reference
+---
+
+<ComponentPreview name="combobox-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/combobox.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the required dependencies.</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="combobox" title="components/ui/combobox.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Combobox,
+  ComboboxContent,
+  ComboboxEmpty,
+  ComboboxInput,
+  ComboboxItem,
+  ComboboxList,
+} from "@/components/ui/combobox"
+```
+
+```tsx
+const items = ["Next.js", "SvelteKit", "Nuxt.js", "Remix"] as const
+
+<Combobox items={items}>
+  <ComboboxInput placeholder="Select..." />
+  <ComboboxContent>
+    <ComboboxEmpty>No results.</ComboboxEmpty>
+    <ComboboxList>
+      {(item) => (
+        <ComboboxItem key={item} value={item}>
+          {item}
+        </ComboboxItem>
+      )}
+    </ComboboxList>
+  </ComboboxContent>
+</Combobox>
+```
+
+## Examples
+
+### With Clear Button
+
+Use `showClear` to display a clear button when a value is selected.
+
+<ComponentPreview name="combobox-clear" />
+
+### With Objects
+
+Pass an array of objects as `items`. Use the object's properties to render custom content.
+
+<ComponentPreview name="combobox-objects" />
+
+### Multiple Selection
+
+Use `multiple` for multi-select with chips display.
+
+<ComponentPreview name="combobox-multiple" />
+
+## API Reference
+
+### Components
+
+| Component            | Description                                |
+| -------------------- | ------------------------------------------ |
+| `Combobox`           | Root component wrapping all combobox parts |
+| `ComboboxInput`      | Text input with optional trigger and clear |
+| `ComboboxTrigger`    | Button to toggle the dropdown              |
+| `ComboboxValue`      | Displays the selected value                |
+| `ComboboxContent`    | Dropdown container with positioning        |
+| `ComboboxList`       | Renders filtered items via render prop     |
+| `ComboboxItem`       | Individual selectable option               |
+| `ComboboxGroup`      | Groups related items together              |
+| `ComboboxLabel`      | Label for a group of items                 |
+| `ComboboxEmpty`      | Fallback content when no items match       |
+| `ComboboxSeparator`  | Visual separator between items             |
+| `ComboboxChips`      | Container for multi-select chips           |
+| `ComboboxChip`       | Individual chip for selected values        |
+| `ComboboxChipsInput` | Text input used within chips container     |
+
+### Combobox
+
+| Prop            | Type                      | Default | Description                  |
+| --------------- | ------------------------- | ------- | ---------------------------- |
+| `items`         | `T[]`                     | -       | Array of items to filter     |
+| `value`         | `T \| T[]`                | -       | Controlled selected value(s) |
+| `defaultValue`  | `T \| T[]`                | -       | Default selected value(s)    |
+| `onValueChange` | `(value: T) => void`      | -       | Callback when value changes  |
+| `multiple`      | `boolean`                 | `false` | Enable multiple selection    |
+| `disabled`      | `boolean`                 | `false` | Disable the combobox         |
+| `open`          | `boolean`                 | -       | Controlled open state        |
+| `onOpenChange`  | `(open: boolean) => void` | -       | Callback when open changes   |
+
+### ComboboxInput
+
+| Prop          | Type      | Default | Description                |
+| ------------- | --------- | ------- | -------------------------- |
+| `placeholder` | `string`  | -       | Input placeholder text     |
+| `showTrigger` | `boolean` | `true`  | Show dropdown trigger icon |
+| `showClear`   | `boolean` | `false` | Show clear button          |
+| `disabled`    | `boolean` | `false` | Disable the input          |
+
+### ComboboxContent
+
+| Prop          | Type                                     | Default    | Description           |
+| ------------- | ---------------------------------------- | ---------- | --------------------- |
+| `side`        | `"top" \| "bottom" \| "left" \| "right"` | `"bottom"` | Preferred side        |
+| `sideOffset`  | `number`                                 | `6`        | Distance from anchor  |
+| `align`       | `"start" \| "center" \| "end"`           | `"start"`  | Alignment to anchor   |
+| `alignOffset` | `number`                                 | `0`        | Offset from alignment |
+| `anchor`      | `React.RefObject`                        | -          | Custom anchor element |
+
+### ComboboxItem
+
+| Prop       | Type      | Default | Description                      |
+| ---------- | --------- | ------- | -------------------------------- |
+| `value`    | `T`       | -       | The value of the item (required) |
+| `disabled` | `boolean` | `false` | Disable the item                 |
+
+### ComboboxChip
+
+| Prop         | Type      | Default | Description        |
+| ------------ | --------- | ------- | ------------------ |
+| `showRemove` | `boolean` | `true`  | Show remove button |
+
+### useComboboxAnchor
+
+Hook that returns a ref for custom anchor positioning with `ComboboxChips`.
+
+```tsx
+const anchor = useComboboxAnchor()
+
+<ComboboxChips ref={anchor}>...</ComboboxChips>
+<ComboboxContent anchor={anchor}>...</ComboboxContent>
+```
