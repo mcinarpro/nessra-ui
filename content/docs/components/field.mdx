@@ -1,0 +1,96 @@
+---
+title: Field
+description: Combine labels, controls, and help text to compose accessible form fields.
+---
+
+<ComponentPreview name="field-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/field.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="field" title="components/ui/field.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Field,
+  FieldDescription,
+  FieldError,
+  FieldLabel,
+} from "@/components/ui/field"
+```
+
+```tsx
+<Field>
+  <FieldLabel htmlFor="username">Username</FieldLabel>
+  <Input id="username" />
+  <FieldDescription>Your public display name.</FieldDescription>
+</Field>
+```
+
+## Examples
+
+### Horizontal Layout
+
+Use `orientation="horizontal"` for inline layouts like checkboxes.
+
+<ComponentPreview name="field-horizontal" />
+
+### With Error
+
+Add `data-invalid="true"` to Field and `aria-invalid="true"` to the input for error states.
+
+<ComponentPreview name="field-with-error" />
+
+## API Reference
+
+### Field
+
+| Prop          | Type                                             | Default      | Description      |
+| ------------- | ------------------------------------------------ | ------------ | ---------------- |
+| `orientation` | `"vertical"` \| `"horizontal"` \| `"responsive"` | `"vertical"` | Layout direction |
+
+### FieldLabel
+
+A styled label that automatically associates with form controls.
+
+### FieldDescription
+
+Helper text displayed below the input.
+
+### FieldError
+
+Error message container with accessible alert role.
+
+### FieldContent
+
+Wrapper for grouping label and description in horizontal layouts.

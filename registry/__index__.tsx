@@ -363,6 +363,24 @@ export const Index: Record<string, RegistryEntry> = {
     component: React.lazy(() => import("./new-york/examples/empty-icon")),
     files: ["registry/new-york/examples/empty-icon.tsx"],
   },
+
+  // Field examples
+  "field-demo": {
+    name: "field-demo",
+    component: React.lazy(() => import("./new-york/examples/field-demo")),
+    files: ["registry/new-york/examples/field-demo.tsx"],
+  },
+  "field-horizontal": {
+    name: "field-horizontal",
+    component: React.lazy(() => import("./new-york/examples/field-horizontal")),
+    files: ["registry/new-york/examples/field-horizontal.tsx"],
+  },
+  "field-with-error": {
+    name: "field-with-error",
+    component: React.lazy(() => import("./new-york/examples/field-with-error")),
+    files: ["registry/new-york/examples/field-with-error.tsx"],
+  },
+
   "dropdown-menu-demo": {
     name: "dropdown-menu-demo",
     component: React.lazy(
@@ -446,6 +464,25 @@ export const Index: Record<string, RegistryEntry> = {
     name: "input-with-label",
     component: React.lazy(() => import("./new-york/examples/input-with-label")),
     files: ["registry/new-york/examples/input-with-label.tsx"],
+  },
+
+  // Input Group examples
+  "input-group-demo": {
+    name: "input-group-demo",
+    component: React.lazy(() => import("./new-york/examples/input-group-demo")),
+    files: ["registry/new-york/examples/input-group-demo.tsx"],
+  },
+  "input-group-text": {
+    name: "input-group-text",
+    component: React.lazy(() => import("./new-york/examples/input-group-text")),
+    files: ["registry/new-york/examples/input-group-text.tsx"],
+  },
+  "input-group-button": {
+    name: "input-group-button",
+    component: React.lazy(
+      () => import("./new-york/examples/input-group-button")
+    ),
+    files: ["registry/new-york/examples/input-group-button.tsx"],
   },
 
   // Label examples

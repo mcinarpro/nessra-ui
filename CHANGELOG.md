@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Typography**: Styled text components (H1-H4, P, Blockquote, List, InlineCode, Lead, Large, Small, Muted)
 - **Toggle Group**: Set of two-state buttons with single/multiple selection modes
 - **Button Group**: Groups related buttons with consistent styling (horizontal/vertical)
+- **Field**: Accessible form field composition (label, description, error)
+- **Input Group**: Input with addons, buttons, and helper content
 
 ### Fixed
 

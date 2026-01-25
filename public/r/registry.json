@@ -640,6 +640,34 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "title": "Field",
+      "description": "Combine labels, controls, and help text to compose accessible form fields.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils", "label", "separator"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:ui",
+      "title": "Input Group",
+      "description": "Add addons, buttons, and helper content to inputs.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils", "button", "input", "textarea"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/input-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

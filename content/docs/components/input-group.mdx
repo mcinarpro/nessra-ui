@@ -1,0 +1,96 @@
+---
+title: Input Group
+description: Add addons, buttons, and helper content to inputs.
+---
+
+<ComponentPreview name="input-group-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/input-group.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="input-group" title="components/ui/input-group.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupButton,
+  InputGroupInput,
+  InputGroupText,
+} from "@/components/ui/input-group"
+```
+
+```tsx
+<InputGroup>
+  <InputGroupAddon>
+    <MailIcon />
+  </InputGroupAddon>
+  <InputGroupInput placeholder="Email" />
+</InputGroup>
+```
+
+## Examples
+
+### With Text
+
+<ComponentPreview name="input-group-text" />
+
+### With Button
+
+Use `align="inline-end"` to position the addon at the end.
+
+<ComponentPreview name="input-group-button" />
+
+## API Reference
+
+### InputGroup
+
+Main wrapper component with automatic focus and error state handling.
+
+### InputGroupAddon
+
+| Prop    | Type                                                                   | Default          | Description    |
+| ------- | ---------------------------------------------------------------------- | ---------------- | -------------- |
+| `align` | `"inline-start"` \| `"inline-end"` \| `"block-start"` \| `"block-end"` | `"inline-start"` | Addon position |
+
+### InputGroupInput
+
+Styled input component for use within InputGroup.
+
+### InputGroupButton
+
+Button component styled for InputGroup context.
+
+### InputGroupText
+
+Text element for displaying static content.
