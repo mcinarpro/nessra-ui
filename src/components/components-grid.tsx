@@ -19,6 +19,7 @@ const components = [
   { name: "Dialog", href: "/docs/components/dialog" },
   { name: "Drawer", href: "/docs/components/drawer" },
   { name: "Dropdown Menu", href: "/docs/components/dropdown-menu" },
+  { name: "Form", href: "/docs/components/form" },
   { name: "Hover Card", href: "/docs/components/hover-card" },
   { name: "Input", href: "/docs/components/input" },
   { name: "Label", href: "/docs/components/label" },

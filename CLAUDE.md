@@ -36,6 +36,19 @@ content/docs/            # MDX documentation
 - Commit messages must follow conventional commits (enforced by commitlint)
 - **Do not push automatically** — only push when explicitly requested by the user
 
+## Adding a New Component
+
+When adding a new component, update these files:
+
+1. `registry/new-york/ui/<component>.tsx` — Component source
+2. `registry.json` — Registry entry with dependencies
+3. `content/docs/components/<component>.mdx` — Documentation
+4. `content/docs/components/meta.json` — Add to `pages` array (alphabetical)
+5. `src/components/components-grid.tsx` — Add to `components` array (alphabetical)
+6. `CHANGELOG.md` — Document in `[Unreleased]` section
+
+Then run `pnpm registry:build` to generate `public/r/*.json` files.
+
 ## Changelog Workflow
 
 | When        | Action                                                       |

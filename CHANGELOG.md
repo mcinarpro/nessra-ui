@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Form component missing from components grid page
+
+### Changed
+
+- `CLAUDE.md` updated with checklist for adding new components
+
 ## [0.3.0] - 2025-01-25
 
 ### Added
