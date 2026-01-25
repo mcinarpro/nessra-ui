@@ -7,12 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Changed
-
-- Dependabot config optimized: monthly schedule, grouped minor/patch updates, ignore patches
-- `CLAUDE.md` changelog rule clarified: any notable change, not just user-facing
-- **Form**: `FormField` now accepts `unknown[]` for errors and normalizes them automatically (handles Zod error objects, strings, and objects with `message` property)
-- **Form**: Added `orientation` prop to `FormField` (`"vertical"` | `"horizontal"`) for inline layouts like checkbox/switch
+## [0.3.0] - 2025-01-25
 
 ### Added
 
@@ -20,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `Form`, `FormField`, `FormLabel`, `FormControl`, `FormDescription`, `FormMessage` UI components
   - Context-based field state management with error handling
   - Accessible form controls with auto `aria-invalid` and `aria-describedby`
+  - `FormField` accepts `unknown[]` for errors and normalizes automatically
+  - `orientation` prop for horizontal layouts (checkbox/switch)
   - Examples: basic form, Zod validation, all field types, dynamic array fields
   - Dependencies: `@tanstack/react-form`, `zod`
 - **DataTable**: Complete rewrite with all shadcn features
@@ -33,6 +30,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Row click callback (`onRowClick`)
   - Controlled state for URL sync (`pagination`, `sorting`, `columnFilters` + callbacks)
   - New props: `facetedFilters`, `showPageNumbers`, `enableRowSelection`, `getRowId`, `toolbarChildren`
+
+### Changed
+
+- Dependabot config optimized: monthly schedule, grouped minor/patch updates, ignore patches
+- `CLAUDE.md` changelog rule clarified: any notable change, not just user-facing
 
 ## [0.2.0] - 2025-01-24
 
