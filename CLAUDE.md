@@ -31,7 +31,7 @@ content/docs/            # MDX documentation
 ## Important Notes
 
 - Files in `public/r/` are generated — do not format or edit manually
-- **Update CHANGELOG.md before committing** if the change is user-facing
+- **Update CHANGELOG.md before committing** for any notable change (components, features, config, tooling — not just user-facing)
 - Always run `pnpm check` before committing
 - Commit messages must follow conventional commits (enforced by commitlint)
 - **Do not push automatically** — only push when explicitly requested by the user

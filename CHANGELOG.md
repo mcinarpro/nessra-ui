@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Dependabot config optimized: monthly schedule, grouped minor/patch updates, ignore patches
+- `CLAUDE.md` changelog rule clarified: any notable change, not just user-facing
+
 ### Added
 
 - **DataTable**: Complete rewrite with all shadcn features

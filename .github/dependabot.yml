@@ -3,15 +3,21 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     commit-message:
       prefix: "chore(deps)"
+    # Ignorer les mises à jour patch/minor, garder uniquement les majeures
+    # pour les dépendances stables
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
     groups:
-      dev-dependencies:
-        dependency-type: "development"
-      radix:
+      # Grouper TOUTES les dépendances en une seule PR
+      all-dependencies:
         patterns:
-          - "@radix-ui/*"
-      fumadocs:
-        patterns:
-          - "fumadocs-*"
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+      # Les mises à jour majeures restent séparées (breaking changes)
+    open-pull-requests-limit: 5
