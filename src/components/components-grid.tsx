@@ -19,6 +19,7 @@ const components = [
   { name: "Dialog", href: "/docs/components/dialog" },
   { name: "Drawer", href: "/docs/components/drawer" },
   { name: "Dropdown Menu", href: "/docs/components/dropdown-menu" },
+  { name: "Empty", href: "/docs/components/empty" },
   { name: "Form", href: "/docs/components/form" },
   { name: "Hover Card", href: "/docs/components/hover-card" },
   { name: "Input", href: "/docs/components/input" },
@@ -34,12 +35,14 @@ const components = [
   { name: "Skeleton", href: "/docs/components/skeleton" },
   { name: "Slider", href: "/docs/components/slider" },
   { name: "Sonner", href: "/docs/components/sonner" },
+  { name: "Spinner", href: "/docs/components/spinner" },
   { name: "Switch", href: "/docs/components/switch" },
   { name: "Table", href: "/docs/components/table" },
   { name: "Tabs", href: "/docs/components/tabs" },
   { name: "Textarea", href: "/docs/components/textarea" },
   { name: "Toggle", href: "/docs/components/toggle" },
   { name: "Tooltip", href: "/docs/components/tooltip" },
+  { name: "Typography", href: "/docs/components/typography" },
 ]
 
 export function ComponentsGrid() {

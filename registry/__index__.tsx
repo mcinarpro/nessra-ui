@@ -328,6 +328,18 @@ export const Index: Record<string, RegistryEntry> = {
     ),
     files: ["registry/new-york/examples/dropdown-menu-checkboxes.tsx"],
   },
+
+  // Empty examples
+  "empty-demo": {
+    name: "empty-demo",
+    component: React.lazy(() => import("./new-york/examples/empty-demo")),
+    files: ["registry/new-york/examples/empty-demo.tsx"],
+  },
+  "empty-icon": {
+    name: "empty-icon",
+    component: React.lazy(() => import("./new-york/examples/empty-icon")),
+    files: ["registry/new-york/examples/empty-icon.tsx"],
+  },
   "dropdown-menu-demo": {
     name: "dropdown-menu-demo",
     component: React.lazy(
@@ -545,6 +557,23 @@ export const Index: Record<string, RegistryEntry> = {
     files: ["registry/new-york/examples/sonner-types.tsx"],
   },
 
+  // Spinner examples
+  "spinner-demo": {
+    name: "spinner-demo",
+    component: React.lazy(() => import("./new-york/examples/spinner-demo")),
+    files: ["registry/new-york/examples/spinner-demo.tsx"],
+  },
+  "spinner-sizes": {
+    name: "spinner-sizes",
+    component: React.lazy(() => import("./new-york/examples/spinner-sizes")),
+    files: ["registry/new-york/examples/spinner-sizes.tsx"],
+  },
+  "spinner-button": {
+    name: "spinner-button",
+    component: React.lazy(() => import("./new-york/examples/spinner-button")),
+    files: ["registry/new-york/examples/spinner-button.tsx"],
+  },
+
   // Switch examples
   "switch-demo": {
     name: "switch-demo",
@@ -648,5 +677,12 @@ export const Index: Record<string, RegistryEntry> = {
     name: "tooltip-demo",
     component: React.lazy(() => import("./new-york/examples/tooltip-demo")),
     files: ["registry/new-york/examples/tooltip-demo.tsx"],
+  },
+
+  // Typography examples
+  "typography-demo": {
+    name: "typography-demo",
+    component: React.lazy(() => import("./new-york/examples/typography-demo")),
+    files: ["registry/new-york/examples/typography-demo.tsx"],
   },
 }

@@ -1,0 +1,105 @@
+---
+title: Empty
+description: Display an empty state when no data is available.
+---
+
+<ComponentPreview name="empty-demo" previewClassName="h-[400px]" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/empty.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="empty" title="components/ui/empty.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Empty,
+  EmptyContent,
+  EmptyDescription,
+  EmptyHeader,
+  EmptyMedia,
+  EmptyTitle,
+} from "@/components/ui/empty"
+```
+
+```tsx
+<Empty>
+  <EmptyHeader>
+    <EmptyMedia>
+      <Icon />
+    </EmptyMedia>
+    <EmptyTitle>No data</EmptyTitle>
+    <EmptyDescription>No data found.</EmptyDescription>
+  </EmptyHeader>
+  <EmptyContent>
+    <Button>Add data</Button>
+  </EmptyContent>
+</Empty>
+```
+
+## Examples
+
+### With Icon Variant
+
+Use `variant="icon"` on `EmptyMedia` to display the icon in a circular background.
+
+<ComponentPreview name="empty-icon" previewClassName="h-[400px]" />
+
+## API Reference
+
+### Empty
+
+Main wrapper component.
+
+| Prop        | Type     | Default | Description            |
+| ----------- | -------- | ------- | ---------------------- |
+| `className` | `string` | -       | Additional CSS classes |
+
+### EmptyMedia
+
+Container for icons, images, or avatars.
+
+| Prop      | Type                    | Default     | Description   |
+| --------- | ----------------------- | ----------- | ------------- |
+| `variant` | `"default"` \| `"icon"` | `"default"` | Display style |
+
+### EmptyTitle
+
+Primary heading text.
+
+### EmptyDescription
+
+Supporting description text. Links are automatically styled.
+
+### EmptyContent
+
+Action area for buttons or other interactive elements.

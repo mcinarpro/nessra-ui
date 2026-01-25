@@ -572,6 +572,46 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "title": "Spinner",
+      "description": "A loading indicator for asynchronous operations.",
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "empty",
+      "type": "registry:ui",
+      "title": "Empty",
+      "description": "Display an empty state when no data is available.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/empty.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typography",
+      "type": "registry:ui",
+      "title": "Typography",
+      "description": "Styled text components for headings, paragraphs, lists, and more.",
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/typography.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

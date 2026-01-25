@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **Spinner**: Loading indicator component with accessible attributes
+- **Empty**: Empty state component with media, title, description, and action slots
+- **Typography**: Styled text components (H1-H4, P, Blockquote, List, InlineCode, Lead, Large, Small, Muted)
+
 ### Fixed
 
 - Form component missing from components grid page

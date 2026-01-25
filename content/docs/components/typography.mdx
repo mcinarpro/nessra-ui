@@ -1,0 +1,121 @@
+---
+title: Typography
+description: Styled text components for headings, paragraphs, lists, and more.
+---
+
+<ComponentPreview name="typography-demo" previewClassName="h-[1100px]" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/typography.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="typography" title="components/ui/typography.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  TypographyBlockquote,
+  TypographyH1,
+  TypographyH2,
+  TypographyH3,
+  TypographyH4,
+  TypographyInlineCode,
+  TypographyLarge,
+  TypographyLead,
+  TypographyList,
+  TypographyMuted,
+  TypographyP,
+  TypographySmall,
+} from "@/components/ui/typography"
+```
+
+## Components
+
+### Headings
+
+```tsx
+<TypographyH1>Heading 1</TypographyH1>
+<TypographyH2>Heading 2</TypographyH2>
+<TypographyH3>Heading 3</TypographyH3>
+<TypographyH4>Heading 4</TypographyH4>
+```
+
+### Paragraph
+
+```tsx
+<TypographyP>
+  The king thought long and hard, and finally came up with a brilliant plan.
+</TypographyP>
+```
+
+### Lead
+
+A larger paragraph for introductory text.
+
+```tsx
+<TypographyLead>
+  A tale of taxes, jokes, and the people who tell them.
+</TypographyLead>
+```
+
+### Blockquote
+
+```tsx
+<TypographyBlockquote>
+  "After all," he said, "everyone enjoys a good joke."
+</TypographyBlockquote>
+```
+
+### List
+
+```tsx
+<TypographyList>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</TypographyList>
+```
+
+### Inline Code
+
+```tsx
+<TypographyP>
+  Use the <TypographyInlineCode>console.log()</TypographyInlineCode> function.
+</TypographyP>
+```
+
+### Text Sizes
+
+```tsx
+<TypographyLarge>Large text for emphasis</TypographyLarge>
+<TypographySmall>Small text for fine print</TypographySmall>
+<TypographyMuted>Muted text for secondary content</TypographyMuted>
+```

@@ -19,6 +19,7 @@
     "dialog",
     "drawer",
     "dropdown-menu",
+    "empty",
     "form",
     "hover-card",
     "input",
@@ -34,11 +35,13 @@
     "skeleton",
     "slider",
     "sonner",
+    "spinner",
     "switch",
     "table",
     "tabs",
     "textarea",
     "toggle",
-    "tooltip"
+    "tooltip",
+    "typography"
   ]
 }
