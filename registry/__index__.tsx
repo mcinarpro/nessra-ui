@@ -610,6 +610,13 @@ export const Index: Record<string, RegistryEntry> = {
     files: ["registry/new-york/examples/sheet-side.tsx"],
   },
 
+  // Sidebar examples
+  "sidebar-demo": {
+    name: "sidebar-demo",
+    component: React.lazy(() => import("./new-york/examples/sidebar-demo")),
+    files: ["registry/new-york/examples/sidebar-demo.tsx"],
+  },
+
   // Skeleton examples
   "skeleton-card": {
     name: "skeleton-card",

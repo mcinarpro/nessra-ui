@@ -36,6 +36,7 @@ const components = [
   { name: "Select", href: "/docs/components/select" },
   { name: "Separator", href: "/docs/components/separator" },
   { name: "Sheet", href: "/docs/components/sheet" },
+  { name: "Sidebar", href: "/docs/components/sidebar" },
   { name: "Skeleton", href: "/docs/components/skeleton" },
   { name: "Slider", href: "/docs/components/slider" },
   { name: "Sonner", href: "/docs/components/sonner" },

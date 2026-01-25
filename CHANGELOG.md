@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Field**: Accessible form field composition (label, description, error)
 - **Input Group**: Input with addons, buttons, and helper content
 - **Combobox**: Autocomplete input with dropdown suggestions (`@base-ui/react`)
+- **Sidebar**: Composable, themeable sidebar with collapsible modes and mobile support
 
 ### Fixed
 

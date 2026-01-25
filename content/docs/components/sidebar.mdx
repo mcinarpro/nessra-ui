@@ -1,0 +1,252 @@
+---
+title: Sidebar
+description: A composable, themeable and customizable sidebar component.
+
+links:
+  doc: https://ui.shadcn.com/docs/components/sidebar
+  api: https://ui.shadcn.com/docs/components/sidebar#api-reference
+---
+
+<ComponentPreview name="sidebar-demo" previewClassName="h-[750px]" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/sidebar.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the required dependencies.</Step>
+
+```bash
+npm install @radix-ui/react-slot class-variance-authority
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="sidebar" title="components/ui/sidebar.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+<Step>Add the sidebar CSS variables to your `globals.css`.</Step>
+
+```css title="globals.css"
+@layer base {
+  :root {
+    --sidebar: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --sidebar: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+```
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Structure
+
+A `Sidebar` component is composed of the following parts:
+
+- `SidebarProvider` - Handles collapsible state.
+- `Sidebar` - The sidebar container.
+- `SidebarHeader` and `SidebarFooter` - Sticky at the top and bottom of the sidebar.
+- `SidebarContent` - Scrollable content.
+- `SidebarGroup` - Section within the `SidebarContent`.
+- `SidebarTrigger` - Trigger for the `Sidebar`.
+
+<Image
+  src="/images/sidebar-structure.png"
+  width="716"
+  height="420"
+  alt="Sidebar Structure"
+  className="rounded-lg border dark:hidden"
+/>
+<Image
+  src="/images/sidebar-structure-dark.png"
+  width="716"
+  height="420"
+  alt="Sidebar Structure"
+  className="hidden rounded-lg border dark:block"
+/>
+
+### SidebarMenu
+
+The `SidebarMenu` component is used for building a menu within a `SidebarGroup`.
+
+A `SidebarMenu` is composed of `SidebarMenuItem`, `SidebarMenuButton`, `SidebarMenuAction` and `SidebarMenuSub` components.
+
+<Image
+  src="/images/sidebar-menu.png"
+  width="716"
+  height="420"
+  alt="Sidebar Menu"
+  className="rounded-lg border dark:hidden"
+/>
+<Image
+  src="/images/sidebar-menu-dark.png"
+  width="716"
+  height="420"
+  alt="Sidebar Menu"
+  className="hidden rounded-lg border dark:block"
+/>
+
+<Callout>
+  For advanced usage, theming, and more examples, see the [complete shadcn
+  documentation](https://ui.shadcn.com/docs/components/sidebar).
+</Callout>
+
+## Usage
+
+```tsx
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/components/ui/sidebar"
+```
+
+```tsx
+<SidebarProvider>
+  <Sidebar>
+    <SidebarContent>
+      <SidebarGroup>
+        <SidebarGroupLabel>Application</SidebarGroupLabel>
+        <SidebarGroupContent>
+          <SidebarMenu>
+            <SidebarMenuItem>
+              <SidebarMenuButton>
+                <HomeIcon />
+                <span>Home</span>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarGroupContent>
+      </SidebarGroup>
+    </SidebarContent>
+  </Sidebar>
+  <main>
+    <SidebarTrigger />
+    {/* Your content */}
+  </main>
+</SidebarProvider>
+```
+
+## API Reference
+
+### Components
+
+| Component              | Description                                |
+| ---------------------- | ------------------------------------------ |
+| `SidebarProvider`      | Context wrapper managing sidebar state     |
+| `Sidebar`              | Main sidebar container                     |
+| `SidebarTrigger`       | Button to toggle the sidebar               |
+| `SidebarRail`          | Draggable rail for resizing                |
+| `SidebarInset`         | Main content area with inset styling       |
+| `SidebarHeader`        | Sticky header section                      |
+| `SidebarFooter`        | Sticky footer section                      |
+| `SidebarContent`       | Scrollable content area                    |
+| `SidebarGroup`         | Section container                          |
+| `SidebarGroupLabel`    | Label for a group                          |
+| `SidebarGroupAction`   | Action button within a group               |
+| `SidebarGroupContent`  | Content wrapper for a group                |
+| `SidebarMenu`          | Menu container                             |
+| `SidebarMenuItem`      | Individual menu item                       |
+| `SidebarMenuButton`    | Clickable menu button with tooltip support |
+| `SidebarMenuAction`    | Secondary action within menu item          |
+| `SidebarMenuBadge`     | Badge display in menu item                 |
+| `SidebarMenuSkeleton`  | Loading skeleton for menu items            |
+| `SidebarMenuSub`       | Submenu container                          |
+| `SidebarMenuSubItem`   | Submenu item                               |
+| `SidebarMenuSubButton` | Submenu button                             |
+| `SidebarInput`         | Styled input for sidebar                   |
+| `SidebarSeparator`     | Visual separator                           |
+
+### SidebarProvider
+
+| Prop           | Type                      | Default | Description                |
+| -------------- | ------------------------- | ------- | -------------------------- |
+| `defaultOpen`  | `boolean`                 | `true`  | Default open state         |
+| `open`         | `boolean`                 | -       | Controlled open state      |
+| `onOpenChange` | `(open: boolean) => void` | -       | Callback when open changes |
+
+### Sidebar
+
+| Prop          | Type                                 | Default       | Description          |
+| ------------- | ------------------------------------ | ------------- | -------------------- |
+| `side`        | `"left" \| "right"`                  | `"left"`      | Sidebar position     |
+| `variant`     | `"sidebar" \| "floating" \| "inset"` | `"sidebar"`   | Visual style variant |
+| `collapsible` | `"offcanvas" \| "icon" \| "none"`    | `"offcanvas"` | Collapse behavior    |
+
+### SidebarMenuButton
+
+| Prop       | Type                            | Default     | Description         |
+| ---------- | ------------------------------- | ----------- | ------------------- |
+| `asChild`  | `boolean`                       | `false`     | Render as child     |
+| `isActive` | `boolean`                       | `false`     | Active state        |
+| `tooltip`  | `string \| TooltipContentProps` | -           | Tooltip on collapse |
+| `variant`  | `"default" \| "outline"`        | `"default"` | Button style        |
+| `size`     | `"default" \| "sm" \| "lg"`     | `"default"` | Button size         |
+
+### useSidebar Hook
+
+Returns sidebar context with state and controls.
+
+```tsx
+const {
+  state, // "expanded" | "collapsed"
+  open, // boolean
+  setOpen, // (open: boolean) => void
+  isMobile, // boolean
+  openMobile, // boolean
+  setOpenMobile, // (open: boolean) => void
+  toggleSidebar, // () => void
+} = useSidebar()
+```
+
+## Features
+
+- **Keyboard shortcut**: `Ctrl+B` / `Cmd+B` to toggle
+- **Mobile responsive**: Sheet-based sidebar on mobile
+- **Cookie persistence**: Remembers open/closed state
+- **Collapsible modes**: Offcanvas, icon-only, or fixed
+- **Theming**: Full CSS variable support for colors
