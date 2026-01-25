@@ -124,6 +124,29 @@ export const Index: Record<string, RegistryEntry> = {
     component: React.lazy(() => import("./new-york/examples/button-demo")),
     files: ["registry/new-york/examples/button-demo.tsx"],
   },
+
+  // Button Group examples
+  "button-group-demo": {
+    name: "button-group-demo",
+    component: React.lazy(
+      () => import("./new-york/examples/button-group-demo")
+    ),
+    files: ["registry/new-york/examples/button-group-demo.tsx"],
+  },
+  "button-group-vertical": {
+    name: "button-group-vertical",
+    component: React.lazy(
+      () => import("./new-york/examples/button-group-vertical")
+    ),
+    files: ["registry/new-york/examples/button-group-vertical.tsx"],
+  },
+  "button-group-with-icons": {
+    name: "button-group-with-icons",
+    component: React.lazy(
+      () => import("./new-york/examples/button-group-with-icons")
+    ),
+    files: ["registry/new-york/examples/button-group-with-icons.tsx"],
+  },
   "button-destructive": {
     name: "button-destructive",
     component: React.lazy(
@@ -670,6 +693,29 @@ export const Index: Record<string, RegistryEntry> = {
     name: "toggle-with-text",
     component: React.lazy(() => import("./new-york/examples/toggle-with-text")),
     files: ["registry/new-york/examples/toggle-with-text.tsx"],
+  },
+
+  // Toggle Group examples
+  "toggle-group-demo": {
+    name: "toggle-group-demo",
+    component: React.lazy(
+      () => import("./new-york/examples/toggle-group-demo")
+    ),
+    files: ["registry/new-york/examples/toggle-group-demo.tsx"],
+  },
+  "toggle-group-outline": {
+    name: "toggle-group-outline",
+    component: React.lazy(
+      () => import("./new-york/examples/toggle-group-outline")
+    ),
+    files: ["registry/new-york/examples/toggle-group-outline.tsx"],
+  },
+  "toggle-group-single": {
+    name: "toggle-group-single",
+    component: React.lazy(
+      () => import("./new-york/examples/toggle-group-single")
+    ),
+    files: ["registry/new-york/examples/toggle-group-single.tsx"],
   },
 
   // Tooltip examples

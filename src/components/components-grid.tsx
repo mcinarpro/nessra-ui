@@ -9,6 +9,7 @@ const components = [
   { name: "Badge", href: "/docs/components/badge" },
   { name: "Breadcrumb", href: "/docs/components/breadcrumb" },
   { name: "Button", href: "/docs/components/button" },
+  { name: "Button Group", href: "/docs/components/button-group" },
   { name: "Calendar", href: "/docs/components/calendar" },
   { name: "Card", href: "/docs/components/card" },
   { name: "Checkbox", href: "/docs/components/checkbox" },
@@ -41,6 +42,7 @@ const components = [
   { name: "Tabs", href: "/docs/components/tabs" },
   { name: "Textarea", href: "/docs/components/textarea" },
   { name: "Toggle", href: "/docs/components/toggle" },
+  { name: "Toggle Group", href: "/docs/components/toggle-group" },
   { name: "Tooltip", href: "/docs/components/tooltip" },
   { name: "Typography", href: "/docs/components/typography" },
 ]

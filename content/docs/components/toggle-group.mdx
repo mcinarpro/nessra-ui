@@ -1,0 +1,88 @@
+---
+title: Toggle Group
+description: A set of two-state buttons that can be toggled on or off.
+---
+
+<ComponentPreview name="toggle-group-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/toggle-group.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the required dependencies.</Step>
+
+```bash
+npm install @radix-ui/react-toggle-group
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="toggle-group" title="components/ui/toggle-group.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+```
+
+```tsx
+<ToggleGroup type="single">
+  <ToggleGroupItem value="a">A</ToggleGroupItem>
+  <ToggleGroupItem value="b">B</ToggleGroupItem>
+  <ToggleGroupItem value="c">C</ToggleGroupItem>
+</ToggleGroup>
+```
+
+## Examples
+
+### Outline
+
+<ComponentPreview name="toggle-group-outline" />
+
+### Single Selection
+
+Use `type="single"` for single selection mode.
+
+<ComponentPreview name="toggle-group-single" />
+
+## API Reference
+
+### ToggleGroup
+
+| Prop      | Type                            | Default     | Description               |
+| --------- | ------------------------------- | ----------- | ------------------------- |
+| `type`    | `"single"` \| `"multiple"`      | -           | Selection mode (required) |
+| `variant` | `"default"` \| `"outline"`      | `"default"` | Visual style              |
+| `size`    | `"default"` \| `"sm"` \| `"lg"` | `"default"` | Size of toggle items      |
+| `spacing` | `number`                        | `0`         | Gap between items         |
+
+### ToggleGroupItem
+
+| Prop    | Type     | Default | Description               |
+| ------- | -------- | ------- | ------------------------- |
+| `value` | `string` | -       | Unique value for the item |
