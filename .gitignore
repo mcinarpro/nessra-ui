@@ -27,3 +27,4 @@ next-env.d.ts
 
 # husky
 .husky/_
+.claude/settings.local.json
