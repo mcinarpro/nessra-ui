@@ -124,8 +124,18 @@ export const Index: Record<string, RegistryEntry> = {
     component: React.lazy(() => import("./new-york/examples/button-demo")),
     files: ["registry/new-york/examples/button-demo.tsx"],
   },
-
-  // Button Group examples
+  "button-destructive": {
+    name: "button-destructive",
+    component: React.lazy(
+      () => import("./new-york/examples/button-destructive")
+    ),
+    files: ["registry/new-york/examples/button-destructive.tsx"],
+  },
+  "button-ghost": {
+    name: "button-ghost",
+    component: React.lazy(() => import("./new-york/examples/button-ghost")),
+    files: ["registry/new-york/examples/button-ghost.tsx"],
+  },
   "button-group-demo": {
     name: "button-group-demo",
     component: React.lazy(
@@ -146,18 +156,6 @@ export const Index: Record<string, RegistryEntry> = {
       () => import("./new-york/examples/button-group-with-icons")
     ),
     files: ["registry/new-york/examples/button-group-with-icons.tsx"],
-  },
-  "button-destructive": {
-    name: "button-destructive",
-    component: React.lazy(
-      () => import("./new-york/examples/button-destructive")
-    ),
-    files: ["registry/new-york/examples/button-destructive.tsx"],
-  },
-  "button-ghost": {
-    name: "button-ghost",
-    component: React.lazy(() => import("./new-york/examples/button-ghost")),
-    files: ["registry/new-york/examples/button-ghost.tsx"],
   },
   "button-icon": {
     name: "button-icon",
@@ -266,15 +264,15 @@ export const Index: Record<string, RegistryEntry> = {
   },
 
   // Combobox examples
-  "combobox-demo": {
-    name: "combobox-demo",
-    component: React.lazy(() => import("./new-york/examples/combobox-demo")),
-    files: ["registry/new-york/examples/combobox-demo.tsx"],
-  },
   "combobox-clear": {
     name: "combobox-clear",
     component: React.lazy(() => import("./new-york/examples/combobox-clear")),
     files: ["registry/new-york/examples/combobox-clear.tsx"],
+  },
+  "combobox-demo": {
+    name: "combobox-demo",
+    component: React.lazy(() => import("./new-york/examples/combobox-demo")),
+    files: ["registry/new-york/examples/combobox-demo.tsx"],
   },
   "combobox-multiple": {
     name: "combobox-multiple",
@@ -375,6 +373,27 @@ export const Index: Record<string, RegistryEntry> = {
     ),
     files: ["registry/new-york/examples/dropdown-menu-checkboxes.tsx"],
   },
+  "dropdown-menu-demo": {
+    name: "dropdown-menu-demo",
+    component: React.lazy(
+      () => import("./new-york/examples/dropdown-menu-demo")
+    ),
+    files: ["registry/new-york/examples/dropdown-menu-demo.tsx"],
+  },
+  "dropdown-menu-radio": {
+    name: "dropdown-menu-radio",
+    component: React.lazy(
+      () => import("./new-york/examples/dropdown-menu-radio")
+    ),
+    files: ["registry/new-york/examples/dropdown-menu-radio.tsx"],
+  },
+  "dropdown-menu-with-icons": {
+    name: "dropdown-menu-with-icons",
+    component: React.lazy(
+      () => import("./new-york/examples/dropdown-menu-with-icons")
+    ),
+    files: ["registry/new-york/examples/dropdown-menu-with-icons.tsx"],
+  },
 
   // Empty examples
   "empty-demo": {
@@ -403,28 +422,6 @@ export const Index: Record<string, RegistryEntry> = {
     name: "field-with-error",
     component: React.lazy(() => import("./new-york/examples/field-with-error")),
     files: ["registry/new-york/examples/field-with-error.tsx"],
-  },
-
-  "dropdown-menu-demo": {
-    name: "dropdown-menu-demo",
-    component: React.lazy(
-      () => import("./new-york/examples/dropdown-menu-demo")
-    ),
-    files: ["registry/new-york/examples/dropdown-menu-demo.tsx"],
-  },
-  "dropdown-menu-radio": {
-    name: "dropdown-menu-radio",
-    component: React.lazy(
-      () => import("./new-york/examples/dropdown-menu-radio")
-    ),
-    files: ["registry/new-york/examples/dropdown-menu-radio.tsx"],
-  },
-  "dropdown-menu-with-icons": {
-    name: "dropdown-menu-with-icons",
-    component: React.lazy(
-      () => import("./new-york/examples/dropdown-menu-with-icons")
-    ),
-    files: ["registry/new-york/examples/dropdown-menu-with-icons.tsx"],
   },
 
   // Form examples
@@ -477,6 +474,23 @@ export const Index: Record<string, RegistryEntry> = {
     component: React.lazy(() => import("./new-york/examples/input-file")),
     files: ["registry/new-york/examples/input-file.tsx"],
   },
+  "input-group-button": {
+    name: "input-group-button",
+    component: React.lazy(
+      () => import("./new-york/examples/input-group-button")
+    ),
+    files: ["registry/new-york/examples/input-group-button.tsx"],
+  },
+  "input-group-demo": {
+    name: "input-group-demo",
+    component: React.lazy(() => import("./new-york/examples/input-group-demo")),
+    files: ["registry/new-york/examples/input-group-demo.tsx"],
+  },
+  "input-group-text": {
+    name: "input-group-text",
+    component: React.lazy(() => import("./new-york/examples/input-group-text")),
+    files: ["registry/new-york/examples/input-group-text.tsx"],
+  },
   "input-with-button": {
     name: "input-with-button",
     component: React.lazy(
@@ -488,25 +502,6 @@ export const Index: Record<string, RegistryEntry> = {
     name: "input-with-label",
     component: React.lazy(() => import("./new-york/examples/input-with-label")),
     files: ["registry/new-york/examples/input-with-label.tsx"],
-  },
-
-  // Input Group examples
-  "input-group-demo": {
-    name: "input-group-demo",
-    component: React.lazy(() => import("./new-york/examples/input-group-demo")),
-    files: ["registry/new-york/examples/input-group-demo.tsx"],
-  },
-  "input-group-text": {
-    name: "input-group-text",
-    component: React.lazy(() => import("./new-york/examples/input-group-text")),
-    files: ["registry/new-york/examples/input-group-text.tsx"],
-  },
-  "input-group-button": {
-    name: "input-group-button",
-    component: React.lazy(
-      () => import("./new-york/examples/input-group-button")
-    ),
-    files: ["registry/new-york/examples/input-group-button.tsx"],
   },
 
   // Label examples
@@ -649,6 +644,11 @@ export const Index: Record<string, RegistryEntry> = {
   },
 
   // Spinner examples
+  "spinner-button": {
+    name: "spinner-button",
+    component: React.lazy(() => import("./new-york/examples/spinner-button")),
+    files: ["registry/new-york/examples/spinner-button.tsx"],
+  },
   "spinner-demo": {
     name: "spinner-demo",
     component: React.lazy(() => import("./new-york/examples/spinner-demo")),
@@ -658,11 +658,6 @@ export const Index: Record<string, RegistryEntry> = {
     name: "spinner-sizes",
     component: React.lazy(() => import("./new-york/examples/spinner-sizes")),
     files: ["registry/new-york/examples/spinner-sizes.tsx"],
-  },
-  "spinner-button": {
-    name: "spinner-button",
-    component: React.lazy(() => import("./new-york/examples/spinner-button")),
-    files: ["registry/new-york/examples/spinner-button.tsx"],
   },
 
   // Switch examples
