@@ -7,9 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **Release script**: `scripts/release.sh` automates the entire release process (changelog, version, tag, push, GitHub release)
+
 ### Changed
 
-- **CLAUDE.md**: Updated release process to use changelog notes instead of `--generate-notes`
+- **CLAUDE.md**: Simplified release process, added Git Operations section with clear commit/push rules
 
 ## [0.5.0] - 2026-01-26
 

@@ -50,7 +50,12 @@ Update these files in order:
 - Files in `public/r/` are generated - never edit manually
 - Run `pnpm check` before committing
 - Commit messages follow conventional commits (enforced by commitlint)
-- Do not push automatically - only push when explicitly requested
+
+## Git Operations
+
+- **Commit**: Propose when dev is complete (tasks done, tests passing) - wait for user approval
+- **Push**: NEVER initiate - only when user explicitly requests
+- **Release**: NEVER initiate - only when user explicitly requests (use `./scripts/release.sh X.Y.Z`)
 
 ## CHANGELOG Requirement
 
@@ -68,12 +73,19 @@ ALWAYS update `CHANGELOG.md` before every commit:
 
 ## Release Process
 
-1. Update `CHANGELOG.md`: `[Unreleased]` → `[x.y.z] - date`
-2. Update `version` in `package.json`
-3. Commit: `git commit -m "chore(release): vX.Y.Z"`
-4. Tag: `git tag vX.Y.Z`
-5. Push: `git push && git push --tags`
-6. Create GitHub release: `gh release create vX.Y.Z --title "vX.Y.Z" --notes "<changelog section>"`
+Run the release script with the new version number:
+
+```bash
+./scripts/release.sh X.Y.Z
+```
+
+The script automatically:
+
+1. Updates `CHANGELOG.md` (`[Unreleased]` → `[X.Y.Z] - date`)
+2. Updates `version` in `package.json`
+3. Commits and tags
+4. Pushes to remote
+5. Creates GitHub release with changelog notes
 
 ## Versioning
 
