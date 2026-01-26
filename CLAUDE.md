@@ -73,7 +73,7 @@ ALWAYS update `CHANGELOG.md` before every commit:
 3. Commit: `git commit -m "chore(release): vX.Y.Z"`
 4. Tag: `git tag vX.Y.Z`
 5. Push: `git push && git push --tags`
-6. Create GitHub release: `gh release create vX.Y.Z --generate-notes`
+6. Create GitHub release: `gh release create vX.Y.Z --title "vX.Y.Z" --notes "<changelog section>"`
 
 ## Versioning
 
