@@ -798,6 +798,20 @@
       ]
     },
     {
+      "name": "dashboard-stats",
+      "type": "registry:block",
+      "title": "Dashboard Stats",
+      "description": "A dashboard page with KPI stat cards, overview chart placeholder and recent sales list.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "card", "stat-card"],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/dashboard-stats.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
       "name": "signin-form",
       "type": "registry:block",
       "title": "Sign In Form",

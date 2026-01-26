@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - **Stat Card**: Dashboard metric/KPI component with value, label, icon, and trend indicator (up/down percentage). Uses CSS variables (`--trend-up`, `--trend-down`) for customizable trend colors, auto-injected via shadcn CLI
+- **Dashboard Stats Block**: Complete dashboard page with KPI stat cards, overview chart placeholder, and recent sales list
 - **Release script**: `scripts/release.sh` automates the entire release process (changelog, version, tag, push, GitHub release)
 - **MCP documentation**: New page explaining how to use Nessra UI with AI assistants via Model Context Protocol
 

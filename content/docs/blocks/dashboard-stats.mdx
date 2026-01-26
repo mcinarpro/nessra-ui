@@ -1,0 +1,46 @@
+---
+title: Dashboard Stats
+description: A dashboard page with KPI stat cards, overview chart placeholder and recent sales list.
+---
+
+<ComponentPreview
+  name="dashboard-stats"
+  previewClassName="h-[750px] items-start p-0!"
+/>
+
+## Installation
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/dashboard-stats.json
+```
+
+## Usage
+
+This block is a **complete dashboard page** ready to use. Just import and render:
+
+```tsx
+import { DashboardStats } from "@/components/blocks/dashboard-stats"
+
+export default function DashboardPage() {
+  return <DashboardStats />
+}
+```
+
+## Features
+
+- 4 KPI stat cards with trend indicators:
+  - Total Revenue
+  - Subscriptions
+  - Sales
+  - Active Now
+- Overview card with chart placeholder
+- Recent sales card with user list
+- Fully responsive grid layout (4 cols → 2 cols → 1 col)
+
+## Customization
+
+- Replace the stat card data with your real metrics
+- Add a chart library (Recharts, Chart.js) in the overview placeholder
+- Modify the recent sales list with your data source
+- Add more sections (tables, filters, date pickers)
+- Integrate with your data fetching logic

@@ -957,6 +957,15 @@ export const Index: Record<string, RegistryEntry> = {
     files: ["registry/new-york/examples/typography-demo.tsx"],
   },
   // Blocks
+  "dashboard-stats": {
+    name: "dashboard-stats",
+    component: React.lazy(() =>
+      import("./new-york/blocks/dashboard-stats").then((m) => ({
+        default: m.DashboardStats,
+      }))
+    ),
+    files: ["registry/new-york/blocks/dashboard-stats.tsx"],
+  },
   "forgot-password-form": {
     name: "forgot-password-form",
     component: React.lazy(() =>
