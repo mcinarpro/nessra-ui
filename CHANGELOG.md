@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-01-26
+
 ### Added
 
 - **Chart**: Beautiful and responsive charts built with Recharts. Includes `ChartContainer`, `ChartTooltip`, `ChartTooltipContent`, `ChartLegend`, and `ChartLegendContent`. Supports bar, line, area, pie, and radar charts with built-in theming via CSS variables (`--chart-1` to `--chart-5`). Documentation previews use 350px height for proper display
