@@ -758,6 +758,44 @@ export const Index: Record<string, RegistryEntry> = {
     files: ["registry/new-york/examples/spinner-sizes.tsx"],
   },
 
+  // Stat examples
+  "stat-card-basic": {
+    name: "stat-card-basic",
+    component: React.lazy(() => import("./new-york/examples/stat-card-basic")),
+    files: ["registry/new-york/examples/stat-card-basic.tsx"],
+  },
+  "stat-card-demo": {
+    name: "stat-card-demo",
+    component: React.lazy(() => import("./new-york/examples/stat-card-demo")),
+    files: ["registry/new-york/examples/stat-card-demo.tsx"],
+  },
+  "stat-card-grid": {
+    name: "stat-card-grid",
+    component: React.lazy(() => import("./new-york/examples/stat-card-grid")),
+    files: ["registry/new-york/examples/stat-card-grid.tsx"],
+  },
+  "stat-card-negative-trend": {
+    name: "stat-card-negative-trend",
+    component: React.lazy(
+      () => import("./new-york/examples/stat-card-negative-trend")
+    ),
+    files: ["registry/new-york/examples/stat-card-negative-trend.tsx"],
+  },
+  "stat-card-with-icon": {
+    name: "stat-card-with-icon",
+    component: React.lazy(
+      () => import("./new-york/examples/stat-card-with-icon")
+    ),
+    files: ["registry/new-york/examples/stat-card-with-icon.tsx"],
+  },
+  "stat-card-with-trend": {
+    name: "stat-card-with-trend",
+    component: React.lazy(
+      () => import("./new-york/examples/stat-card-with-trend")
+    ),
+    files: ["registry/new-york/examples/stat-card-with-trend.tsx"],
+  },
+
   // Switch examples
   "switch-demo": {
     name: "switch-demo",

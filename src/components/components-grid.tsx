@@ -45,6 +45,7 @@ const components = [
   { name: "Slider", href: "/docs/components/slider" },
   { name: "Sonner", href: "/docs/components/sonner" },
   { name: "Spinner", href: "/docs/components/spinner" },
+  { name: "Stat Card", href: "/docs/components/stat-card" },
   { name: "Switch", href: "/docs/components/switch" },
   { name: "Table", href: "/docs/components/table" },
   { name: "Tag Input", href: "/docs/components/tag-input" },

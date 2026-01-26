@@ -1,0 +1,31 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "stat-card",
+  "title": "Stat Card",
+  "description": "Display key metrics and KPIs with value, label, icon and trend indicator.",
+  "dependencies": [
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/stat-card.tsx",
+      "content": "import * as React from \"react\"\r\nimport { cva } from \"class-variance-authority\"\r\nimport { TrendingDown, TrendingUp } from \"lucide-react\"\r\n\r\nimport { cn } from \"@/lib/utils\"\r\n\r\nconst trendVariants = cva(\r\n  \"inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-xs font-medium\",\r\n  {\r\n    variants: {\r\n      direction: {\r\n        up: \"bg-trend-up/10 text-trend-up\",\r\n        down: \"bg-trend-down/10 text-trend-down\",\r\n        neutral: \"bg-muted text-muted-foreground\",\r\n      },\r\n    },\r\n    defaultVariants: {\r\n      direction: \"neutral\",\r\n    },\r\n  }\r\n)\r\n\r\ninterface StatCardProps extends React.ComponentProps<\"div\"> {\r\n  /** The main metric value to display */\r\n  value: string | number\r\n  /** Label describing the metric */\r\n  label: string\r\n  /** Optional icon to display */\r\n  icon?: React.ReactNode\r\n  /** Trend percentage (positive = up, negative = down) */\r\n  trend?: number\r\n  /** Text to display after trend percentage */\r\n  trendLabel?: string\r\n  /** Additional description text */\r\n  description?: string\r\n}\r\n\r\nfunction StatCard({\r\n  className,\r\n  value,\r\n  label,\r\n  icon,\r\n  trend,\r\n  trendLabel = \"vs last period\",\r\n  description,\r\n  ...props\r\n}: StatCardProps) {\r\n  const trendDirection =\r\n    trend === undefined || trend === 0\r\n      ? \"neutral\"\r\n      : trend > 0\r\n        ? \"up\"\r\n        : \"down\"\r\n\r\n  return (\r\n    <div\r\n      data-slot=\"stat-card\"\r\n      className={cn(\r\n        \"bg-card text-card-foreground flex flex-col gap-3 rounded-xl border p-6 shadow-sm\",\r\n        className\r\n      )}\r\n      {...props}\r\n    >\r\n      <div className=\"flex items-center justify-between\">\r\n        <span\r\n          data-slot=\"stat-card-label\"\r\n          className=\"text-muted-foreground text-sm font-medium\"\r\n        >\r\n          {label}\r\n        </span>\r\n        {icon && (\r\n          <span data-slot=\"stat-card-icon\" className=\"text-muted-foreground\">\r\n            {icon}\r\n          </span>\r\n        )}\r\n      </div>\r\n\r\n      <div className=\"flex flex-col gap-1\">\r\n        <span\r\n          data-slot=\"stat-card-value\"\r\n          className=\"text-3xl font-bold tracking-tight\"\r\n        >\r\n          {value}\r\n        </span>\r\n\r\n        {trend !== undefined && (\r\n          <div className=\"flex items-center gap-2\">\r\n            <span\r\n              data-slot=\"stat-card-trend\"\r\n              className={cn(trendVariants({ direction: trendDirection }))}\r\n            >\r\n              {trendDirection === \"up\" && <TrendingUp className=\"size-3\" />}\r\n              {trendDirection === \"down\" && <TrendingDown className=\"size-3\" />}\r\n              {trend > 0 && \"+\"}\r\n              {trend}%\r\n            </span>\r\n            <span\r\n              data-slot=\"stat-card-trend-label\"\r\n              className=\"text-muted-foreground text-xs\"\r\n            >\r\n              {trendLabel}\r\n            </span>\r\n          </div>\r\n        )}\r\n\r\n        {description && (\r\n          <span\r\n            data-slot=\"stat-card-description\"\r\n            className=\"text-muted-foreground text-sm\"\r\n          >\r\n            {description}\r\n          </span>\r\n        )}\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\ninterface StatCardGroupProps extends React.ComponentProps<\"div\"> {\r\n  /** Number of columns on different breakpoints */\r\n  columns?: 1 | 2 | 3 | 4\r\n}\r\n\r\nfunction StatCardGroup({ className, columns = 4, ...props }: StatCardGroupProps) {\r\n  return (\r\n    <div\r\n      data-slot=\"stat-card-group\"\r\n      className={cn(\r\n        \"grid gap-4\",\r\n        columns === 1 && \"grid-cols-1\",\r\n        columns === 2 && \"grid-cols-1 sm:grid-cols-2\",\r\n        columns === 3 && \"grid-cols-1 sm:grid-cols-2 lg:grid-cols-3\",\r\n        columns === 4 && \"grid-cols-1 sm:grid-cols-2 lg:grid-cols-4\",\r\n        className\r\n      )}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\nexport { StatCard, StatCardGroup, trendVariants }\r\nexport type { StatCardProps, StatCardGroupProps }\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "cssVars": {
+    "light": {
+      "trend-up": "142 71% 45%",
+      "trend-down": "0 84% 60%"
+    },
+    "dark": {
+      "trend-up": "142 71% 45%",
+      "trend-down": "0 84% 60%"
+    }
+  },
+  "type": "registry:ui"
+}

@@ -1,0 +1,105 @@
+---
+title: Stat Card
+description: Display key metrics and KPIs with value, label, icon and trend indicator.
+---
+
+<ComponentPreview name="stat-card-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/stat-card.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="stat-card" title="components/ui/stat-card.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { StatCard, StatCardGroup } from "@/components/ui/stat-card"
+```
+
+```tsx
+<StatCard
+  label="Total Revenue"
+  value="$45,231.89"
+  trend={20.1}
+  icon={<DollarSign className="size-4" />}
+/>
+```
+
+## Examples
+
+### Basic
+
+A simple stat card with just a label and value.
+
+<ComponentPreview name="stat-card-basic" />
+
+### With Trend (Positive)
+
+Display a positive trend indicator.
+
+<ComponentPreview name="stat-card-with-trend" />
+
+### With Trend (Negative)
+
+Display a negative trend indicator.
+
+<ComponentPreview name="stat-card-negative-trend" />
+
+### With Icons
+
+Add icons to provide visual context.
+
+<ComponentPreview name="stat-card-with-icon" previewClassName="h-[400px]" />
+
+### Grid Layout
+
+Use `StatCardGroup` to create a responsive grid of stat cards.
+
+<ComponentPreview name="stat-card-grid" />
+
+## API Reference
+
+### StatCard
+
+| Prop          | Type               | Default            | Description                                       |
+| ------------- | ------------------ | ------------------ | ------------------------------------------------- |
+| `value`       | `string \| number` | -                  | The main metric value to display (required)       |
+| `label`       | `string`           | -                  | Label describing the metric (required)            |
+| `icon`        | `ReactNode`        | -                  | Optional icon to display                          |
+| `trend`       | `number`           | -                  | Trend percentage (positive = up, negative = down) |
+| `trendLabel`  | `string`           | `"vs last period"` | Text to display after trend percentage            |
+| `description` | `string`           | -                  | Additional description text                       |
+
+### StatCardGroup
+
+| Prop      | Type               | Default | Description                                |
+| --------- | ------------------ | ------- | ------------------------------------------ |
+| `columns` | `1 \| 2 \| 3 \| 4` | `4`     | Number of columns on different breakpoints |

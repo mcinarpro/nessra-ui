@@ -15,13 +15,17 @@ paths:
 ## Patterns
 
 ```tsx
-// Standard component pattern
-const Component = React.forwardRef<HTMLElement, ComponentProps>(
-  ({ className, ...props }, ref) => (
-    <div ref={ref} className={cn("base-classes", className)} {...props} />
+// Standard component pattern (React 19 - no forwardRef needed)
+function Component({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="component"
+      className={cn("base-classes", className)}
+      {...props}
+    />
   )
-)
-Component.displayName = "Component"
+}
+// ref is automatically included in ComponentProps and passed via ...props
 ```
 
 ## Variants with CVA

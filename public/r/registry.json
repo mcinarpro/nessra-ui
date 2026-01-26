@@ -774,6 +774,30 @@
       ]
     },
     {
+      "name": "stat-card",
+      "type": "registry:ui",
+      "title": "Stat Card",
+      "description": "Display key metrics and KPIs with value, label, icon and trend indicator.",
+      "dependencies": ["class-variance-authority", "lucide-react"],
+      "registryDependencies": ["utils"],
+      "cssVars": {
+        "light": {
+          "trend-up": "142 71% 45%",
+          "trend-down": "0 84% 60%"
+        },
+        "dark": {
+          "trend-up": "142 71% 45%",
+          "trend-down": "0 84% 60%"
+        }
+      },
+      "files": [
+        {
+          "path": "registry/new-york/ui/stat-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "signin-form",
       "type": "registry:block",
       "title": "Sign In Form",
