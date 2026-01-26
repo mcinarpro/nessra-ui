@@ -728,7 +728,7 @@
     {
       "name": "signup-form",
       "type": "registry:block",
-      "title": "Signup Form",
+      "title": "Sign Up Form",
       "description": "A complete signup page with name, email, password and confirmation.",
       "registryDependencies": [
         "button",

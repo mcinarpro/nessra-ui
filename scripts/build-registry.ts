@@ -3,12 +3,26 @@ import * as path from "node:path"
 import * as prettier from "prettier"
 
 const EXAMPLES_DIR = "registry/new-york/examples"
+const BLOCKS_DIR = "registry/new-york/blocks"
 const OUTPUT_FILE = "registry/__index__.tsx"
 
 interface ExampleFile {
   name: string
   group: string
   filePath: string
+}
+
+interface BlockFile {
+  name: string
+  exportName: string
+  filePath: string
+}
+
+function kebabToPascal(str: string): string {
+  return str
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join("")
 }
 
 function getGroupFromFileName(fileName: string): string {
@@ -118,6 +132,42 @@ export const Index: Record<string, RegistryEntry> = {
     }
   })
 
+  // Scan blocks directory
+  const blocksPath = path.resolve(BLOCKS_DIR)
+  let blocks: BlockFile[] = []
+
+  if (fs.existsSync(blocksPath)) {
+    const blockFiles = fs
+      .readdirSync(blocksPath)
+      .filter((file) => file.endsWith(".tsx"))
+      .sort()
+
+    blocks = blockFiles.map((file) => {
+      const name = file.replace(".tsx", "")
+      return {
+        name,
+        exportName: kebabToPascal(name),
+        filePath: `${BLOCKS_DIR}/${file}`,
+      }
+    })
+
+    if (blocks.length > 0) {
+      output += "\n  // Blocks\n"
+      blocks.forEach((block, index) => {
+        const isLast = index === blocks.length - 1
+        output += `  "${block.name}": {
+    name: "${block.name}",
+    component: React.lazy(() =>
+      import("./new-york/blocks/${block.name}").then((m) => ({
+        default: m.${block.exportName},
+      }))
+    ),
+    files: ["${block.filePath}"],
+  },${isLast ? "" : "\n"}`
+      })
+    }
+  }
+
   output += `\n}\n`
 
   // Format and write output
@@ -134,6 +184,12 @@ export const Index: Record<string, RegistryEntry> = {
       `   - ${capitalizeGroup(group)}: ${grouped[group].length} examples`
     )
   })
+  if (blocks.length > 0) {
+    console.log(`   ${blocks.length} blocks`)
+    blocks.forEach((block) => {
+      console.log(`   - ${block.name}`)
+    })
+  }
 }
 
 main()
