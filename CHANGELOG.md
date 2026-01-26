@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - **Release script**: `scripts/release.sh` automates the entire release process (changelog, version, tag, push, GitHub release)
+- **MCP documentation**: New page explaining how to use Nessra UI with AI assistants via Model Context Protocol
 
 ### Changed
 

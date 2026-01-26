@@ -1,0 +1,128 @@
+---
+title: MCP Integration
+description: Use Nessra UI components with AI assistants via Model Context Protocol.
+---
+
+## What is MCP?
+
+[Model Context Protocol (MCP)](https://ui.shadcn.com/docs/mcp) is an open protocol that enables AI assistants to connect to component registries. With MCP, you can install Nessra UI components using natural language.
+
+## Setup
+
+### 1. Configure MCP Server
+
+Add the shadcn MCP server to your project.
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="claude">Claude Code</TabsTrigger>
+  <TabsTrigger value="cursor">Cursor</TabsTrigger>
+  <TabsTrigger value="vscode">VS Code</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="claude">
+
+Create `.mcp.json` in your project root:
+
+```json title=".mcp.json"
+{
+  "mcpServers": {
+    "shadcn": {
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"]
+    }
+  }
+}
+```
+
+Restart Claude Code and run `/mcp` to verify the connection.
+
+</TabsPanel>
+
+<TabsPanel value="cursor">
+
+Create `.cursor/mcp.json`:
+
+```json title=".cursor/mcp.json"
+{
+  "mcpServers": {
+    "shadcn": {
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"]
+    }
+  }
+}
+```
+
+Enable the shadcn MCP server in Cursor Settings.
+
+</TabsPanel>
+
+<TabsPanel value="vscode">
+
+Create `.vscode/mcp.json`:
+
+```json title=".vscode/mcp.json"
+{
+  "servers": {
+    "shadcn": {
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"]
+    }
+  }
+}
+```
+
+</TabsPanel>
+
+</CodeTabs>
+
+### 2. Add Nessra UI Registry
+
+Configure the Nessra UI registry in your `components.json`:
+
+```json title="components.json"
+{
+  "$schema": "https://shadcn.com/schema.json",
+  "registries": {
+    "@nessra-ui": "https://nessra-ui.vercel.app/r/{name}.json"
+  }
+}
+```
+
+## Usage
+
+Once configured, ask your AI assistant to install components naturally:
+
+- "Add the button component from @nessra-ui"
+- "Install @nessra-ui/code-block"
+- "Add a date picker from @nessra-ui"
+- "List all available @nessra-ui components"
+
+The AI will use the MCP server to fetch and install components from the Nessra UI registry.
+
+## Available Commands
+
+The MCP server supports these operations:
+
+| Command         | Description                                |
+| --------------- | ------------------------------------------ |
+| List components | Browse all available components and blocks |
+| Search          | Find components by name or functionality   |
+| Install         | Add components to your project             |
+| Get info        | View component dependencies and API        |
+
+## Without MCP
+
+You can always install components directly without MCP:
+
+```bash
+npx shadcn@latest add @nessra-ui/button
+```
+
+Or using the full URL:
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/button.json
+```
