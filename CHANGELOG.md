@@ -15,6 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Number Input**: Numeric input with increment/decrement buttons and keyboard support
 - **Tag Input**: Multi-tag input with suggestions, keyboard navigation, and delimiter support
 
+### Changed
+
+- **CLAUDE.md**: Refactored with clearer structure, code conventions, and explicit changelog requirements
+- **Claude Rules**: Added path-specific rules for documentation (`.claude/rules/documentation.md`) and registry (`.claude/rules/registry.md`)
+
 ## [0.4.1] - 2025-01-26
 
 ### Fixed
