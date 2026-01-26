@@ -66,6 +66,15 @@ ALWAYS update `CHANGELOG.md` before every commit:
 - Each commit: Add changes to `[Unreleased]` section
 - Release: `[Unreleased]` becomes `[x.y.z] - date`, create new empty `[Unreleased]`
 
+## Release Process
+
+1. Update `CHANGELOG.md`: `[Unreleased]` → `[x.y.z] - date`
+2. Update `version` in `package.json`
+3. Commit: `git commit -m "chore(release): vX.Y.Z"`
+4. Tag: `git tag vX.Y.Z`
+5. Push: `git push && git push --tags`
+6. Create GitHub release: `gh release create vX.Y.Z --generate-notes`
+
 ## Versioning
 
 - PATCH (0.1.1 → 0.1.2): Bug fixes, docs, minor improvements
