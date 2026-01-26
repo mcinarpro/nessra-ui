@@ -256,6 +256,27 @@ export const Index: Record<string, RegistryEntry> = {
     files: ["registry/new-york/examples/checkbox-with-text.tsx"],
   },
 
+  // Code examples
+  "code-block-demo": {
+    name: "code-block-demo",
+    component: React.lazy(() => import("./new-york/examples/code-block-demo")),
+    files: ["registry/new-york/examples/code-block-demo.tsx"],
+  },
+  "code-block-line-numbers": {
+    name: "code-block-line-numbers",
+    component: React.lazy(
+      () => import("./new-york/examples/code-block-line-numbers")
+    ),
+    files: ["registry/new-york/examples/code-block-line-numbers.tsx"],
+  },
+  "code-block-simple": {
+    name: "code-block-simple",
+    component: React.lazy(
+      () => import("./new-york/examples/code-block-simple")
+    ),
+    files: ["registry/new-york/examples/code-block-simple.tsx"],
+  },
+
   // Collapsible examples
   "collapsible-demo": {
     name: "collapsible-demo",
@@ -297,6 +318,27 @@ export const Index: Record<string, RegistryEntry> = {
     name: "command-dialog",
     component: React.lazy(() => import("./new-york/examples/command-dialog")),
     files: ["registry/new-york/examples/command-dialog.tsx"],
+  },
+
+  // Copy examples
+  "copy-button-custom": {
+    name: "copy-button-custom",
+    component: React.lazy(
+      () => import("./new-york/examples/copy-button-custom")
+    ),
+    files: ["registry/new-york/examples/copy-button-custom.tsx"],
+  },
+  "copy-button-demo": {
+    name: "copy-button-demo",
+    component: React.lazy(() => import("./new-york/examples/copy-button-demo")),
+    files: ["registry/new-york/examples/copy-button-demo.tsx"],
+  },
+  "copy-button-with-text": {
+    name: "copy-button-with-text",
+    component: React.lazy(
+      () => import("./new-york/examples/copy-button-with-text")
+    ),
+    files: ["registry/new-york/examples/copy-button-with-text.tsx"],
   },
 
   // Data Table examples
@@ -491,6 +533,32 @@ export const Index: Record<string, RegistryEntry> = {
     component: React.lazy(() => import("./new-york/examples/input-group-text")),
     files: ["registry/new-york/examples/input-group-text.tsx"],
   },
+  "input-otp-controlled": {
+    name: "input-otp-controlled",
+    component: React.lazy(
+      () => import("./new-york/examples/input-otp-controlled")
+    ),
+    files: ["registry/new-york/examples/input-otp-controlled.tsx"],
+  },
+  "input-otp-demo": {
+    name: "input-otp-demo",
+    component: React.lazy(() => import("./new-york/examples/input-otp-demo")),
+    files: ["registry/new-york/examples/input-otp-demo.tsx"],
+  },
+  "input-otp-pattern": {
+    name: "input-otp-pattern",
+    component: React.lazy(
+      () => import("./new-york/examples/input-otp-pattern")
+    ),
+    files: ["registry/new-york/examples/input-otp-pattern.tsx"],
+  },
+  "input-otp-separator": {
+    name: "input-otp-separator",
+    component: React.lazy(
+      () => import("./new-york/examples/input-otp-separator")
+    ),
+    files: ["registry/new-york/examples/input-otp-separator.tsx"],
+  },
   "input-with-button": {
     name: "input-with-button",
     component: React.lazy(
@@ -521,6 +589,36 @@ export const Index: Record<string, RegistryEntry> = {
     name: "label-with-input",
     component: React.lazy(() => import("./new-york/examples/label-with-input")),
     files: ["registry/new-york/examples/label-with-input.tsx"],
+  },
+
+  // Number examples
+  "number-input-controlled": {
+    name: "number-input-controlled",
+    component: React.lazy(
+      () => import("./new-york/examples/number-input-controlled")
+    ),
+    files: ["registry/new-york/examples/number-input-controlled.tsx"],
+  },
+  "number-input-demo": {
+    name: "number-input-demo",
+    component: React.lazy(
+      () => import("./new-york/examples/number-input-demo")
+    ),
+    files: ["registry/new-york/examples/number-input-demo.tsx"],
+  },
+  "number-input-disabled": {
+    name: "number-input-disabled",
+    component: React.lazy(
+      () => import("./new-york/examples/number-input-disabled")
+    ),
+    files: ["registry/new-york/examples/number-input-disabled.tsx"],
+  },
+  "number-input-step": {
+    name: "number-input-step",
+    component: React.lazy(
+      () => import("./new-york/examples/number-input-step")
+    ),
+    files: ["registry/new-york/examples/number-input-step.tsx"],
   },
 
   // Pagination examples
@@ -701,6 +799,32 @@ export const Index: Record<string, RegistryEntry> = {
     name: "tabs-with-cards",
     component: React.lazy(() => import("./new-york/examples/tabs-with-cards")),
     files: ["registry/new-york/examples/tabs-with-cards.tsx"],
+  },
+
+  // Tag examples
+  "tag-input-controlled": {
+    name: "tag-input-controlled",
+    component: React.lazy(
+      () => import("./new-york/examples/tag-input-controlled")
+    ),
+    files: ["registry/new-york/examples/tag-input-controlled.tsx"],
+  },
+  "tag-input-demo": {
+    name: "tag-input-demo",
+    component: React.lazy(() => import("./new-york/examples/tag-input-demo")),
+    files: ["registry/new-york/examples/tag-input-demo.tsx"],
+  },
+  "tag-input-disabled": {
+    name: "tag-input-disabled",
+    component: React.lazy(
+      () => import("./new-york/examples/tag-input-disabled")
+    ),
+    files: ["registry/new-york/examples/tag-input-disabled.tsx"],
+  },
+  "tag-input-max": {
+    name: "tag-input-max",
+    component: React.lazy(() => import("./new-york/examples/tag-input-max")),
+    files: ["registry/new-york/examples/tag-input-max.tsx"],
   },
 
   // Textarea examples

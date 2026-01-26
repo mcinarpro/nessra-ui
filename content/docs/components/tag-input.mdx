@@ -1,0 +1,95 @@
+---
+title: Tag Input
+description: An input for entering multiple tags with keyboard support.
+---
+
+<ComponentPreview name="tag-input-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/tag-input.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="tag-input" title="components/ui/tag-input.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { TagInput } from "@/components/ui/tag-input"
+```
+
+```tsx
+<TagInput defaultValue={["React", "TypeScript"]} />
+```
+
+## Examples
+
+### Controlled
+
+Control tags with `value` and `onChange`.
+
+<ComponentPreview name="tag-input-controlled" />
+
+### Max Tags
+
+Limit the number of tags with `maxTags`.
+
+<ComponentPreview name="tag-input-max" />
+
+### Disabled
+
+<ComponentPreview name="tag-input-disabled" />
+
+## API Reference
+
+### TagInput
+
+| Prop              | Type                        | Default        | Description                          |
+| ----------------- | --------------------------- | -------------- | ------------------------------------ |
+| `value`           | `string[]`                  | -              | Controlled value                     |
+| `defaultValue`    | `string[]`                  | `[]`           | Default value (uncontrolled)         |
+| `onChange`        | `(value: string[]) => void` | -              | Called when tags change              |
+| `suggestions`     | `string[]`                  | `[]`           | List of autocomplete suggestions     |
+| `placeholder`     | `string`                    | `"Add tag..."` | Placeholder text                     |
+| `disabled`        | `boolean`                   | `false`        | Disable the input                    |
+| `maxTags`         | `number`                    | -              | Maximum number of tags               |
+| `allowDuplicates` | `boolean`                   | `false`        | Allow duplicate tags                 |
+| `allowCustom`     | `boolean`                   | `true`         | Allow custom tags not in suggestions |
+| `delimiter`       | `string \| RegExp`          | `/[,\n]/`      | Delimiter to split input             |
+
+## Keyboard Navigation
+
+| Key         | Action                              |
+| ----------- | ----------------------------------- |
+| `Enter`     | Add highlighted suggestion or input |
+| `ArrowDown` | Highlight next suggestion           |
+| `ArrowUp`   | Highlight previous suggestion       |
+| `Escape`    | Close suggestions dropdown          |
+| `,`         | Add current input as tag            |
+| `Backspace` | Remove last tag (when input empty)  |

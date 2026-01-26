@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **Code Block**: Syntax highlighting with Shiki, line numbers, copy button, auto light/dark theme
+- **Copy Button**: Click-to-copy button with visual feedback
+- **Input OTP**: One-time password input with slots and separators
+- **Number Input**: Numeric input with increment/decrement buttons and keyboard support
+- **Tag Input**: Multi-tag input with suggestions, keyboard navigation, and delimiter support
+
 ## [0.4.1] - 2025-01-26
 
 ### Fixed

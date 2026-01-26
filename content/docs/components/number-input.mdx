@@ -1,0 +1,89 @@
+---
+title: Number Input
+description: A numeric input with increment and decrement buttons.
+---
+
+<ComponentPreview name="number-input-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/number-input.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="number-input" title="components/ui/number-input.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { NumberInput } from "@/components/ui/number-input"
+```
+
+```tsx
+<NumberInput defaultValue={5} min={0} max={100} />
+```
+
+## Examples
+
+### With Step
+
+Use the `step` prop to control the increment/decrement amount.
+
+<ComponentPreview name="number-input-step" />
+
+### Controlled
+
+Control the value with `value` and `onChange`.
+
+<ComponentPreview name="number-input-controlled" />
+
+### Disabled
+
+<ComponentPreview name="number-input-disabled" />
+
+## API Reference
+
+### NumberInput
+
+| Prop           | Type                                   | Default | Description                   |
+| -------------- | -------------------------------------- | ------- | ----------------------------- |
+| `value`        | `number`                               | -       | Controlled value              |
+| `defaultValue` | `number`                               | -       | Default value (uncontrolled)  |
+| `onChange`     | `(value: number \| undefined) => void` | -       | Called when the value changes |
+| `min`          | `number`                               | -       | Minimum allowed value         |
+| `max`          | `number`                               | -       | Maximum allowed value         |
+| `step`         | `number`                               | `1`     | Increment/decrement step      |
+| `disabled`     | `boolean`                              | `false` | Disable the input             |
+| `allowEmpty`   | `boolean`                              | `false` | Allow empty value             |
+
+## Keyboard Navigation
+
+| Key         | Action          |
+| ----------- | --------------- |
+| `ArrowUp`   | Increment value |
+| `ArrowDown` | Decrement value |

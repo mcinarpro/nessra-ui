@@ -1,0 +1,79 @@
+---
+title: Copy Button
+description: A button that copies text to the clipboard with visual feedback.
+---
+
+<ComponentPreview name="copy-button-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/copy-button.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="copy-button" title="components/ui/copy-button.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { CopyButton } from "@/components/ui/copy-button"
+```
+
+```tsx
+<CopyButton value="Text to copy" />
+```
+
+## Examples
+
+### With Text
+
+Display next to a code snippet or command.
+
+<ComponentPreview name="copy-button-with-text" />
+
+### Custom Content
+
+Use custom text or icons inside the button.
+
+<ComponentPreview name="copy-button-custom" />
+
+## API Reference
+
+### CopyButton
+
+Extends the `Button` component with copy functionality.
+
+| Prop      | Type         | Default     | Description                    |
+| --------- | ------------ | ----------- | ------------------------------ |
+| `value`   | `string`     | -           | The text to copy to clipboard  |
+| `onCopy`  | `() => void` | -           | Called after successful copy   |
+| `timeout` | `number`     | `2000`      | Duration of success state (ms) |
+| `variant` | `string`     | `"outline"` | Button variant                 |
+| `size`    | `string`     | `"icon"`    | Button size                    |
+
+All other `Button` props are supported.

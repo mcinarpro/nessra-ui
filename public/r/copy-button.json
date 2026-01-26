@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "copy-button",
+  "title": "Copy Button",
+  "description": "A button that copies text to the clipboard with visual feedback.",
+  "registryDependencies": [
+    "utils",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/copy-button.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon, CopyIcon } from \"lucide-react\"\nimport { cn } from \"registry/new-york/lib/utils\"\nimport { Button } from \"registry/new-york/ui/button\"\n\ninterface CopyButtonProps extends Omit<\n  React.ComponentProps<typeof Button>,\n  \"onClick\"\n> {\n  value: string\n  onCopy?: () => void\n  timeout?: number\n}\n\nfunction CopyButton({\n  value,\n  onCopy,\n  timeout = 2000,\n  className,\n  variant = \"outline\",\n  size = \"icon\",\n  children,\n  ...props\n}: CopyButtonProps) {\n  const [copied, setCopied] = React.useState(false)\n\n  const handleCopy = React.useCallback(async () => {\n    try {\n      await navigator.clipboard.writeText(value)\n      setCopied(true)\n      onCopy?.()\n      setTimeout(() => setCopied(false), timeout)\n    } catch (err) {\n      console.error(\"Failed to copy:\", err)\n    }\n  }, [value, onCopy, timeout])\n\n  return (\n    <Button\n      type=\"button\"\n      variant={variant}\n      size={size}\n      className={cn(\"relative\", className)}\n      onClick={handleCopy}\n      aria-label={copied ? \"Copied\" : \"Copy to clipboard\"}\n      {...props}\n    >\n      <span\n        className={cn(\n          \"absolute inset-0 flex items-center justify-center transition-opacity\",\n          copied ? \"opacity-100\" : \"opacity-0\"\n        )}\n      >\n        <CheckIcon className=\"size-4 text-green-500\" />\n      </span>\n      <span\n        className={cn(\n          \"flex items-center justify-center transition-opacity\",\n          copied ? \"opacity-0\" : \"opacity-100\"\n        )}\n      >\n        {children ?? <CopyIcon className=\"size-4\" />}\n      </span>\n    </Button>\n  )\n}\n\nexport { CopyButton }\nexport type { CopyButtonProps }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

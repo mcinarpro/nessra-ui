@@ -1,0 +1,123 @@
+---
+title: Input OTP
+description: Accessible one-time password input with copy/paste support.
+---
+
+<ComponentPreview name="input-otp-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/input-otp.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install input-otp
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="input-otp" title="components/ui/input-otp.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSlot,
+} from "@/components/ui/input-otp"
+```
+
+```tsx
+<InputOTP maxLength={6}>
+  <InputOTPGroup>
+    <InputOTPSlot index={0} />
+    <InputOTPSlot index={1} />
+    <InputOTPSlot index={2} />
+    <InputOTPSlot index={3} />
+    <InputOTPSlot index={4} />
+    <InputOTPSlot index={5} />
+  </InputOTPGroup>
+</InputOTP>
+```
+
+## Examples
+
+### With Separator
+
+Use `InputOTPSeparator` to add a visual separator between groups.
+
+<ComponentPreview name="input-otp-separator" />
+
+### Controlled
+
+Control the input value with `value` and `onChange`.
+
+<ComponentPreview name="input-otp-controlled" />
+
+### Pattern
+
+Use the `pattern` prop to restrict input to specific characters.
+
+<ComponentPreview name="input-otp-pattern" />
+
+## API Reference
+
+### InputOTP
+
+The root component that manages the OTP input state.
+
+| Prop        | Type                      | Default              | Description                   |
+| ----------- | ------------------------- | -------------------- | ----------------------------- |
+| `maxLength` | `number`                  | -                    | Maximum number of characters  |
+| `value`     | `string`                  | -                    | Controlled value              |
+| `onChange`  | `(value: string) => void` | -                    | Called when the value changes |
+| `pattern`   | `string \| RegExp`        | `REGEXP_ONLY_DIGITS` | Pattern to validate input     |
+| `disabled`  | `boolean`                 | `false`              | Disable the input             |
+| `autoFocus` | `boolean`                 | `false`              | Auto focus on mount           |
+
+### InputOTPGroup
+
+Groups slots together visually.
+
+### InputOTPSlot
+
+Individual character slot.
+
+| Prop    | Type     | Default | Description                     |
+| ------- | -------- | ------- | ------------------------------- |
+| `index` | `number` | -       | The index of the slot (0-based) |
+
+### InputOTPSeparator
+
+Visual separator between groups.
+
+## Credits
+
+Built on top of [input-otp](https://input-otp.rodz.dev/) by [@guilhermerodz](https://github.com/guilhermerodz).

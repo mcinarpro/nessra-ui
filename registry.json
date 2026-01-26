@@ -288,6 +288,20 @@
       ]
     },
     {
+      "name": "code-block",
+      "type": "registry:ui",
+      "title": "Code Block",
+      "description": "Display code with syntax highlighting powered by Shiki.",
+      "dependencies": ["shiki"],
+      "registryDependencies": ["utils", "copy-button", "scroll-area"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/code-block.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "alert",
       "type": "registry:ui",
       "title": "Alert",
@@ -492,6 +506,19 @@
       ]
     },
     {
+      "name": "tag-input",
+      "type": "registry:ui",
+      "title": "Tag Input",
+      "description": "An input for entering multiple tags with keyboard support.",
+      "registryDependencies": ["utils", "badge"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/tag-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "command",
       "type": "registry:ui",
       "title": "Command",
@@ -501,6 +528,19 @@
       "files": [
         {
           "path": "registry/new-york/ui/command.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "copy-button",
+      "type": "registry:ui",
+      "title": "Copy Button",
+      "description": "A button that copies text to the clipboard with visual feedback.",
+      "registryDependencies": ["utils", "button"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/copy-button.tsx",
           "type": "registry:ui"
         }
       ]
@@ -702,6 +742,33 @@
       "files": [
         {
           "path": "registry/new-york/ui/sidebar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:ui",
+      "title": "Input OTP",
+      "description": "Accessible one-time password input with copy/paste support.",
+      "dependencies": ["input-otp"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/input-otp.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "number-input",
+      "type": "registry:ui",
+      "title": "Number Input",
+      "description": "A numeric input with increment and decrement buttons.",
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/number-input.tsx",
           "type": "registry:ui"
         }
       ]
