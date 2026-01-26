@@ -12,6 +12,7 @@ const components = [
   { name: "Button Group", href: "/docs/components/button-group" },
   { name: "Calendar", href: "/docs/components/calendar" },
   { name: "Card", href: "/docs/components/card" },
+  { name: "Chart", href: "/docs/components/chart" },
   { name: "Checkbox", href: "/docs/components/checkbox" },
   { name: "Code Block", href: "/docs/components/code-block" },
   { name: "Collapsible", href: "/docs/components/collapsible" },

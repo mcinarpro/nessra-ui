@@ -1,0 +1,199 @@
+---
+title: Chart
+description: Beautiful and responsive charts built with Recharts.
+---
+
+<ComponentPreview name="chart-demo" previewClassName="h-[550px]" />
+
+## About
+
+The Chart component is built using [Recharts](https://recharts.org/en-US). It provides a set of composable chart components with built-in theming support.
+
+## Installation
+
+<CodeTabs>
+
+<TabsList variant="underline">
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add https://nessra-ui.vercel.app/r/chart.json
+```
+
+</TabsPanel>
+
+<TabsPanel value='manual'>
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install recharts
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="chart" title="components/ui/chart.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart"
+```
+
+```tsx
+const chartConfig = {
+  desktop: {
+    label: "Desktop",
+    color: "var(--chart-1)",
+  },
+} satisfies ChartConfig
+
+export function MyChart() {
+  return (
+    <ChartContainer config={chartConfig}>
+      <BarChart data={data}>
+        <Bar dataKey="desktop" fill="var(--color-desktop)" />
+        <ChartTooltip content={<ChartTooltipContent />} />
+      </BarChart>
+    </ChartContainer>
+  )
+}
+```
+
+## Chart Config
+
+The chart config defines labels, icons, and colors for each data series.
+
+```tsx
+const chartConfig = {
+  desktop: {
+    label: "Desktop",
+    color: "var(--chart-1)",
+  },
+  mobile: {
+    label: "Mobile",
+    color: "var(--chart-2)",
+  },
+} satisfies ChartConfig
+```
+
+### Theme Colors
+
+You can use theme colors from CSS variables:
+
+```tsx
+const chartConfig = {
+  desktop: {
+    label: "Desktop",
+    theme: {
+      light: "#2563eb",
+      dark: "#3b82f6",
+    },
+  },
+}
+```
+
+## Examples
+
+### Bar Chart
+
+A basic bar chart with multiple data series.
+
+<ComponentPreview name="chart-demo" previewClassName="h-[550px]" />
+
+### With Legend
+
+Add a legend to identify data series.
+
+<ComponentPreview name="chart-with-legend" previewClassName="h-[550px]" />
+
+### Line Chart
+
+A line chart for showing trends over time.
+
+<ComponentPreview name="chart-line" previewClassName="h-[550px]" />
+
+### Area Chart
+
+An area chart with gradient fills.
+
+<ComponentPreview name="chart-area" previewClassName="h-[550px]" />
+
+### Pie Chart
+
+A pie chart for showing proportions.
+
+<ComponentPreview name="chart-pie" previewClassName="h-[550px]" />
+
+### Radar Chart
+
+A radar chart for comparing multiple variables.
+
+<ComponentPreview name="chart-radar" previewClassName="h-[550px]" />
+
+## Theming
+
+The chart components use CSS variables for colors. The following variables are available by default:
+
+- `--chart-1` through `--chart-5`
+
+These are defined in your `globals.css` with light and dark variants.
+
+## API Reference
+
+### ChartContainer
+
+The main wrapper component that provides context and responsive sizing.
+
+| Prop       | Type          | Default | Description                 |
+| ---------- | ------------- | ------- | --------------------------- |
+| `config`   | `ChartConfig` | -       | Configuration for the chart |
+| `children` | `ReactNode`   | -       | Recharts chart component    |
+
+### ChartTooltip
+
+Re-exported from Recharts with custom styling.
+
+### ChartTooltipContent
+
+Custom tooltip content component.
+
+| Prop            | Type                          | Default | Description                  |
+| --------------- | ----------------------------- | ------- | ---------------------------- |
+| `hideLabel`     | `boolean`                     | `false` | Hide the tooltip label       |
+| `hideIndicator` | `boolean`                     | `false` | Hide the color indicator     |
+| `indicator`     | `"line" \| "dot" \| "dashed"` | `"dot"` | Style of the color indicator |
+| `nameKey`       | `string`                      | -       | Key to use for item names    |
+| `labelKey`      | `string`                      | -       | Key to use for label         |
+
+### ChartLegend
+
+Re-exported from Recharts with custom styling.
+
+### ChartLegendContent
+
+Custom legend content component.
+
+| Prop       | Type      | Default | Description          |
+| ---------- | --------- | ------- | -------------------- |
+| `hideIcon` | `boolean` | `false` | Hide the legend icon |
+| `nameKey`  | `string`  | -       | Key to use for names |

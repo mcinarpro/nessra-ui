@@ -228,6 +228,40 @@ export const Index: Record<string, RegistryEntry> = {
     files: ["registry/new-york/examples/card-simple.tsx"],
   },
 
+  // Chart examples
+  "chart-area": {
+    name: "chart-area",
+    component: React.lazy(() => import("./new-york/examples/chart-area")),
+    files: ["registry/new-york/examples/chart-area.tsx"],
+  },
+  "chart-demo": {
+    name: "chart-demo",
+    component: React.lazy(() => import("./new-york/examples/chart-demo")),
+    files: ["registry/new-york/examples/chart-demo.tsx"],
+  },
+  "chart-line": {
+    name: "chart-line",
+    component: React.lazy(() => import("./new-york/examples/chart-line")),
+    files: ["registry/new-york/examples/chart-line.tsx"],
+  },
+  "chart-pie": {
+    name: "chart-pie",
+    component: React.lazy(() => import("./new-york/examples/chart-pie")),
+    files: ["registry/new-york/examples/chart-pie.tsx"],
+  },
+  "chart-radar": {
+    name: "chart-radar",
+    component: React.lazy(() => import("./new-york/examples/chart-radar")),
+    files: ["registry/new-york/examples/chart-radar.tsx"],
+  },
+  "chart-with-legend": {
+    name: "chart-with-legend",
+    component: React.lazy(
+      () => import("./new-york/examples/chart-with-legend")
+    ),
+    files: ["registry/new-york/examples/chart-with-legend.tsx"],
+  },
+
   // Checkbox examples
   "checkbox-demo": {
     name: "checkbox-demo",

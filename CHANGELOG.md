@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Chart**: Beautiful and responsive charts built with Recharts. Includes `ChartContainer`, `ChartTooltip`, `ChartTooltipContent`, `ChartLegend`, and `ChartLegendContent`. Supports bar, line, area, pie, and radar charts with built-in theming via CSS variables (`--chart-1` to `--chart-5`). Documentation previews use 350px height for proper display
 - **Stat Card**: Dashboard metric/KPI component with value, label, icon, and trend indicator (up/down percentage). Uses CSS variables (`--trend-up`, `--trend-down`) for customizable trend colors, auto-injected via shadcn CLI
 - **Dashboard Stats Block**: Complete dashboard page with KPI stat cards, overview chart placeholder, and recent sales list
 - **Release script**: `scripts/release.sh` automates the entire release process (changelog, version, tag, push, GitHub release)
