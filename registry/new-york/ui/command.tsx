@@ -3,14 +3,14 @@
 import * as React from "react"
 import { Command as CommandPrimitive } from "cmdk"
 import { SearchIcon } from "lucide-react"
-import { cn } from "registry/new-york/lib/utils"
+import { cn } from "@/registry/new-york/lib/utils"
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "registry/new-york/ui/dialog"
+} from "@/registry/new-york/ui/dialog"
 
 function Command({
   className,

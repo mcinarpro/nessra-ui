@@ -1,4 +1,4 @@
-import { CodeBlock } from "registry/new-york/ui/code-block"
+import { CodeBlock } from "@/registry/new-york/ui/code-block"
 
 const code = `import { Button } from "@/components/ui/button"
 

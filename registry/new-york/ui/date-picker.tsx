@@ -4,14 +4,14 @@ import * as React from "react"
 import { format } from "date-fns"
 import { CalendarIcon } from "lucide-react"
 import type { DateRange } from "react-day-picker"
-import { cn } from "registry/new-york/lib/utils"
-import { Button } from "registry/new-york/ui/button"
-import { Calendar } from "registry/new-york/ui/calendar"
+import { cn } from "@/registry/new-york/lib/utils"
+import { Button } from "@/registry/new-york/ui/button"
+import { Calendar } from "@/registry/new-york/ui/calendar"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "registry/new-york/ui/popover"
+} from "@/registry/new-york/ui/popover"
 
 function DatePicker({
   date,

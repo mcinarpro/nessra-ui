@@ -1,4 +1,4 @@
-import { CopyButton } from "registry/new-york/ui/copy-button"
+import { CopyButton } from "@/registry/new-york/ui/copy-button"
 
 export default function CopyButtonWithText() {
   return (

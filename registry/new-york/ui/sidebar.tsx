@@ -4,25 +4,25 @@ import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 import { PanelLeftIcon } from "lucide-react"
-import { useIsMobile } from "registry/new-york/hooks/use-mobile"
-import { cn } from "registry/new-york/lib/utils"
-import { Button } from "registry/new-york/ui/button"
-import { Input } from "registry/new-york/ui/input"
-import { Separator } from "registry/new-york/ui/separator"
+import { useIsMobile } from "@/registry/new-york/hooks/use-mobile"
+import { cn } from "@/registry/new-york/lib/utils"
+import { Button } from "@/registry/new-york/ui/button"
+import { Input } from "@/registry/new-york/ui/input"
+import { Separator } from "@/registry/new-york/ui/separator"
 import {
   Sheet,
   SheetContent,
   SheetDescription,
   SheetHeader,
   SheetTitle,
-} from "registry/new-york/ui/sheet"
-import { Skeleton } from "registry/new-york/ui/skeleton"
+} from "@/registry/new-york/ui/sheet"
+import { Skeleton } from "@/registry/new-york/ui/skeleton"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "registry/new-york/ui/tooltip"
+} from "@/registry/new-york/ui/tooltip"
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7

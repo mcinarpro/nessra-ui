@@ -33,9 +33,9 @@ import {
   Settings2Icon,
   XIcon,
 } from "lucide-react"
-import { cn } from "registry/new-york/lib/utils"
-import { Badge } from "registry/new-york/ui/badge"
-import { Button } from "registry/new-york/ui/button"
+import { cn } from "@/registry/new-york/lib/utils"
+import { Badge } from "@/registry/new-york/ui/badge"
+import { Button } from "@/registry/new-york/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -44,7 +44,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "registry/new-york/ui/command"
+} from "@/registry/new-york/ui/command"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -53,22 +53,22 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "registry/new-york/ui/dropdown-menu"
-import { Input } from "registry/new-york/ui/input"
+} from "@/registry/new-york/ui/dropdown-menu"
+import { Input } from "@/registry/new-york/ui/input"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "registry/new-york/ui/popover"
+} from "@/registry/new-york/ui/popover"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "registry/new-york/ui/select"
-import { Separator } from "registry/new-york/ui/separator"
-import { Skeleton } from "registry/new-york/ui/skeleton"
+} from "@/registry/new-york/ui/select"
+import { Separator } from "@/registry/new-york/ui/separator"
+import { Skeleton } from "@/registry/new-york/ui/skeleton"
 import {
   Table,
   TableBody,
@@ -76,7 +76,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "registry/new-york/ui/table"
+} from "@/registry/new-york/ui/table"
 
 // ============================================================================
 // TYPES & INTERFACES

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { NumberInput } from "registry/new-york/ui/number-input"
+import { NumberInput } from "@/registry/new-york/ui/number-input"
 
 export default function NumberInputControlled() {
   const [value, setValue] = React.useState<number | undefined>(10)

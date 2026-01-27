@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { MinusIcon, PlusIcon } from "lucide-react"
-import { cn } from "registry/new-york/lib/utils"
+import { cn } from "@/registry/new-york/lib/utils"
 
 interface NumberInputProps extends Omit<
   React.ComponentProps<"input">,

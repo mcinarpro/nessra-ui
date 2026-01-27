@@ -1,4 +1,4 @@
-import { NumberInput } from "registry/new-york/ui/number-input"
+import { NumberInput } from "@/registry/new-york/ui/number-input"
 
 export default function NumberInputStep() {
   return (

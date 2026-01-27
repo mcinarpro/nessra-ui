@@ -1,4 +1,4 @@
-import { CodeBlock } from "registry/new-york/ui/code-block"
+import { CodeBlock } from "@/registry/new-york/ui/code-block"
 
 const code = `function fibonacci(n: number): number {
   if (n <= 1) return n

@@ -4,7 +4,7 @@ import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "registry/new-york/ui/input-otp"
+} from "@/registry/new-york/ui/input-otp"
 
 export default function InputOtpDemo() {
   return (

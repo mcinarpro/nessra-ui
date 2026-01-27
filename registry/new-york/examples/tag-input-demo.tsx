@@ -1,4 +1,4 @@
-import { TagInput } from "registry/new-york/ui/tag-input"
+import { TagInput } from "@/registry/new-york/ui/tag-input"
 
 const frameworks = [
   "React",

@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- **Registry imports**: Added `@/` prefix to all internal imports (`@/registry/new-york/...` instead of `registry/new-york/...`). This enables proper path transformation when components are installed via shadcn CLI
 - **Registry dependencies**: Changed all `registryDependencies` from simple names to full URLs (`https://nessra-ui.vercel.app/r/*.json`). This ensures components are resolved from nessra-ui registry instead of shadcn/ui, preventing unwanted packages like react-hook-form from being installed
 - **Form blocks**: Added missing `dependencies` (`@tanstack/react-form`, `lucide-react`, `zod`) to signin-form, signup-form, forgot-password-form, and reset-password-form registry entries
 

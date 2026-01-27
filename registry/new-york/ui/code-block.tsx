@@ -1,9 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { cn } from "registry/new-york/lib/utils"
-import { CopyButton } from "registry/new-york/ui/copy-button"
-import { ScrollArea, ScrollBar } from "registry/new-york/ui/scroll-area"
+import { cn } from "@/registry/new-york/lib/utils"
+import { CopyButton } from "@/registry/new-york/ui/copy-button"
+import { ScrollArea, ScrollBar } from "@/registry/new-york/ui/scroll-area"
 import type { BundledLanguage, BundledTheme, HighlighterGeneric } from "shiki"
 
 // Singleton highlighter cache

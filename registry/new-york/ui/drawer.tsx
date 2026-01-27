@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { cn } from "registry/new-york/lib/utils"
+import { cn } from "@/registry/new-york/lib/utils"
 import { Drawer as DrawerPrimitive } from "vaul"
 
 function Drawer({
