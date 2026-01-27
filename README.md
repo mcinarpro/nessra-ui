@@ -1,5 +1,6 @@
 # nessra ui
 
+[![CI](https://github.com/nessra/nessra-ui/actions/workflows/ci.yml/badge.svg)](https://github.com/nessra/nessra-ui/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8)](https://tailwindcss.com/)
@@ -186,10 +187,10 @@ npx shadcn@latest add http://localhost:3000/r/component-name.json
 
 ```
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│   Develop   │────▶│   Commit    │────▶│   Deploy    │────▶│   Release   │
+│   Develop   │────▶│   Commit    │────▶│   CI + Deploy │──▶│   Release   │
 └─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘
-    pnpm dev         git commit          git push           pnpm prerelease
-                     (lint-staged)       (Vercel auto)      git tag vX.Y.Z
+    pnpm dev         git commit          GitHub Actions      ./scripts/release.sh
+                     (lint-staged)       Vercel auto
 ```
 
 ### 1. Development
@@ -206,26 +207,20 @@ git commit -m "feat(components): add tooltip"
 # └─ Pre-commit hook: lint-staged (ESLint + Prettier)
 ```
 
-### 3. Deploy (automatic)
+### 3. Push (CI + Deploy)
 
 ```bash
 git push
-# └─ Vercel: prebuild → registry:generate + registry:build
-# └─ Vercel: next build
+# └─ GitHub Actions: lint → format → types → registry → build
+# └─ Vercel: auto-deploy on success
 ```
 
 ### 4. Release
 
 ```bash
-# Full validation
-pnpm prerelease
-
-# Update CHANGELOG.md
-# Then tag and push
-git add .
-git commit -m "chore(release): v0.2.0"
-git tag v0.2.0
-git push && git push --tags
+./scripts/release.sh 0.7.0
+# └─ Updates CHANGELOG.md and package.json
+# └─ Creates commit, tag, and GitHub release
 ```
 
 ---
