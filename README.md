@@ -1,6 +1,6 @@
 # nessra ui
 
-[![CI](https://github.com/nessra/nessra-ui/actions/workflows/ci.yml/badge.svg)](https://github.com/nessra/nessra-ui/actions/workflows/ci.yml)
+[![CI](https://github.com/codewithmehmet/nessra-ui/actions/workflows/ci.yml/badge.svg)](https://github.com/codewithmehmet/nessra-ui/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8)](https://tailwindcss.com/)
