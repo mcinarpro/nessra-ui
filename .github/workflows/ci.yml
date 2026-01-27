@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   check:
-    name: Lint, Format & Types
+    name: Lint, Format, Types & Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -44,6 +44,9 @@ jobs:
 
       - name: Validate registry
         run: pnpm registry:validate
+
+      - name: Run tests
+        run: pnpm test
 
   build:
     name: Build

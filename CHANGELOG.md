@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- **GitHub Actions CI**: Automated CI/CD pipeline with lint, format check, type check, registry validation, and build on push/PR to main. CI badge added to README
+- **GitHub Actions CI**: Automated CI/CD pipeline with lint, format check, type check, registry validation, tests, and build on push/PR to main. CI badge added to README
+- **Testing infrastructure**: Vitest + React Testing Library setup with tests for Button, Checkbox, Input, and Badge components
 - **Form blocks logo**: Auth form blocks (signin, signup, forgot-password, reset-password) now include the logo SVG file, automatically installed to `public/nessra-ui-logo.svg`
 
 ### Fixed

@@ -33,6 +33,7 @@ import {
   Settings2Icon,
   XIcon,
 } from "lucide-react"
+
 import { cn } from "@/registry/new-york/lib/utils"
 import { Badge } from "@/registry/new-york/ui/badge"
 import { Button } from "@/registry/new-york/ui/button"

@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { XIcon } from "lucide-react"
+
 import { cn } from "@/registry/new-york/lib/utils"
 import { Badge } from "@/registry/new-york/ui/badge"
 

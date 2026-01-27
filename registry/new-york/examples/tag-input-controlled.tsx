@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+
 import { TagInput } from "@/registry/new-york/ui/tag-input"
 
 export default function TagInputControlled() {
