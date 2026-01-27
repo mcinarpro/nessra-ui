@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- **Registry dependencies**: Changed all `registryDependencies` from simple names to full URLs (`https://nessra-ui.vercel.app/r/*.json`). This ensures components are resolved from nessra-ui registry instead of shadcn/ui, preventing unwanted packages like react-hook-form from being installed
+- **Form blocks**: Added missing `dependencies` (`@tanstack/react-form`, `lucide-react`, `zod`) to signin-form, signup-form, forgot-password-form, and reset-password-form registry entries
+
 ## [0.6.0] - 2026-01-26
 
 ### Added
