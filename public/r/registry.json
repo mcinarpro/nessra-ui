@@ -896,6 +896,11 @@
         {
           "path": "registry/new-york/blocks/signin-form.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "registry/new-york/assets/nessra-ui-logo.svg",
+          "type": "registry:file",
+          "target": "~/public/nessra-ui-logo.svg"
         }
       ]
     },
@@ -916,6 +921,11 @@
         {
           "path": "registry/new-york/blocks/signup-form.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "registry/new-york/assets/nessra-ui-logo.svg",
+          "type": "registry:file",
+          "target": "~/public/nessra-ui-logo.svg"
         }
       ]
     },
@@ -937,6 +947,11 @@
         {
           "path": "registry/new-york/blocks/forgot-password-form.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "registry/new-york/assets/nessra-ui-logo.svg",
+          "type": "registry:file",
+          "target": "~/public/nessra-ui-logo.svg"
         }
       ]
     },
@@ -958,6 +973,11 @@
         {
           "path": "registry/new-york/blocks/reset-password-form.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "registry/new-york/assets/nessra-ui-logo.svg",
+          "type": "registry:file",
+          "target": "~/public/nessra-ui-logo.svg"
         }
       ]
     }

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **Form blocks logo**: Auth form blocks (signin, signup, forgot-password, reset-password) now include the logo SVG file, automatically installed to `public/nessra-ui-logo.svg`
+
 ### Fixed
 
 - **Registry imports**: Added `@/` prefix to all internal imports (`@/registry/new-york/...` instead of `registry/new-york/...`). This enables proper path transformation when components are installed via shadcn CLI
