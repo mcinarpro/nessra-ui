@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **Claude Code customization**: Complete GitHub Flow development setup with agents, commands, and skills
+  - 6 agents: reviewer, debugger, planner, component-creator, tester, doc-writer (Opus/Sonnet/Haiku)
+  - 12 commands: branch, build, changelog, check, commit, dev, fix, merge, pr, release, status, test
+  - 6 skills: component (with templates), feature, hotfix, refactor, radix-patterns, tailwind-v4
+
 ## [0.7.0] - 2026-01-28
 
 ### Added

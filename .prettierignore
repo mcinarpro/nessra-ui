@@ -14,6 +14,9 @@ public/r
 # Lock files
 pnpm-lock.yaml
 
+# Claude templates (contain mustache placeholders)
+.claude
+
 # Misc
 .vercel
 *.tsbuildinfo

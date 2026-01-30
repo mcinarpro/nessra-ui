@@ -1,0 +1,46 @@
+---
+title: {{Title}}
+description: {{description}}
+---
+
+import { ComponentPreview } from "@/components/component-preview"
+import { Tab, Tabs } from "fumadocs-ui/components/tabs"
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab value="CLI">
+    ```bash
+    npx shadcn@latest add "https://nessra-ui.vercel.app/r/{{name}}.json"
+    ```
+  </Tab>
+  <Tab value="Manual">
+    Copy the source code from `registry/new-york/ui/{{name}}.tsx`
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx
+import { {{Name}} } from "@/components/ui/{{name}}"
+
+export default function Example() {
+  return <{{Name}}>Content</{{Name}}>
+}
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview name="{{name}}-demo" />
+
+## API Reference
+
+### {{Name}}
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `variant` | `"default" \| "secondary" \| "outline"` | `"default"` | Visual style variant |
+| `size` | `"default" \| "sm" \| "lg"` | `"default"` | Size of the component |
+| `className` | `string` | - | Additional CSS classes |

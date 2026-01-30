@@ -29,7 +29,7 @@ content/docs/            # MDX documentation
 - Use `cn()` from `@/lib/utils` for merging Tailwind classes
 - Use `cva()` from `class-variance-authority` for component variants
 - Export component props as `ComponentNameProps` type
-- Use `React.forwardRef` for components that need ref forwarding
+- Use `ref` prop for ref forwarding (React 19 pattern, no forwardRef needed)
 - Use Radix UI primitives for accessible interactive components
 - Tailwind CSS v4 syntax (no `@apply`, use CSS variables via `--color-*`)
 

@@ -1,0 +1,14 @@
+{
+  "name": "{{name}}",
+  "type": "registry:ui",
+  "title": "{{Title}}",
+  "description": "{{description}}",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/new-york/ui/{{name}}.tsx",
+      "type": "registry:ui"
+    }
+  ]
+}
