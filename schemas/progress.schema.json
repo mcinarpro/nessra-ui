@@ -1,0 +1,37 @@
+{
+  "name": "Progress",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\progress.tsx",
+  "description": "Displays an indicator showing the completion progress of a task.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "value",
+      "type": "string | number",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "@radix-ui/react-progress"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Progress",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.155Z",
+    "extractorVersion": "0.1.0"
+  }
+}

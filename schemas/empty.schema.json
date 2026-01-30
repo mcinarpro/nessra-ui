@@ -1,0 +1,86 @@
+{
+  "name": "Empty",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\empty.tsx",
+  "description": "Display an empty state when no data is available.",
+  "baseClasses": "[&_svg]:pointer-events-none [&_svg]:shrink-0",
+  "baseTokens": [],
+  "variants": [
+    {
+      "name": "variant",
+      "values": {
+        "default": {
+          "name": "default",
+          "classes": "[&_svg:not([class*='size-'])]:size-12",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "size-12",
+              "rawClass": "size-12"
+            }
+          ]
+        },
+        "icon": {
+          "name": "icon",
+          "classes": "bg-muted flex size-12 items-center justify-center rounded-full [&_svg:not([class*='size-'])]:size-6",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "bg-muted",
+              "rawClass": "bg-muted",
+              "cssVar": "--muted"
+            },
+            {
+              "type": "spacing",
+              "name": "size-12",
+              "rawClass": "size-12"
+            },
+            {
+              "type": "spacing",
+              "name": "size-6",
+              "rawClass": "size-6"
+            },
+            {
+              "type": "radius",
+              "name": "rounded-full",
+              "rawClass": "rounded-full"
+            }
+          ]
+        }
+      },
+      "defaultValue": "default"
+    }
+  ],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Empty",
+    "variantProperties": [
+      {
+        "name": "Variant",
+        "values": [
+          "Default",
+          "Icon"
+        ],
+        "defaultValue": "Default"
+      }
+    ],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.280Z",
+    "extractorVersion": "0.1.0"
+  }
+}

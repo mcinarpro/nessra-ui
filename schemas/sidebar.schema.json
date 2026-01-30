@@ -1,0 +1,215 @@
+{
+  "name": "Sidebar",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\sidebar.tsx",
+  "description": "A composable, themeable and customizable sidebar component.",
+  "baseClasses": "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left text-sm outline-hidden ring-sidebar-ring transition-[width,height,padding] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
+  "baseTokens": [
+    {
+      "type": "spacing",
+      "name": "gap-2",
+      "rawClass": "gap-2"
+    },
+    {
+      "type": "spacing",
+      "name": "p-2",
+      "rawClass": "p-2"
+    },
+    {
+      "type": "spacing",
+      "name": "pr-8",
+      "rawClass": "pr-8"
+    },
+    {
+      "type": "spacing",
+      "name": "w-full",
+      "rawClass": "w-full"
+    },
+    {
+      "type": "spacing",
+      "name": "size-8",
+      "rawClass": "size-8"
+    },
+    {
+      "type": "spacing",
+      "name": "size-4",
+      "rawClass": "size-4"
+    },
+    {
+      "type": "radius",
+      "name": "rounded-md",
+      "rawClass": "rounded-md"
+    },
+    {
+      "type": "typography",
+      "name": "text-sm",
+      "rawClass": "text-sm"
+    },
+    {
+      "type": "typography",
+      "name": "font-medium",
+      "rawClass": "font-medium"
+    }
+  ],
+  "variants": [
+    {
+      "name": "variant",
+      "values": {
+        "default": {
+          "name": "default",
+          "classes": "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
+          "tokens": []
+        },
+        "outline": {
+          "name": "outline",
+          "classes": "bg-background shadow-[0_0_0_1px_hsl(var(--sidebar-border))] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))]",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "bg-background",
+              "rawClass": "bg-background",
+              "cssVar": "--background"
+            },
+            {
+              "type": "shadow",
+              "name": "shadow",
+              "rawClass": "shadow"
+            }
+          ]
+        }
+      },
+      "defaultValue": "default"
+    },
+    {
+      "name": "size",
+      "values": {
+        "default": {
+          "name": "default",
+          "classes": "h-8 text-sm",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "h-8",
+              "rawClass": "h-8"
+            },
+            {
+              "type": "typography",
+              "name": "text-sm",
+              "rawClass": "text-sm"
+            }
+          ]
+        },
+        "sm": {
+          "name": "sm",
+          "classes": "h-7 text-xs",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "h-7",
+              "rawClass": "h-7"
+            },
+            {
+              "type": "typography",
+              "name": "text-xs",
+              "rawClass": "text-xs"
+            }
+          ]
+        },
+        "lg": {
+          "name": "lg",
+          "classes": "h-12 text-sm group-data-[collapsible=icon]:p-0!",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "p-0",
+              "rawClass": "p-0"
+            },
+            {
+              "type": "spacing",
+              "name": "h-12",
+              "rawClass": "h-12"
+            },
+            {
+              "type": "typography",
+              "name": "text-sm",
+              "rawClass": "text-sm"
+            }
+          ]
+        }
+      },
+      "defaultValue": "default"
+    }
+  ],
+  "props": [
+    {
+      "name": "side",
+      "type": "\"left\" | \"right\"",
+      "required": false,
+      "defaultValue": "left"
+    },
+    {
+      "name": "variant",
+      "type": "\"sidebar\" | \"floating\" | \"inset\"",
+      "required": false,
+      "defaultValue": "sidebar"
+    },
+    {
+      "name": "collapsible",
+      "type": "\"offcanvas\" | \"icon\" | \"none\"",
+      "required": false,
+      "defaultValue": "offcanvas"
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "children",
+      "type": "tooltip",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "@radix-ui/react-slot",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json",
+    "https://nessra-ui.vercel.app/r/use-mobile.json",
+    "https://nessra-ui.vercel.app/r/button.json",
+    "https://nessra-ui.vercel.app/r/separator.json",
+    "https://nessra-ui.vercel.app/r/sheet.json",
+    "https://nessra-ui.vercel.app/r/tooltip.json",
+    "https://nessra-ui.vercel.app/r/input.json",
+    "https://nessra-ui.vercel.app/r/skeleton.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Sidebar",
+    "variantProperties": [
+      {
+        "name": "Variant",
+        "values": [
+          "Default",
+          "Outline"
+        ],
+        "defaultValue": "Default"
+      },
+      {
+        "name": "Size",
+        "values": [
+          "Default",
+          "Sm",
+          "Lg"
+        ],
+        "defaultValue": "Default"
+      }
+    ],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.321Z",
+    "extractorVersion": "0.1.0"
+  }
+}

@@ -1,0 +1,546 @@
+[
+  {
+    "name": "Background",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(1 0 0)",
+      "dark": "oklch(0.141 0.005 285.823)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Foreground",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.141 0.005 285.823)",
+      "dark": "oklch(0.985 0 0)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Card",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(1 0 0)",
+      "dark": "oklch(0.21 0.006 285.885)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Card/Foreground",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.141 0.005 285.823)",
+      "dark": "oklch(0.985 0 0)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Popover",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(1 0 0)",
+      "dark": "oklch(0.21 0.006 285.885)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Popover/Foreground",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.141 0.005 285.823)",
+      "dark": "oklch(0.985 0 0)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Primary",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.21 0.006 285.885)",
+      "dark": "oklch(0.92 0.004 286.32)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Primary/Foreground",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.985 0 0)",
+      "dark": "oklch(0.21 0.006 285.885)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Secondary",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.967 0.001 286.375)",
+      "dark": "oklch(0.274 0.006 286.033)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Secondary/Foreground",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.21 0.006 285.885)",
+      "dark": "oklch(0.985 0 0)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Muted",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.967 0.001 286.375)",
+      "dark": "oklch(0.274 0.006 286.033)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Muted/Foreground",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.552 0.016 285.938)",
+      "dark": "oklch(0.705 0.015 286.067)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Accent",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.967 0.001 286.375)",
+      "dark": "oklch(0.274 0.006 286.033)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Accent/Foreground",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.21 0.006 285.885)",
+      "dark": "oklch(0.985 0 0)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Destructive",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.577 0.245 27.325)",
+      "dark": "oklch(0.704 0.191 22.216)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Border",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.92 0.004 286.32)",
+      "dark": "oklch(1 0 0 / 10%)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Input",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.92 0.004 286.32)",
+      "dark": "oklch(1 0 0 / 15%)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Ring",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.705 0.015 286.067)",
+      "dark": "oklch(0.552 0.016 285.938)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Chart1",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.646 0.222 41.116)",
+      "dark": "oklch(0.488 0.243 264.376)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Chart2",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.6 0.118 184.704)",
+      "dark": "oklch(0.696 0.17 162.48)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Chart3",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.398 0.07 227.392)",
+      "dark": "oklch(0.769 0.188 70.08)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Chart4",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.828 0.189 84.429)",
+      "dark": "oklch(0.627 0.265 303.9)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Chart5",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.769 0.188 70.08)",
+      "dark": "oklch(0.645 0.246 16.439)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Radius",
+    "resolvedType": "STRING",
+    "valuesByMode": {
+      "light": "0.625rem",
+      "dark": "0.625rem"
+    },
+    "scopes": [
+      "CORNER_RADIUS"
+    ]
+  },
+  {
+    "name": "Sidebar",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.985 0 0)",
+      "dark": "oklch(0.21 0.006 285.885)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Sidebar/Foreground",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.141 0.005 285.823)",
+      "dark": "oklch(0.985 0 0)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Sidebar/Primary",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.21 0.006 285.885)",
+      "dark": "oklch(0.488 0.243 264.376)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Sidebar/Primary/Foreground",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.985 0 0)",
+      "dark": "oklch(0.985 0 0)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Sidebar/Accent",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.967 0.001 286.375)",
+      "dark": "oklch(0.274 0.006 286.033)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Sidebar/Accent/Foreground",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.21 0.006 285.885)",
+      "dark": "oklch(0.985 0 0)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Sidebar/Border",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.92 0.004 286.32)",
+      "dark": "oklch(1 0 0 / 10%)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Sidebar/Ring",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.705 0.015 286.067)",
+      "dark": "oklch(0.552 0.016 285.938)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Surface",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.98 0 0)",
+      "dark": "oklch(0.2 0 0)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Surface/Foreground",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "var(--foreground)",
+      "dark": "oklch(0.708 0 0)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Code",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "var(--surface)",
+      "dark": "var(--surface)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Code/Foreground",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "var(--surface-foreground)",
+      "dark": "var(--surface-foreground)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Code/Highlight",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.96 0 0)",
+      "dark": "oklch(0.27 0 0)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Code/Number",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.56 0 0)",
+      "dark": "oklch(0.72 0 0)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Selection",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.145 0 0)",
+      "dark": "oklch(0.922 0 0)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Selection/Foreground",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(1 0 0)",
+      "dark": "oklch(0.205 0 0)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Trend/Up",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.627 0.194 149.214)",
+      "dark": "oklch(0.627 0.194 149.214)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  },
+  {
+    "name": "Trend/Down",
+    "resolvedType": "COLOR",
+    "valuesByMode": {
+      "light": "oklch(0.577 0.245 27.325)",
+      "dark": "oklch(0.704 0.191 22.216)"
+    },
+    "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR",
+      "EFFECT_COLOR"
+    ]
+  }
+]

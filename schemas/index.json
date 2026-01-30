@@ -1,0 +1,337 @@
+{
+  "name": "nessra-ui",
+  "version": "0.1.0",
+  "generatedAt": "2026-01-28T13:02:56.347Z",
+  "components": [
+    {
+      "name": "Button",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\button.tsx",
+      "variantCount": 2,
+      "propsCount": 4
+    },
+    {
+      "name": "Card",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\card.tsx",
+      "variantCount": 0,
+      "propsCount": 1
+    },
+    {
+      "name": "Input",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\input.tsx",
+      "variantCount": 0,
+      "propsCount": 2
+    },
+    {
+      "name": "Label",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\label.tsx",
+      "variantCount": 0,
+      "propsCount": 1
+    },
+    {
+      "name": "Form",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\form.tsx",
+      "variantCount": 0,
+      "propsCount": 1
+    },
+    {
+      "name": "Textarea",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\textarea.tsx",
+      "variantCount": 0,
+      "propsCount": 1
+    },
+    {
+      "name": "Select",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\select.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "Checkbox",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\checkbox.tsx",
+      "variantCount": 0,
+      "propsCount": 1
+    },
+    {
+      "name": "Switch",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\switch.tsx",
+      "variantCount": 0,
+      "propsCount": 1
+    },
+    {
+      "name": "Dialog",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\dialog.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "AlertDialog",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\alert-dialog.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "DropdownMenu",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\dropdown-menu.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "Tabs",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\tabs.tsx",
+      "variantCount": 0,
+      "propsCount": 1
+    },
+    {
+      "name": "Accordion",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\accordion.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "Avatar",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\avatar.tsx",
+      "variantCount": 0,
+      "propsCount": 1
+    },
+    {
+      "name": "Badge",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\badge.tsx",
+      "variantCount": 1,
+      "propsCount": 3
+    },
+    {
+      "name": "Separator",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\separator.tsx",
+      "variantCount": 0,
+      "propsCount": 3
+    },
+    {
+      "name": "Tooltip",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\tooltip.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "Collapsible",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\collapsible.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "CodeBlock",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\code-block.tsx",
+      "variantCount": 0,
+      "propsCount": 6
+    },
+    {
+      "name": "Alert",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\alert.tsx",
+      "variantCount": 1,
+      "propsCount": 2
+    },
+    {
+      "name": "Progress",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\progress.tsx",
+      "variantCount": 0,
+      "propsCount": 2
+    },
+    {
+      "name": "Sheet",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\sheet.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "Sonner",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\sonner.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "Popover",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\popover.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "Skeleton",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\skeleton.tsx",
+      "variantCount": 0,
+      "propsCount": 1
+    },
+    {
+      "name": "Slider",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\slider.tsx",
+      "variantCount": 0,
+      "propsCount": 5
+    },
+    {
+      "name": "ScrollArea",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\scroll-area.tsx",
+      "variantCount": 0,
+      "propsCount": 2
+    },
+    {
+      "name": "RadioGroup",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\radio-group.tsx",
+      "variantCount": 0,
+      "propsCount": 1
+    },
+    {
+      "name": "Toggle",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\toggle.tsx",
+      "variantCount": 2,
+      "propsCount": 3
+    },
+    {
+      "name": "AspectRatio",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\aspect-ratio.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "HoverCard",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\hover-card.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "Breadcrumb",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\breadcrumb.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "Pagination",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\pagination.tsx",
+      "variantCount": 0,
+      "propsCount": 1
+    },
+    {
+      "name": "Table",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\table.tsx",
+      "variantCount": 0,
+      "propsCount": 1
+    },
+    {
+      "name": "TagInput",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\tag-input.tsx",
+      "variantCount": 0,
+      "propsCount": 13
+    },
+    {
+      "name": "Command",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\command.tsx",
+      "variantCount": 0,
+      "propsCount": 1
+    },
+    {
+      "name": "CopyButton",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\copy-button.tsx",
+      "variantCount": 0,
+      "propsCount": 7
+    },
+    {
+      "name": "Drawer",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\drawer.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "Calendar",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\calendar.tsx",
+      "variantCount": 0,
+      "propsCount": 7
+    },
+    {
+      "name": "DatePicker",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\date-picker.tsx",
+      "variantCount": 0,
+      "propsCount": 4
+    },
+    {
+      "name": "DataTable",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\data-table.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "Spinner",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\spinner.tsx",
+      "variantCount": 0,
+      "propsCount": 1
+    },
+    {
+      "name": "Empty",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\empty.tsx",
+      "variantCount": 1,
+      "propsCount": 1
+    },
+    {
+      "name": "Typography",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\typography.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "ToggleGroup",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\toggle-group.tsx",
+      "variantCount": 0,
+      "propsCount": 5
+    },
+    {
+      "name": "ButtonGroup",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\button-group.tsx",
+      "variantCount": 1,
+      "propsCount": 2
+    },
+    {
+      "name": "Field",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\field.tsx",
+      "variantCount": 1,
+      "propsCount": 2
+    },
+    {
+      "name": "InputGroup",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\input-group.tsx",
+      "variantCount": 1,
+      "propsCount": 1
+    },
+    {
+      "name": "Combobox",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\combobox.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "Sidebar",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\sidebar.tsx",
+      "variantCount": 2,
+      "propsCount": 5
+    },
+    {
+      "name": "InputOtp",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\input-otp.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "NumberInput",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\number-input.tsx",
+      "variantCount": 0,
+      "propsCount": 10
+    },
+    {
+      "name": "Chart",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\chart.tsx",
+      "variantCount": 0,
+      "propsCount": 0
+    },
+    {
+      "name": "StatCard",
+      "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\stat-card.tsx",
+      "variantCount": 1,
+      "propsCount": 7
+    }
+  ]
+}

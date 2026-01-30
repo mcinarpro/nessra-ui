@@ -1,0 +1,285 @@
+{
+  "name": "Badge",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\badge.tsx",
+  "description": "Displays a badge or a component that looks like a badge.",
+  "baseClasses": "inline-flex items-center justify-center rounded-full border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden",
+  "baseTokens": [
+    {
+      "type": "color",
+      "name": "border-ring",
+      "rawClass": "border-ring",
+      "cssVar": "--ring"
+    },
+    {
+      "type": "color",
+      "name": "ring-ring",
+      "rawClass": "ring-ring",
+      "cssVar": "--ring"
+    },
+    {
+      "type": "color",
+      "name": "ring-destructive",
+      "rawClass": "ring-destructive",
+      "cssVar": "--destructive"
+    },
+    {
+      "type": "color",
+      "name": "border-destructive",
+      "rawClass": "border-destructive",
+      "cssVar": "--destructive"
+    },
+    {
+      "type": "color",
+      "name": "ring-ring/50",
+      "rawClass": "ring-ring/50",
+      "cssVar": "--ring"
+    },
+    {
+      "type": "color",
+      "name": "ring-destructive/20",
+      "rawClass": "ring-destructive/20",
+      "cssVar": "--destructive"
+    },
+    {
+      "type": "color",
+      "name": "ring-destructive/40",
+      "rawClass": "ring-destructive/40",
+      "cssVar": "--destructive"
+    },
+    {
+      "type": "spacing",
+      "name": "px-2",
+      "rawClass": "px-2"
+    },
+    {
+      "type": "spacing",
+      "name": "py-0.5",
+      "rawClass": "py-0.5"
+    },
+    {
+      "type": "spacing",
+      "name": "gap-1",
+      "rawClass": "gap-1"
+    },
+    {
+      "type": "spacing",
+      "name": "w-fit",
+      "rawClass": "w-fit"
+    },
+    {
+      "type": "spacing",
+      "name": "size-3",
+      "rawClass": "size-3"
+    },
+    {
+      "type": "radius",
+      "name": "rounded-full",
+      "rawClass": "rounded-full"
+    },
+    {
+      "type": "shadow",
+      "name": "shadow",
+      "rawClass": "shadow"
+    },
+    {
+      "type": "typography",
+      "name": "text-xs",
+      "rawClass": "text-xs"
+    },
+    {
+      "type": "typography",
+      "name": "font-medium",
+      "rawClass": "font-medium"
+    }
+  ],
+  "variants": [
+    {
+      "name": "variant",
+      "values": {
+        "default": {
+          "name": "default",
+          "classes": "border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "bg-primary",
+              "rawClass": "bg-primary",
+              "cssVar": "--primary"
+            },
+            {
+              "type": "color",
+              "name": "text-primary-foreground",
+              "rawClass": "text-primary-foreground",
+              "cssVar": "--primary"
+            },
+            {
+              "type": "color",
+              "name": "border-transparent",
+              "rawClass": "border-transparent"
+            },
+            {
+              "type": "color",
+              "name": "bg-primary/90",
+              "rawClass": "bg-primary/90",
+              "cssVar": "--primary"
+            }
+          ]
+        },
+        "secondary": {
+          "name": "secondary",
+          "classes": "border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "bg-secondary",
+              "rawClass": "bg-secondary",
+              "cssVar": "--secondary"
+            },
+            {
+              "type": "color",
+              "name": "text-secondary-foreground",
+              "rawClass": "text-secondary-foreground",
+              "cssVar": "--secondary"
+            },
+            {
+              "type": "color",
+              "name": "border-transparent",
+              "rawClass": "border-transparent"
+            },
+            {
+              "type": "color",
+              "name": "bg-secondary/90",
+              "rawClass": "bg-secondary/90",
+              "cssVar": "--secondary"
+            }
+          ]
+        },
+        "destructive": {
+          "name": "destructive",
+          "classes": "border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "bg-destructive",
+              "rawClass": "bg-destructive",
+              "cssVar": "--destructive"
+            },
+            {
+              "type": "color",
+              "name": "ring-destructive",
+              "rawClass": "ring-destructive",
+              "cssVar": "--destructive"
+            },
+            {
+              "type": "color",
+              "name": "border-transparent",
+              "rawClass": "border-transparent"
+            },
+            {
+              "type": "color",
+              "name": "text-white",
+              "rawClass": "text-white"
+            },
+            {
+              "type": "color",
+              "name": "bg-destructive/90",
+              "rawClass": "bg-destructive/90",
+              "cssVar": "--destructive"
+            },
+            {
+              "type": "color",
+              "name": "ring-destructive/20",
+              "rawClass": "ring-destructive/20",
+              "cssVar": "--destructive"
+            },
+            {
+              "type": "color",
+              "name": "ring-destructive/40",
+              "rawClass": "ring-destructive/40",
+              "cssVar": "--destructive"
+            },
+            {
+              "type": "color",
+              "name": "bg-destructive/60",
+              "rawClass": "bg-destructive/60",
+              "cssVar": "--destructive"
+            }
+          ]
+        },
+        "outline": {
+          "name": "outline",
+          "classes": "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "text-foreground",
+              "rawClass": "text-foreground",
+              "cssVar": "--foreground"
+            },
+            {
+              "type": "color",
+              "name": "bg-accent",
+              "rawClass": "bg-accent",
+              "cssVar": "--accent"
+            },
+            {
+              "type": "color",
+              "name": "text-accent-foreground",
+              "rawClass": "text-accent-foreground",
+              "cssVar": "--accent"
+            }
+          ]
+        }
+      },
+      "defaultValue": "default"
+    }
+  ],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "variant",
+      "type": "{",
+      "required": true
+    },
+    {
+      "name": "asChild",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false"
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Badge",
+    "variantProperties": [
+      {
+        "name": "Variant",
+        "values": [
+          "Default",
+          "Secondary",
+          "Destructive",
+          "Outline"
+        ],
+        "defaultValue": "Default"
+      }
+    ],
+    "booleanProperties": [
+      "AsChild"
+    ],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.122Z",
+    "extractorVersion": "0.1.0"
+  }
+}

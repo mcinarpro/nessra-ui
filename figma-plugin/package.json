@@ -1,0 +1,28 @@
+{
+  "name": "nessra-sync-figma-plugin",
+  "version": "0.1.0",
+  "description": "Bidirectional sync between nessra-ui component registry and Figma",
+  "main": "dist/code.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:code\" \"npm run dev:ui\"",
+    "dev:code": "esbuild src/code.ts --bundle --outfile=dist/code.js --watch",
+    "dev:ui": "esbuild src/ui.tsx --bundle --outfile=dist/ui.js --watch",
+    "build": "npm run build:code && npm run build:ui && npm run build:html",
+    "build:code": "esbuild src/code.ts --bundle --outfile=dist/code.js --minify --target=es2017",
+    "build:ui": "esbuild src/ui.tsx --bundle --outfile=dist/ui.js --minify --target=es2017 --define:process.env.NODE_ENV=\\\"production\\\"",
+    "build:html": "node scripts/build-html.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.100.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "concurrently": "^9.0.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.5.0"
+  },
+  "dependencies": {
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  }
+}

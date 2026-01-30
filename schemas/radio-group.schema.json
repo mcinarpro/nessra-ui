@@ -1,0 +1,32 @@
+{
+  "name": "RadioGroup",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\radio-group.tsx",
+  "description": "A set of checkable buttons where only one can be checked at a time.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "@radix-ui/react-radio-group"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "RadioGroup",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.197Z",
+    "extractorVersion": "0.1.0"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Drawer",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\drawer.tsx",
+  "description": "A drawer component for mobile-friendly navigation and content.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [],
+  "subComponents": [],
+  "dependencies": [
+    "vaul"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Drawer",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.250Z",
+    "extractorVersion": "0.1.0"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "Calendar",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\calendar.tsx",
+  "description": "A date field component that allows users to enter and edit date.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "classNames",
+      "type": "unknown",
+      "required": true
+    },
+    {
+      "name": "showOutsideDays",
+      "type": "unknown",
+      "required": false,
+      "defaultValue": "true"
+    },
+    {
+      "name": "captionLayout",
+      "type": "unknown",
+      "required": false,
+      "defaultValue": "label"
+    },
+    {
+      "name": "buttonVariant",
+      "type": "React.ComponentProps<typeof Button>[\"variant\"]",
+      "required": false,
+      "defaultValue": "ghost"
+    },
+    {
+      "name": "formatters",
+      "type": "unknown",
+      "required": true
+    },
+    {
+      "name": "components",
+      "type": "unknown",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "react-day-picker",
+    "date-fns"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json",
+    "https://nessra-ui.vercel.app/r/button.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Calendar",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.257Z",
+    "extractorVersion": "0.1.0"
+  }
+}

@@ -1,0 +1,476 @@
+{
+  "name": "Button",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\button.tsx",
+  "description": "Displays a button or a component that looks like a button.",
+  "baseClasses": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*=",
+  "baseTokens": [
+    {
+      "type": "spacing",
+      "name": "gap-2",
+      "rawClass": "gap-2"
+    },
+    {
+      "type": "radius",
+      "name": "rounded-md",
+      "rawClass": "rounded-md"
+    },
+    {
+      "type": "typography",
+      "name": "text-sm",
+      "rawClass": "text-sm"
+    },
+    {
+      "type": "typography",
+      "name": "font-medium",
+      "rawClass": "font-medium"
+    }
+  ],
+  "variants": [
+    {
+      "name": "variant",
+      "values": {
+        "default": {
+          "name": "default",
+          "classes": "bg-primary text-primary-foreground hover:bg-primary/90",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "bg-primary",
+              "rawClass": "bg-primary",
+              "cssVar": "--primary"
+            },
+            {
+              "type": "color",
+              "name": "text-primary-foreground",
+              "rawClass": "text-primary-foreground",
+              "cssVar": "--primary"
+            },
+            {
+              "type": "color",
+              "name": "bg-primary/90",
+              "rawClass": "bg-primary/90",
+              "cssVar": "--primary"
+            }
+          ]
+        },
+        "destructive": {
+          "name": "destructive",
+          "classes": "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "bg-destructive",
+              "rawClass": "bg-destructive",
+              "cssVar": "--destructive"
+            },
+            {
+              "type": "color",
+              "name": "ring-destructive",
+              "rawClass": "ring-destructive",
+              "cssVar": "--destructive"
+            },
+            {
+              "type": "color",
+              "name": "text-white",
+              "rawClass": "text-white"
+            },
+            {
+              "type": "color",
+              "name": "bg-destructive/90",
+              "rawClass": "bg-destructive/90",
+              "cssVar": "--destructive"
+            },
+            {
+              "type": "color",
+              "name": "ring-destructive/20",
+              "rawClass": "ring-destructive/20",
+              "cssVar": "--destructive"
+            },
+            {
+              "type": "color",
+              "name": "ring-destructive/40",
+              "rawClass": "ring-destructive/40",
+              "cssVar": "--destructive"
+            },
+            {
+              "type": "color",
+              "name": "bg-destructive/60",
+              "rawClass": "bg-destructive/60",
+              "cssVar": "--destructive"
+            }
+          ]
+        },
+        "outline": {
+          "name": "outline",
+          "classes": "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "bg-background",
+              "rawClass": "bg-background",
+              "cssVar": "--background"
+            },
+            {
+              "type": "color",
+              "name": "bg-accent",
+              "rawClass": "bg-accent",
+              "cssVar": "--accent"
+            },
+            {
+              "type": "color",
+              "name": "text-accent-foreground",
+              "rawClass": "text-accent-foreground",
+              "cssVar": "--accent"
+            },
+            {
+              "type": "color",
+              "name": "bg-input",
+              "rawClass": "bg-input",
+              "cssVar": "--input"
+            },
+            {
+              "type": "color",
+              "name": "border-input",
+              "rawClass": "border-input",
+              "cssVar": "--input"
+            },
+            {
+              "type": "color",
+              "name": "bg-input/30",
+              "rawClass": "bg-input/30",
+              "cssVar": "--input"
+            },
+            {
+              "type": "color",
+              "name": "bg-input/50",
+              "rawClass": "bg-input/50",
+              "cssVar": "--input"
+            },
+            {
+              "type": "shadow",
+              "name": "shadow-xs",
+              "rawClass": "shadow-xs"
+            }
+          ]
+        },
+        "secondary": {
+          "name": "secondary",
+          "classes": "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "bg-secondary",
+              "rawClass": "bg-secondary",
+              "cssVar": "--secondary"
+            },
+            {
+              "type": "color",
+              "name": "text-secondary-foreground",
+              "rawClass": "text-secondary-foreground",
+              "cssVar": "--secondary"
+            },
+            {
+              "type": "color",
+              "name": "bg-secondary/80",
+              "rawClass": "bg-secondary/80",
+              "cssVar": "--secondary"
+            }
+          ]
+        },
+        "ghost": {
+          "name": "ghost",
+          "classes": "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "bg-accent",
+              "rawClass": "bg-accent",
+              "cssVar": "--accent"
+            },
+            {
+              "type": "color",
+              "name": "text-accent-foreground",
+              "rawClass": "text-accent-foreground",
+              "cssVar": "--accent"
+            },
+            {
+              "type": "color",
+              "name": "bg-accent/50",
+              "rawClass": "bg-accent/50",
+              "cssVar": "--accent"
+            }
+          ]
+        },
+        "link": {
+          "name": "link",
+          "classes": "text-primary underline-offset-4 hover:underline",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "text-primary",
+              "rawClass": "text-primary",
+              "cssVar": "--primary"
+            }
+          ]
+        }
+      },
+      "defaultValue": "default"
+    },
+    {
+      "name": "size",
+      "values": {
+        "default": {
+          "name": "default",
+          "classes": "h-9 px-4 py-2 has-[>svg]:px-3",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "px-4",
+              "rawClass": "px-4"
+            },
+            {
+              "type": "spacing",
+              "name": "py-2",
+              "rawClass": "py-2"
+            },
+            {
+              "type": "spacing",
+              "name": "px-3",
+              "rawClass": "px-3"
+            },
+            {
+              "type": "spacing",
+              "name": "h-9",
+              "rawClass": "h-9"
+            }
+          ]
+        },
+        "xs": {
+          "name": "xs",
+          "classes": "h-6 gap-1 rounded-md px-2 text-xs has-[>svg]:px-1.5 [&_svg:not([class*='size-'])]:size-3",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "gap-1",
+              "rawClass": "gap-1"
+            },
+            {
+              "type": "spacing",
+              "name": "px-2",
+              "rawClass": "px-2"
+            },
+            {
+              "type": "spacing",
+              "name": "px-1.5",
+              "rawClass": "px-1.5"
+            },
+            {
+              "type": "spacing",
+              "name": "h-6",
+              "rawClass": "h-6"
+            },
+            {
+              "type": "spacing",
+              "name": "size-3",
+              "rawClass": "size-3"
+            },
+            {
+              "type": "radius",
+              "name": "rounded-md",
+              "rawClass": "rounded-md"
+            },
+            {
+              "type": "typography",
+              "name": "text-xs",
+              "rawClass": "text-xs"
+            }
+          ]
+        },
+        "sm": {
+          "name": "sm",
+          "classes": "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "gap-1.5",
+              "rawClass": "gap-1.5"
+            },
+            {
+              "type": "spacing",
+              "name": "px-3",
+              "rawClass": "px-3"
+            },
+            {
+              "type": "spacing",
+              "name": "px-2.5",
+              "rawClass": "px-2.5"
+            },
+            {
+              "type": "spacing",
+              "name": "h-8",
+              "rawClass": "h-8"
+            },
+            {
+              "type": "radius",
+              "name": "rounded-md",
+              "rawClass": "rounded-md"
+            }
+          ]
+        },
+        "lg": {
+          "name": "lg",
+          "classes": "h-10 rounded-md px-6 has-[>svg]:px-4",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "px-6",
+              "rawClass": "px-6"
+            },
+            {
+              "type": "spacing",
+              "name": "px-4",
+              "rawClass": "px-4"
+            },
+            {
+              "type": "spacing",
+              "name": "h-10",
+              "rawClass": "h-10"
+            },
+            {
+              "type": "radius",
+              "name": "rounded-md",
+              "rawClass": "rounded-md"
+            }
+          ]
+        },
+        "icon": {
+          "name": "icon",
+          "classes": "size-9",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "size-9",
+              "rawClass": "size-9"
+            }
+          ]
+        },
+        "icon-xs": {
+          "name": "icon-xs",
+          "classes": "size-6 rounded-md [&_svg:not([class*='size-'])]:size-3",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "size-6",
+              "rawClass": "size-6"
+            },
+            {
+              "type": "spacing",
+              "name": "size-3",
+              "rawClass": "size-3"
+            },
+            {
+              "type": "radius",
+              "name": "rounded-md",
+              "rawClass": "rounded-md"
+            }
+          ]
+        },
+        "icon-sm": {
+          "name": "icon-sm",
+          "classes": "size-8",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "size-8",
+              "rawClass": "size-8"
+            }
+          ]
+        },
+        "icon-lg": {
+          "name": "icon-lg",
+          "classes": "size-10",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "size-10",
+              "rawClass": "size-10"
+            }
+          ]
+        }
+      },
+      "defaultValue": "default"
+    }
+  ],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "variant",
+      "type": "{",
+      "required": false,
+      "defaultValue": "default"
+    },
+    {
+      "name": "size",
+      "type": "{",
+      "required": false,
+      "defaultValue": "default"
+    },
+    {
+      "name": "asChild",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false"
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "@radix-ui/react-slot",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Button",
+    "variantProperties": [
+      {
+        "name": "Variant",
+        "values": [
+          "Default",
+          "Destructive",
+          "Outline",
+          "Secondary",
+          "Ghost",
+          "Link"
+        ],
+        "defaultValue": "Default"
+      },
+      {
+        "name": "Size",
+        "values": [
+          "Default",
+          "Xs",
+          "Sm",
+          "Lg",
+          "Icon",
+          "Icon-xs",
+          "Icon-sm",
+          "Icon-lg"
+        ],
+        "defaultValue": "Default"
+      }
+    ],
+    "booleanProperties": [
+      "AsChild"
+    ],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.026Z",
+    "extractorVersion": "0.1.0"
+  }
+}

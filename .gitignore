@@ -3,6 +3,14 @@
 
 # generated content
 .source
+/schemas
+/tokens
+
+# figma plugin
+figma-plugin/node_modules
+figma-plugin/dist/*.js
+figma-plugin/dist/*.html
+!figma-plugin/dist/.gitkeep
 
 # test & build
 /coverage

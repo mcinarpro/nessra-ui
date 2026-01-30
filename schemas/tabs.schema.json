@@ -1,0 +1,32 @@
+{
+  "name": "Tabs",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\tabs.tsx",
+  "description": "A set of layered sections of content, known as tab panels.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "@radix-ui/react-tabs"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Tabs",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.105Z",
+    "extractorVersion": "0.1.0"
+  }
+}

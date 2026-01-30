@@ -1,0 +1,26 @@
+{
+  "name": "Tooltip",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\tooltip.tsx",
+  "description": "A popup that displays information related to an element.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [],
+  "subComponents": [],
+  "dependencies": [
+    "@radix-ui/react-tooltip"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Tooltip",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.133Z",
+    "extractorVersion": "0.1.0"
+  }
+}

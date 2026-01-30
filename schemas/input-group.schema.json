@@ -1,0 +1,169 @@
+{
+  "name": "InputGroup",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\input-group.tsx",
+  "description": "Add addons, buttons, and helper content to inputs.",
+  "baseClasses": "text-muted-foreground flex h-auto cursor-text items-center justify-center gap-2 py-1.5 text-sm font-medium select-none [&>svg:not([class*=",
+  "baseTokens": [
+    {
+      "type": "color",
+      "name": "text-muted-foreground",
+      "rawClass": "text-muted-foreground",
+      "cssVar": "--muted"
+    },
+    {
+      "type": "spacing",
+      "name": "gap-2",
+      "rawClass": "gap-2"
+    },
+    {
+      "type": "spacing",
+      "name": "py-1.5",
+      "rawClass": "py-1.5"
+    },
+    {
+      "type": "spacing",
+      "name": "h-auto",
+      "rawClass": "h-auto"
+    },
+    {
+      "type": "typography",
+      "name": "text-sm",
+      "rawClass": "text-sm"
+    },
+    {
+      "type": "typography",
+      "name": "font-medium",
+      "rawClass": "font-medium"
+    }
+  ],
+  "variants": [
+    {
+      "name": "align",
+      "values": {
+        "inline-start": {
+          "name": "inline-start",
+          "classes": "order-first pl-3 has-[>button]:ml-[-0.45rem] has-[>kbd]:ml-[-0.35rem]",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "pl-3",
+              "rawClass": "pl-3"
+            }
+          ]
+        },
+        "inline-end": {
+          "name": "inline-end",
+          "classes": "order-last pr-3 has-[>button]:mr-[-0.45rem] has-[>kbd]:mr-[-0.35rem]",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "pr-3",
+              "rawClass": "pr-3"
+            }
+          ]
+        },
+        "block-start": {
+          "name": "block-start",
+          "classes": "order-first w-full justify-start px-3 pt-3 [.border-b]:pb-3 group-has-[>input]/input-group:pt-2.5",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "px-3",
+              "rawClass": "px-3"
+            },
+            {
+              "type": "spacing",
+              "name": "pt-3",
+              "rawClass": "pt-3"
+            },
+            {
+              "type": "spacing",
+              "name": "pb-3",
+              "rawClass": "pb-3"
+            },
+            {
+              "type": "spacing",
+              "name": "pt-2.5",
+              "rawClass": "pt-2.5"
+            },
+            {
+              "type": "spacing",
+              "name": "w-full",
+              "rawClass": "w-full"
+            }
+          ]
+        },
+        "block-end": {
+          "name": "block-end",
+          "classes": "order-last w-full justify-start px-3 pb-3 [.border-t]:pt-3 group-has-[>input]/input-group:pb-2.5",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "px-3",
+              "rawClass": "px-3"
+            },
+            {
+              "type": "spacing",
+              "name": "pb-3",
+              "rawClass": "pb-3"
+            },
+            {
+              "type": "spacing",
+              "name": "pt-3",
+              "rawClass": "pt-3"
+            },
+            {
+              "type": "spacing",
+              "name": "pb-2.5",
+              "rawClass": "pb-2.5"
+            },
+            {
+              "type": "spacing",
+              "name": "w-full",
+              "rawClass": "w-full"
+            }
+          ]
+        }
+      },
+      "defaultValue": "inline-start"
+    }
+  ],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json",
+    "https://nessra-ui.vercel.app/r/button.json",
+    "https://nessra-ui.vercel.app/r/input.json",
+    "https://nessra-ui.vercel.app/r/textarea.json"
+  ],
+  "figmaMapping": {
+    "componentName": "InputGroup",
+    "variantProperties": [
+      {
+        "name": "Align",
+        "values": [
+          "Inline-start",
+          "Inline-end",
+          "Block-start",
+          "Block-end"
+        ],
+        "defaultValue": "Inline-start"
+      }
+    ],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.310Z",
+    "extractorVersion": "0.1.0"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "name": "StatCard",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\stat-card.tsx",
+  "description": "Display key metrics and KPIs with value, label, icon and trend indicator.",
+  "baseClasses": "inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-xs font-medium",
+  "baseTokens": [
+    {
+      "type": "spacing",
+      "name": "gap-1",
+      "rawClass": "gap-1"
+    },
+    {
+      "type": "spacing",
+      "name": "px-1.5",
+      "rawClass": "px-1.5"
+    },
+    {
+      "type": "spacing",
+      "name": "py-0.5",
+      "rawClass": "py-0.5"
+    },
+    {
+      "type": "radius",
+      "name": "rounded-md",
+      "rawClass": "rounded-md"
+    },
+    {
+      "type": "typography",
+      "name": "text-xs",
+      "rawClass": "text-xs"
+    },
+    {
+      "type": "typography",
+      "name": "font-medium",
+      "rawClass": "font-medium"
+    }
+  ],
+  "variants": [
+    {
+      "name": "direction",
+      "values": {
+        "up": {
+          "name": "up",
+          "classes": "bg-trend-up/10 text-trend-up",
+          "tokens": []
+        },
+        "down": {
+          "name": "down",
+          "classes": "bg-trend-down/10 text-trend-down",
+          "tokens": []
+        },
+        "neutral": {
+          "name": "neutral",
+          "classes": "bg-muted text-muted-foreground",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "bg-muted",
+              "rawClass": "bg-muted",
+              "cssVar": "--muted"
+            },
+            {
+              "type": "color",
+              "name": "text-muted-foreground",
+              "rawClass": "text-muted-foreground",
+              "cssVar": "--muted"
+            }
+          ]
+        }
+      },
+      "defaultValue": "neutral"
+    }
+  ],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "value",
+      "type": "string | number",
+      "required": true
+    },
+    {
+      "name": "label",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "icon",
+      "type": "React.ReactNode",
+      "required": true
+    },
+    {
+      "name": "trend",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "trendLabel",
+      "type": "string",
+      "required": false,
+      "defaultValue": "vs last period"
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "StatCard",
+    "variantProperties": [
+      {
+        "name": "Direction",
+        "values": [
+          "Up",
+          "Down",
+          "Neutral"
+        ],
+        "defaultValue": "Neutral"
+      }
+    ],
+    "booleanProperties": [],
+    "textProperties": [
+      "Label",
+      "Icon",
+      "TrendLabel",
+      "Description"
+    ]
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.343Z",
+    "extractorVersion": "0.1.0"
+  }
+}

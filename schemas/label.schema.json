@@ -1,0 +1,32 @@
+{
+  "name": "Label",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\label.tsx",
+  "description": "Renders an accessible label associated with controls.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "@radix-ui/react-label"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Label",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.057Z",
+    "extractorVersion": "0.1.0"
+  }
+}

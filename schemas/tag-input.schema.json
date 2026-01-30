@@ -1,0 +1,103 @@
+{
+  "name": "TagInput",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\tag-input.tsx",
+  "description": "An input for entering multiple tags with keyboard support.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "value",
+      "type": "string[]",
+      "required": true
+    },
+    {
+      "name": "controlledValue",
+      "type": "unknown",
+      "required": true
+    },
+    {
+      "name": "defaultValue",
+      "type": "string[]",
+      "required": false,
+      "defaultValue": "[]"
+    },
+    {
+      "name": "onChange",
+      "type": "(value: string[]) => void",
+      "required": true
+    },
+    {
+      "name": "suggestions",
+      "type": "string[]",
+      "required": false,
+      "defaultValue": "[]"
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "required": false,
+      "defaultValue": "Add tag..."
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "name": "maxTags",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "allowDuplicates",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false"
+    },
+    {
+      "name": "allowCustom",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "true"
+    },
+    {
+      "name": "delimiter",
+      "type": "string | RegExp",
+      "required": false,
+      "defaultValue": "/["
+    },
+    {
+      "name": "n",
+      "type": "border-ring focus-within:ring-ring/50 flex min-h-9 w-full flex-wrap items-center gap-1.5 rounded-md border bg-transparent px-3 py-1.5 shadow-xs transition-[color",
+      "required": true
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json",
+    "https://nessra-ui.vercel.app/r/badge.json"
+  ],
+  "figmaMapping": {
+    "componentName": "TagInput",
+    "variantProperties": [],
+    "booleanProperties": [
+      "Disabled",
+      "AllowDuplicates",
+      "AllowCustom"
+    ],
+    "textProperties": [
+      "Placeholder"
+    ]
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.235Z",
+    "extractorVersion": "0.1.0"
+  }
+}

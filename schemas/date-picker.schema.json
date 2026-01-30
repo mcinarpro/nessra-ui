@@ -1,0 +1,54 @@
+{
+  "name": "DatePicker",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\date-picker.tsx",
+  "description": "A date picker component with range and presets.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "date",
+      "type": "Date",
+      "required": true
+    },
+    {
+      "name": "onDateChange",
+      "type": "(date: Date | undefined) => void",
+      "required": true
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "required": false,
+      "defaultValue": "Pick a date"
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "react-day-picker",
+    "date-fns"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json",
+    "https://nessra-ui.vercel.app/r/button.json",
+    "https://nessra-ui.vercel.app/r/calendar.json",
+    "https://nessra-ui.vercel.app/r/popover.json"
+  ],
+  "figmaMapping": {
+    "componentName": "DatePicker",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": [
+      "Placeholder"
+    ]
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.262Z",
+    "extractorVersion": "0.1.0"
+  }
+}

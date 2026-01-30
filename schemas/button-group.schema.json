@@ -1,0 +1,84 @@
+{
+  "name": "ButtonGroup",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\button-group.tsx",
+  "description": "Groups related buttons together with consistent styling.",
+  "baseClasses": "flex w-fit items-stretch [&>*]:focus-visible:z-10 [&>*]:focus-visible:relative [&>[data-slot=select-trigger]:not([class*=",
+  "baseTokens": [
+    {
+      "type": "spacing",
+      "name": "w-fit",
+      "rawClass": "w-fit"
+    }
+  ],
+  "variants": [
+    {
+      "name": "orientation",
+      "values": {
+        "horizontal": {
+          "name": "horizontal",
+          "classes": "[&>*:not(:first-child)]:rounded-l-none [&>*:not(:first-child)]:border-l-0 [&>*:not(:last-child)]:rounded-r-none",
+          "tokens": [
+            {
+              "type": "radius",
+              "name": "rounded",
+              "rawClass": "rounded"
+            }
+          ]
+        },
+        "vertical": {
+          "name": "vertical",
+          "classes": "flex-col [&>*:not(:first-child)]:rounded-t-none [&>*:not(:first-child)]:border-t-0 [&>*:not(:last-child)]:rounded-b-none",
+          "tokens": [
+            {
+              "type": "radius",
+              "name": "rounded",
+              "rawClass": "rounded"
+            }
+          ]
+        }
+      },
+      "defaultValue": "horizontal"
+    }
+  ],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "orientation",
+      "type": "{",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "@radix-ui/react-slot",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json",
+    "https://nessra-ui.vercel.app/r/button.json",
+    "https://nessra-ui.vercel.app/r/separator.json"
+  ],
+  "figmaMapping": {
+    "componentName": "ButtonGroup",
+    "variantProperties": [
+      {
+        "name": "Orientation",
+        "values": [
+          "Horizontal",
+          "Vertical"
+        ],
+        "defaultValue": "Horizontal"
+      }
+    ],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.296Z",
+    "extractorVersion": "0.1.0"
+  }
+}

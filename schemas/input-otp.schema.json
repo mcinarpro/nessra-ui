@@ -1,0 +1,26 @@
+{
+  "name": "InputOtp",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\input-otp.tsx",
+  "description": "Accessible one-time password input with copy/paste support.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [],
+  "subComponents": [],
+  "dependencies": [
+    "input-otp"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "InputOtp",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.326Z",
+    "extractorVersion": "0.1.0"
+  }
+}

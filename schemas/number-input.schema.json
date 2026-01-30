@@ -1,0 +1,80 @@
+{
+  "name": "NumberInput",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\number-input.tsx",
+  "description": "A numeric input with increment and decrement buttons.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "controlledValue",
+      "type": "unknown",
+      "required": true
+    },
+    {
+      "name": "defaultValue",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "onChange",
+      "type": "(value: number | undefined) => void",
+      "required": true
+    },
+    {
+      "name": "min",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "max",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "step",
+      "type": "number",
+      "required": false,
+      "defaultValue": "1"
+    },
+    {
+      "name": "disabled",
+      "type": "pointer-events-none disabled:opacity-50\"",
+      "required": true
+    },
+    {
+      "name": "allowEmpty",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false"
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "NumberInput",
+    "variantProperties": [],
+    "booleanProperties": [
+      "Disabled",
+      "AllowEmpty"
+    ],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.332Z",
+    "extractorVersion": "0.1.0"
+  }
+}

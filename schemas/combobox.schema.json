@@ -1,0 +1,28 @@
+{
+  "name": "Combobox",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\combobox.tsx",
+  "description": "An autocomplete input with a dropdown list of suggestions.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [],
+  "subComponents": [],
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json",
+    "https://nessra-ui.vercel.app/r/button.json",
+    "https://nessra-ui.vercel.app/r/input-group.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Combobox",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.314Z",
+    "extractorVersion": "0.1.0"
+  }
+}

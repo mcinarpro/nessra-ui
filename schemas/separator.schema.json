@@ -1,0 +1,44 @@
+{
+  "name": "Separator",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\separator.tsx",
+  "description": "Visually separates content.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "orientation",
+      "type": "unknown",
+      "required": false,
+      "defaultValue": "horizontal"
+    },
+    {
+      "name": "decorative",
+      "type": "unknown",
+      "required": false,
+      "defaultValue": "true"
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "@radix-ui/react-separator"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Separator",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.128Z",
+    "extractorVersion": "0.1.0"
+  }
+}

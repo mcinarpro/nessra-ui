@@ -1,0 +1,35 @@
+{
+  "name": "Form",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\form.tsx",
+  "description": "Form field components for building accessible forms with TanStack Form.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "@radix-ui/react-slot",
+    "@tanstack/react-form",
+    "zod"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json",
+    "https://nessra-ui.vercel.app/r/label.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Form",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.063Z",
+    "extractorVersion": "0.1.0"
+  }
+}

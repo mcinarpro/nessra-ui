@@ -1,0 +1,39 @@
+{
+  "name": "ScrollArea",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\scroll-area.tsx",
+  "description": "Augments native scroll functionality for custom, cross-browser styling.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "@radix-ui/react-scroll-area"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "ScrollArea",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": [
+      "Children"
+    ]
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.191Z",
+    "extractorVersion": "0.1.0"
+  }
+}

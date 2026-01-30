@@ -1,0 +1,24 @@
+{
+  "name": "Typography",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\typography.tsx",
+  "description": "Styled text components for headings, paragraphs, lists, and more.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [],
+  "subComponents": [],
+  "dependencies": [],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Typography",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.284Z",
+    "extractorVersion": "0.1.0"
+  }
+}

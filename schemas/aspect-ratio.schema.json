@@ -1,0 +1,24 @@
+{
+  "name": "AspectRatio",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\aspect-ratio.tsx",
+  "description": "Displays content within a desired ratio.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [],
+  "subComponents": [],
+  "dependencies": [
+    "@radix-ui/react-aspect-ratio"
+  ],
+  "registryDependencies": [],
+  "figmaMapping": {
+    "componentName": "AspectRatio",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.208Z",
+    "extractorVersion": "0.1.0"
+  }
+}

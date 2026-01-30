@@ -1,0 +1,33 @@
+{
+  "name": "Command",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\command.tsx",
+  "description": "A command menu with search and keyboard navigation.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "cmdk"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json",
+    "https://nessra-ui.vercel.app/r/dialog.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Command",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.240Z",
+    "extractorVersion": "0.1.0"
+  }
+}

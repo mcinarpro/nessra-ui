@@ -1,0 +1,126 @@
+{
+  "name": "Alert",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\alert.tsx",
+  "description": "Displays a callout for user attention.",
+  "baseClasses": "relative w-full rounded-lg border px-4 py-3 text-sm grid has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] grid-cols-[0_1fr] has-[>svg]:gap-x-3 gap-y-0.5 items-start [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current",
+  "baseTokens": [
+    {
+      "type": "spacing",
+      "name": "px-4",
+      "rawClass": "px-4"
+    },
+    {
+      "type": "spacing",
+      "name": "py-3",
+      "rawClass": "py-3"
+    },
+    {
+      "type": "spacing",
+      "name": "w-full",
+      "rawClass": "w-full"
+    },
+    {
+      "type": "spacing",
+      "name": "size-4",
+      "rawClass": "size-4"
+    },
+    {
+      "type": "radius",
+      "name": "rounded-lg",
+      "rawClass": "rounded-lg"
+    },
+    {
+      "type": "typography",
+      "name": "text-sm",
+      "rawClass": "text-sm"
+    }
+  ],
+  "variants": [
+    {
+      "name": "variant",
+      "values": {
+        "default": {
+          "name": "default",
+          "classes": "bg-card text-card-foreground",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "bg-card",
+              "rawClass": "bg-card",
+              "cssVar": "--card"
+            },
+            {
+              "type": "color",
+              "name": "text-card-foreground",
+              "rawClass": "text-card-foreground",
+              "cssVar": "--card"
+            }
+          ]
+        },
+        "destructive": {
+          "name": "destructive",
+          "classes": "text-destructive bg-card [&>svg]:text-current *:data-[slot=alert-description]:text-destructive/90",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "text-destructive",
+              "rawClass": "text-destructive",
+              "cssVar": "--destructive"
+            },
+            {
+              "type": "color",
+              "name": "bg-card",
+              "rawClass": "bg-card",
+              "cssVar": "--card"
+            },
+            {
+              "type": "color",
+              "name": "text-destructive/90",
+              "rawClass": "text-destructive/90",
+              "cssVar": "--destructive"
+            }
+          ]
+        }
+      },
+      "defaultValue": "default"
+    }
+  ],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "variant",
+      "type": "{",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Alert",
+    "variantProperties": [
+      {
+        "name": "Variant",
+        "values": [
+          "Default",
+          "Destructive"
+        ],
+        "defaultValue": "Default"
+      }
+    ],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.150Z",
+    "extractorVersion": "0.1.0"
+  }
+}

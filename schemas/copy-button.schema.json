@@ -1,0 +1,69 @@
+{
+  "name": "CopyButton",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\copy-button.tsx",
+  "description": "A button that copies text to the clipboard with visual feedback.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "value",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "onCopy",
+      "type": "() => void",
+      "required": true
+    },
+    {
+      "name": "timeout",
+      "type": "number",
+      "required": false,
+      "defaultValue": "2000"
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "variant",
+      "type": "string",
+      "required": false,
+      "defaultValue": "outline"
+    },
+    {
+      "name": "size",
+      "type": "string",
+      "required": false,
+      "defaultValue": "icon"
+    },
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json",
+    "https://nessra-ui.vercel.app/r/button.json"
+  ],
+  "figmaMapping": {
+    "componentName": "CopyButton",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": [
+      "Value",
+      "Variant",
+      "Size",
+      "Children"
+    ]
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.245Z",
+    "extractorVersion": "0.1.0"
+  }
+}

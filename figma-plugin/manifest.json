@@ -1,0 +1,46 @@
+{
+  "name": "nessra-sync",
+  "id": "nessra-sync-figma-plugin",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "documentAccess": "dynamic-page",
+  "editorType": ["figma"],
+  "networkAccess": {
+    "allowedDomains": [
+      "https://nessra-ui.vercel.app",
+      "https://api.github.com",
+      "https://raw.githubusercontent.com"
+    ],
+    "devAllowedDomains": ["http://localhost:3000"]
+  },
+  "permissions": ["currentuser"],
+  "menu": [
+    {
+      "name": "Sync from Registry",
+      "command": "sync-from-registry"
+    },
+    {
+      "name": "Push to Registry",
+      "command": "push-to-registry"
+    },
+    {
+      "separator": true
+    },
+    {
+      "name": "Import Tokens",
+      "command": "import-tokens"
+    },
+    {
+      "name": "Export Tokens",
+      "command": "export-tokens"
+    },
+    {
+      "separator": true
+    },
+    {
+      "name": "Settings",
+      "command": "settings"
+    }
+  ]
+}

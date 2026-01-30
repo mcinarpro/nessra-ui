@@ -1,0 +1,118 @@
+{
+  "name": "Field",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\field.tsx",
+  "description": "Combine labels, controls, and help text to compose accessible form fields.",
+  "baseClasses": "group/field flex w-full gap-3 data-[invalid=true]:text-destructive",
+  "baseTokens": [
+    {
+      "type": "color",
+      "name": "text-destructive",
+      "rawClass": "text-destructive",
+      "cssVar": "--destructive"
+    },
+    {
+      "type": "spacing",
+      "name": "gap-3",
+      "rawClass": "gap-3"
+    },
+    {
+      "type": "spacing",
+      "name": "w-full",
+      "rawClass": "w-full"
+    }
+  ],
+  "variants": [
+    {
+      "name": "orientation",
+      "values": {
+        "vertical": {
+          "name": "vertical",
+          "classes": "[\"flex-col [&>*]:w-full [&>.sr-only]:w-auto\"]",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "w-full",
+              "rawClass": "w-full"
+            },
+            {
+              "type": "spacing",
+              "name": "w-auto",
+              "rawClass": "w-auto"
+            }
+          ]
+        },
+        "horizontal": {
+          "name": "horizontal",
+          "classes": "[",
+          "tokens": []
+        },
+        "flex-row items-center": {
+          "name": "flex-row items-center",
+          "classes": "flex-auto",
+          "tokens": []
+        },
+        "has-[>[data-slot=field-content]]:items-start has-[>[data-slot=field-content]]:[&>[role=checkbox],[role=radio]]:mt-px": {
+          "name": "has-[>[data-slot=field-content]]:items-start has-[>[data-slot=field-content]]:[&>[role=checkbox],[role=radio]]:mt-px",
+          "classes": "[",
+          "tokens": []
+        },
+        "flex-col [&>*]:w-full [&>.sr-only]:w-auto @md/field-group:flex-row @md/field-group:items-center @md/field-group:[&>*]:w-auto": {
+          "name": "flex-col [&>*]:w-full [&>.sr-only]:w-auto @md/field-group:flex-row @md/field-group:items-center @md/field-group:[&>*]:w-auto",
+          "classes": "[&>[data-slot=field-label]]:flex-auto",
+          "tokens": []
+        },
+        "@md/field-group:has-[>[data-slot=field-content]]:items-start @md/field-group:has-[>[data-slot=field-content]]:[&>[role=checkbox],[role=radio]]:mt-px": {
+          "name": "@md/field-group:has-[>[data-slot=field-content]]:items-start @md/field-group:has-[>[data-slot=field-content]]:[&>[role=checkbox],[role=radio]]:mt-px",
+          "classes": "",
+          "tokens": []
+        }
+      },
+      "defaultValue": "vertical"
+    }
+  ],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "orientation",
+      "type": "{",
+      "required": false,
+      "defaultValue": "vertical"
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json",
+    "https://nessra-ui.vercel.app/r/label.json",
+    "https://nessra-ui.vercel.app/r/separator.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Field",
+    "variantProperties": [
+      {
+        "name": "Orientation",
+        "values": [
+          "Vertical",
+          "Horizontal",
+          "Flex-row items-center",
+          "Has-[>[data-slot=field-content]]:items-start has-[>[data-slot=field-content]]:[&>[role=checkbox],[role=radio]]:mt-px",
+          "Flex-col [&>*]:w-full [&>.sr-only]:w-auto @md/field-group:flex-row @md/field-group:items-center @md/field-group:[&>*]:w-auto",
+          "@md/field-group:has-[>[data-slot=field-content]]:items-start @md/field-group:has-[>[data-slot=field-content]]:[&>[role=checkbox],[role=radio]]:mt-px"
+        ],
+        "defaultValue": "Vertical"
+      }
+    ],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.303Z",
+    "extractorVersion": "0.1.0"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Slider",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\slider.tsx",
+  "description": "An input where the user selects a value from within a given range.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "defaultValue",
+      "type": "string | number",
+      "required": true
+    },
+    {
+      "name": "value",
+      "type": "string | number",
+      "required": true
+    },
+    {
+      "name": "min",
+      "type": "unknown",
+      "required": false,
+      "defaultValue": "0"
+    },
+    {
+      "name": "max",
+      "type": "unknown",
+      "required": false,
+      "defaultValue": "100"
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "@radix-ui/react-slider"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Slider",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.186Z",
+    "extractorVersion": "0.1.0"
+  }
+}

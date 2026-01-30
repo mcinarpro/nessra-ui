@@ -1,0 +1,25 @@
+{
+  "name": "Sonner",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\sonner.tsx",
+  "description": "An opinionated toast component for React.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [],
+  "subComponents": [],
+  "dependencies": [
+    "sonner",
+    "next-themes"
+  ],
+  "registryDependencies": [],
+  "figmaMapping": {
+    "componentName": "Sonner",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.169Z",
+    "extractorVersion": "0.1.0"
+  }
+}

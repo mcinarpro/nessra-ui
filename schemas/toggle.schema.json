@@ -1,0 +1,227 @@
+{
+  "name": "Toggle",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\toggle.tsx",
+  "description": "A two-state button that can be either on or off.",
+  "baseClasses": "inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium hover:bg-muted hover:text-muted-foreground disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground [&_svg]:pointer-events-none [&_svg:not([class*=",
+  "baseTokens": [
+    {
+      "type": "color",
+      "name": "bg-muted",
+      "rawClass": "bg-muted",
+      "cssVar": "--muted"
+    },
+    {
+      "type": "color",
+      "name": "text-muted-foreground",
+      "rawClass": "text-muted-foreground",
+      "cssVar": "--muted"
+    },
+    {
+      "type": "color",
+      "name": "bg-accent",
+      "rawClass": "bg-accent",
+      "cssVar": "--accent"
+    },
+    {
+      "type": "color",
+      "name": "text-accent-foreground",
+      "rawClass": "text-accent-foreground",
+      "cssVar": "--accent"
+    },
+    {
+      "type": "spacing",
+      "name": "gap-2",
+      "rawClass": "gap-2"
+    },
+    {
+      "type": "radius",
+      "name": "rounded-md",
+      "rawClass": "rounded-md"
+    },
+    {
+      "type": "typography",
+      "name": "text-sm",
+      "rawClass": "text-sm"
+    },
+    {
+      "type": "typography",
+      "name": "font-medium",
+      "rawClass": "font-medium"
+    }
+  ],
+  "variants": [
+    {
+      "name": "variant",
+      "values": {
+        "default": {
+          "name": "default",
+          "classes": "bg-transparent",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "bg-transparent",
+              "rawClass": "bg-transparent"
+            }
+          ]
+        },
+        "outline": {
+          "name": "outline",
+          "classes": "border border-input bg-transparent shadow-xs hover:bg-accent hover:text-accent-foreground",
+          "tokens": [
+            {
+              "type": "color",
+              "name": "border-input",
+              "rawClass": "border-input",
+              "cssVar": "--input"
+            },
+            {
+              "type": "color",
+              "name": "bg-accent",
+              "rawClass": "bg-accent",
+              "cssVar": "--accent"
+            },
+            {
+              "type": "color",
+              "name": "text-accent-foreground",
+              "rawClass": "text-accent-foreground",
+              "cssVar": "--accent"
+            },
+            {
+              "type": "color",
+              "name": "bg-transparent",
+              "rawClass": "bg-transparent"
+            },
+            {
+              "type": "shadow",
+              "name": "shadow-xs",
+              "rawClass": "shadow-xs"
+            }
+          ]
+        }
+      },
+      "defaultValue": "default"
+    },
+    {
+      "name": "size",
+      "values": {
+        "default": {
+          "name": "default",
+          "classes": "h-9 px-2 min-w-9",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "px-2",
+              "rawClass": "px-2"
+            },
+            {
+              "type": "spacing",
+              "name": "h-9",
+              "rawClass": "h-9"
+            },
+            {
+              "type": "spacing",
+              "name": "min-w-9",
+              "rawClass": "min-w-9"
+            }
+          ]
+        },
+        "sm": {
+          "name": "sm",
+          "classes": "h-8 px-1.5 min-w-8",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "px-1.5",
+              "rawClass": "px-1.5"
+            },
+            {
+              "type": "spacing",
+              "name": "h-8",
+              "rawClass": "h-8"
+            },
+            {
+              "type": "spacing",
+              "name": "min-w-8",
+              "rawClass": "min-w-8"
+            }
+          ]
+        },
+        "lg": {
+          "name": "lg",
+          "classes": "h-10 px-2.5 min-w-10",
+          "tokens": [
+            {
+              "type": "spacing",
+              "name": "px-2.5",
+              "rawClass": "px-2.5"
+            },
+            {
+              "type": "spacing",
+              "name": "h-10",
+              "rawClass": "h-10"
+            },
+            {
+              "type": "spacing",
+              "name": "min-w-10",
+              "rawClass": "min-w-10"
+            }
+          ]
+        }
+      },
+      "defaultValue": "default"
+    }
+  ],
+  "props": [
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "variant",
+      "type": "{",
+      "required": true
+    },
+    {
+      "name": "size",
+      "type": "{",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "@radix-ui/react-toggle",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json"
+  ],
+  "figmaMapping": {
+    "componentName": "Toggle",
+    "variantProperties": [
+      {
+        "name": "Variant",
+        "values": [
+          "Default",
+          "Outline"
+        ],
+        "defaultValue": "Default"
+      },
+      {
+        "name": "Size",
+        "values": [
+          "Default",
+          "Sm",
+          "Lg"
+        ],
+        "defaultValue": "Default"
+      }
+    ],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.203Z",
+    "extractorVersion": "0.1.0"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "DataTable",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\data-table.tsx",
+  "description": "A powerful data table with sorting, filtering, pagination, row selection and faceted filters.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [],
+  "subComponents": [],
+  "dependencies": [
+    "@tanstack/react-table"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json",
+    "https://nessra-ui.vercel.app/r/button.json",
+    "https://nessra-ui.vercel.app/r/input.json",
+    "https://nessra-ui.vercel.app/r/table.json",
+    "https://nessra-ui.vercel.app/r/dropdown-menu.json",
+    "https://nessra-ui.vercel.app/r/select.json",
+    "https://nessra-ui.vercel.app/r/skeleton.json",
+    "https://nessra-ui.vercel.app/r/badge.json",
+    "https://nessra-ui.vercel.app/r/popover.json",
+    "https://nessra-ui.vercel.app/r/command.json",
+    "https://nessra-ui.vercel.app/r/separator.json"
+  ],
+  "figmaMapping": {
+    "componentName": "DataTable",
+    "variantProperties": [],
+    "booleanProperties": [],
+    "textProperties": []
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.268Z",
+    "extractorVersion": "0.1.0"
+  }
+}

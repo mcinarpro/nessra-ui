@@ -1,0 +1,68 @@
+{
+  "name": "CodeBlock",
+  "filePath": "C:\\Projects\\DEV\\nessra-ui\\registry\\new-york\\ui\\code-block.tsx",
+  "description": "Display code with syntax highlighting powered by Shiki.",
+  "baseClasses": "",
+  "baseTokens": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "code",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "language",
+      "type": "string",
+      "required": false,
+      "defaultValue": "plaintext"
+    },
+    {
+      "name": "showLineNumbers",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false"
+    },
+    {
+      "name": "showCopyButton",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "true"
+    },
+    {
+      "name": "maxHeight",
+      "type": "string | number",
+      "required": true
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "shiki"
+  ],
+  "registryDependencies": [
+    "https://nessra-ui.vercel.app/r/utils.json",
+    "https://nessra-ui.vercel.app/r/copy-button.json",
+    "https://nessra-ui.vercel.app/r/scroll-area.json"
+  ],
+  "figmaMapping": {
+    "componentName": "CodeBlock",
+    "variantProperties": [],
+    "booleanProperties": [
+      "ShowLineNumbers",
+      "ShowCopyButton"
+    ],
+    "textProperties": [
+      "Code",
+      "Language"
+    ]
+  },
+  "meta": {
+    "extractedAt": "2026-01-28T13:02:56.143Z",
+    "extractorVersion": "0.1.0"
+  }
+}
