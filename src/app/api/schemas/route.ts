@@ -1,6 +1,6 @@
-import { NextResponse } from "next/server"
 import * as fs from "node:fs"
 import * as path from "node:path"
+import { NextResponse } from "next/server"
 
 /**
  * GET /api/schemas
@@ -15,7 +15,8 @@ export async function GET() {
     if (!fs.existsSync(schemasDir)) {
       return NextResponse.json(
         {
-          error: "Schemas not generated. Run: npx tsx scripts/figma-sync/cli.ts extract",
+          error:
+            "Schemas not generated. Run: npx tsx scripts/figma-sync/cli.ts extract",
         },
         { status: 404 }
       )

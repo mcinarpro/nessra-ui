@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from "next/server"
 import * as fs from "node:fs"
 import * as path from "node:path"
+import { NextRequest, NextResponse } from "next/server"
 
 /**
  * GET /api/schemas/[name]

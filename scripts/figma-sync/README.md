@@ -23,6 +23,7 @@ npx tsx scripts/figma-sync/cli.ts help
 ### `extract` - Component Schema Extraction
 
 Parses registry components and extracts:
+
 - CVA variants (names, values, defaults)
 - Component props with types
 - Design tokens from Tailwind classes
@@ -37,6 +38,7 @@ npx tsx scripts/figma-sync/cli.ts extract [--output schemas] [--verbose]
 ### `tokens` - Design Token Extraction
 
 Extracts CSS variables from `global.css` and converts to multiple formats:
+
 - **W3C Design Tokens** - Standard JSON format
 - **Figma Variables** - Ready for Figma import
 - **Tailwind Config** - TypeScript color exports
@@ -46,6 +48,7 @@ npx tsx scripts/figma-sync/cli.ts tokens [--input src/app/global.css] [--output 
 ```
 
 **Output:**
+
 - `tokens/design-tokens.json` (W3C format)
 - `tokens/figma-variables.json` (Figma format)
 - `tokens/tailwind-colors.ts` (Tailwind config)

@@ -120,7 +120,10 @@ interface CategorizedToken {
   mode: "light" | "dark"
 }
 
-const TOKEN_CATEGORIES: Record<string, { category: TokenCategory; group: string }> = {
+const TOKEN_CATEGORIES: Record<
+  string,
+  { category: TokenCategory; group: string }
+> = {
   // Colors - semantic
   background: { category: "color", group: "background" },
   foreground: { category: "color", group: "foreground" },
@@ -274,10 +277,7 @@ function convertToW3CFormat(tokens: CategorizedToken[]): DesignTokensFile {
   }
 }
 
-function getW3CType(
-  category: TokenCategory,
-  value: string
-): string {
+function getW3CType(category: TokenCategory, value: string): string {
   switch (category) {
     case "color":
       return "color"
@@ -291,7 +291,11 @@ function getW3CType(
       return "fontWeight"
     default:
       // Infer from value
-      if (value.startsWith("oklch") || value.startsWith("#") || value.startsWith("rgb")) {
+      if (
+        value.startsWith("oklch") ||
+        value.startsWith("#") ||
+        value.startsWith("rgb")
+      ) {
         return "color"
       }
       if (value.match(/^\d+(\.\d+)?(px|rem|em|%)$/)) {
@@ -482,8 +486,12 @@ export async function extractTokens(options: ExtractOptions = {}) {
   // Summary
   console.log("\n" + "=".repeat(50))
   console.log(`✅ Extracted ${categorizedTokens.length / 2} unique tokens`)
-  console.log(`   Light mode: ${variables.filter((v) => v.mode === "light").length}`)
-  console.log(`   Dark mode: ${variables.filter((v) => v.mode === "dark").length}`)
+  console.log(
+    `   Light mode: ${variables.filter((v) => v.mode === "light").length}`
+  )
+  console.log(
+    `   Dark mode: ${variables.filter((v) => v.mode === "dark").length}`
+  )
 
   return { variables, categorizedTokens }
 }

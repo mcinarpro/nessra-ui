@@ -118,7 +118,9 @@ const TOKEN_PATTERNS: Record<DesignToken["type"], RegExp[]> = {
     /\b(inset|top|right|bottom|left)-(\d+(\.\d+)?|auto)\b/g,
   ],
   radius: [/\b(rounded|rounded-[a-z]+)(-sm|-md|-lg|-xl|-2xl|-3xl|-full)?\b/g],
-  shadow: [/\b(shadow|shadow-[a-z]+)(-xs|-sm|-md|-lg|-xl|-2xl|-inner|-none)?\b/g],
+  shadow: [
+    /\b(shadow|shadow-[a-z]+)(-xs|-sm|-md|-lg|-xl|-2xl|-inner|-none)?\b/g,
+  ],
   typography: [
     /\b(text)-(xs|sm|base|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl|8xl|9xl)\b/g,
     /\b(font)-(thin|extralight|light|normal|medium|semibold|bold|extrabold|black)\b/g,
@@ -180,7 +182,10 @@ function parseTopLevelObject(objStr: string): Record<string, string> {
   const result: Record<string, string> = {}
 
   // Remove outer braces
-  const inner = objStr.trim().replace(/^\{|\}$/g, "").trim()
+  const inner = objStr
+    .trim()
+    .replace(/^\{|\}$/g, "")
+    .trim()
 
   let i = 0
   while (i < inner.length) {
@@ -329,7 +334,9 @@ function extractCva(content: string): CvaExtraction | null {
   // Find each top-level property in the variants block
   const topLevelVariants = parseTopLevelObject(variantsBlock)
 
-  for (const [variantName, variantContent] of Object.entries(topLevelVariants)) {
+  for (const [variantName, variantContent] of Object.entries(
+    topLevelVariants
+  )) {
     const values: Record<string, VariantValue> = {}
 
     // Parse the values inside this variant
@@ -522,7 +529,8 @@ function generateFigmaMapping(
 
   const booleanProperties = props
     .filter(
-      (p) => p.type === "boolean" || p.name === "disabled" || p.name === "asChild"
+      (p) =>
+        p.type === "boolean" || p.name === "disabled" || p.name === "asChild"
     )
     .map((p) => capitalizeFirst(p.name))
 
